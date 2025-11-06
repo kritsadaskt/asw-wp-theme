@@ -1,0 +1,78 @@
+stages:
+  - deploy
+
+# Deploy to production
+deploy_production:
+  stage: deploy
+  image: alpine:latest
+  
+  before_script:
+    # Install SSH client
+    - apk add --no-cache openssh-client rsync
+    
+    # Setup SSH
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - cp $WP_SSH_PRIVATE_KEY ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    
+    # Add EC2 to known hosts (disable host key checking for simplicity)
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    
+  script:
+    # Deploy theme files to EC2
+    - echo "Deploying $THEME_NAME to $WP_EC2_HOST..."
+    
+    # Rsync files (excludes .git, node_modules, etc)
+    - rsync -avz --delete 
+      --exclude='.git/' 
+      --exclude='node_modules/' 
+      --exclude='.gitlab-ci.yml' 
+      --exclude='README.md'
+      ./ ${WP_EC2_USER}@${WP_EC2_HOST}:/var/www/html/wordpress/wp-content/themes/${THEME_NAME}/
+    
+    # Set correct permissions on EC2
+    - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo chown -R apache:apache /var/www/html/wordpress/wp-content/themes/${THEME_NAME}/"
+    - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo chmod -R 755 /var/www/html/wordpress/wp-content/themes/${THEME_NAME}/"
+    
+    # Optional: Clear WordPress cache
+    - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "cd /var/www/html/wordpress && wp cache flush --allow-root" || true
+    
+    # Optional: Restart Apache
+    - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo systemctl restart httpd"
+    
+    - echo "Deployment completed successfully!"
+  
+  only:
+    - main  # Only deploy when pushing to main branch
+  
+  environment:
+    name: production
+    url: https://new.assetwise.dev
+
+# Optional: Deploy to staging on develop branch
+# deploy_staging:
+#   stage: deploy
+#   image: alpine:latest
+  
+#   before_script:
+#     - apk add --no-cache openssh-client rsync
+#     - mkdir -p ~/.ssh
+#     - chmod 700 ~/.ssh
+#     - cp $WP_SSH_PRIVATE_KEY ~/.ssh/id_rsa
+#     - chmod 600 ~/.ssh/id_rsa
+#     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    
+#   script:
+#     - echo "Deploying to staging..."
+#     - rsync -avz --delete 
+#       --exclude='.git/' 
+#       --exclude='node_modules/' 
+#       ./ ${WP_EC2_USER}@${WP_EC2_HOST}:/var/www/html/wordpress/wp-content/themes/${THEME_NAME}-staging/
+#     - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo chown -R apache:apache /var/www/html/wordpress/wp-content/themes/${THEME_NAME}-staging/"
+    
+#   only:
+#     - develop  # Deploy to staging from develop branch
+  
+#   environment:
+#     name: staging
