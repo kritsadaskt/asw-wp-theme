@@ -23,17 +23,55 @@ deploy_production:
     # Deploy theme files to EC2
     - echo "Deploying $THEME_NAME to $WP_EC2_HOST..."
 
+    # Detect changed files using Git diff
+    - echo "Detecting changed files..."
+    - git fetch --unshallow || true  # Ensure we have full git history
+    - |
+      # Get changed and added files (excluding deleted)
+      git diff --name-only --diff-filter=AM HEAD~1 HEAD | \
+        grep -v '^\.git/' | \
+        grep -v '^node_modules/' | \
+        grep -v '^\.gitlab-ci\.yml$' | \
+        grep -v '^README\.md$' \
+        > changed_files.txt || echo "No changed files to deploy"
+      
+      # Get deleted files
+      git diff --name-only --diff-filter=D HEAD~1 HEAD | \
+        grep -v '^\.git/' | \
+        grep -v '^node_modules/' | \
+        grep -v '^\.gitlab-ci\.yml$' | \
+        grep -v '^README\.md$' \
+        > deleted_files.txt || echo "No deleted files"
+      
+      echo "Changed/Added files:"
+      cat changed_files.txt || echo "None"
+      echo ""
+      echo "Deleted files:"
+      cat deleted_files.txt || echo "None"
+
     # Set permissions BEFORE rsync
     - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo chown -R deploy:apache /var/www/html/wordpress/wp-content/themes/${THEME_NAME}"
     - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo chmod -R 775 /var/www/html/wordpress/wp-content/themes/${THEME_NAME}"
     
-    # Rsync files (excludes .git, node_modules, etc)
-    - rsync -avz --delete 
-      --exclude='.git/' 
-      --exclude='node_modules/' 
-      --exclude='.gitlab-ci.yml' 
-      --exclude='README.md'
-      ./ ${WP_EC2_USER}@${WP_EC2_HOST}:/var/www/html/wordpress/wp-content/themes/${THEME_NAME}/
+    # Deploy only changed files using rsync
+    - |
+      if [ -s changed_files.txt ]; then
+        echo "Deploying changed files..."
+        rsync -avz --files-from=changed_files.txt ./ ${WP_EC2_USER}@${WP_EC2_HOST}:/var/www/html/wordpress/wp-content/themes/${THEME_NAME}/
+      else
+        echo "No changed files to deploy"
+      fi
+    
+    # Handle deleted files
+    - |
+      if [ -s deleted_files.txt ]; then
+        echo "Removing deleted files from server..."
+        while IFS= read -r file; do
+          ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo rm -f /var/www/html/wordpress/wp-content/themes/${THEME_NAME}/$file" || true
+        done < deleted_files.txt
+      else
+        echo "No files to delete"
+      fi
     
     # Set correct permissions on EC2
     - ssh ${WP_EC2_USER}@${WP_EC2_HOST} "sudo chown -R apache:apache /var/www/html/wordpress/wp-content/themes/${THEME_NAME}/"
