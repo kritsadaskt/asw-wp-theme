@@ -1,0 +1,70 @@
+#plan {
+    padding-top: 5.625rem;
+    padding-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    --bg-color: var(
+        --plan--background_color);
+    --bg-img:var(
+        --plan--background_image);
+    --text-color:var(
+        --plan--color_swatch--body_text);
+    color: var(--text-color);
+}
+
+#plan .dynamic-selector-ui-wrap .-arrow {
+    width: 22px;
+}
+
+#plan .dynamic-selector-ui-wrap {
+    background-image: var(--plan--color_gradient)
+}
+
+#plan .dynamic-selector-ui {
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+#plan .dynamic-selector-ui::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #0008;
+    pointer-events: none;
+    content: " ";
+}
+.plan-select p {
+    color: var(--text-color);
+}
+
+.plan-select .selected-label {
+    color: var(--text-color);
+    position: relative;
+    z-index: 10;
+    /* color: #fff; */
+}
+
+#plan .info-tab-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0008;
+    background: var(--plan--new_tab_block--bg_color);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    padding: 24px 0;
+    z-index: 10;
+}
+#plan .info-tab-option:hover{
+    background: var(--plan--new_tab_block--item_bg_hover_active_dynamic);
+}
+
+@media (max-width: 1319px) {
+    #plan {
+        padding-top: 70px;
+    }
+}

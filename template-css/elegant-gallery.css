@@ -1,0 +1,128 @@
+#gallery{
+	background-color: var(--gallery--background_color);
+	background-image: var(--gallery--background_image);
+}
+
+.scroll-gal {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	background-color: rgba(255, 255, 255, 0);
+	overflow-x: auto;
+	scroll-behavior: smooth;
+}
+
+.modal-column {
+	flex: 0 0 auto;
+	width: auto;
+	height: 92px;
+	max-width: 100%;
+	padding: 10px;
+}
+
+.modal-nav-img {
+	margin-top: 0;
+}
+
+.mySlides img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.gallery-mobile,
+.pad-53 {
+	display: none;
+}
+
+.pad-bot {
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.gallery-desktop {
+		display: none;
+	}
+
+	.gallery-mobile {
+		display: block;
+		height: 335px;
+		padding-bottom: 53px;
+	}
+
+	.modal-img-content {
+		position: relative;
+		background-color: rgba(255, 255, 255, 0);
+		margin: auto;
+		padding: 0;
+		top: 0vw;
+		width: 100%;
+		max-width: 1200px;
+	}
+
+	.mySlides {
+		height: 450px;
+		background-color: rgba(255, 255, 255, 0);
+	}
+
+}
+
+.-jbl-gll-draw-rail-i {
+	box-shadow: 0px 0px 0px 0px var(--gallery--color_swatch--heading_h2) inset !important;
+}
+
+.-jbl-gll-draw-rail-i[data-active="1"] {
+	box-shadow: 0px 0px 0px 3px var(--gallery--color_swatch--heading_h2) inset !important;
+}
+
+#gallery .view-img {
+	display: flex;
+	opacity: 0;
+	background-color: #141414;
+	/*opacity: 0.6;*/
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	color: white;
+	font-size: 26px;
+	font-weight: 300;
+	line-height: 32px;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	margin: auto;
+	transition: all .5s;
+}
+
+#gallery .jb-lightbox:hover .view-img {
+	opacity: 0.6;
+}
+
+#gallery .view-img img {
+	margin: 0rem;
+	margin-right: 11px;
+	display: inline;
+}
+
+.title-gal {
+	color: var(--gallery--color_swatch--heading_h2);
+}
+/*-- Mobile Version --*/
+@media (max-width: 1319px) {
+	.title-gal {
+		font-size: 38px !important;
+		line-height: 40px;
+		padding-top: 43px;
+		padding-bottom: 13px;
+	}
+
+	.pad-bot {
+		display: none;
+	}
+
+	.pad-53 {
+		padding-bottom: 43px;
+		display: block;
+	}
+}

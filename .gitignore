@@ -1,0 +1,36 @@
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+__cron-log.txt
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# WordPress specific
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+# Theme specific
+node_modules/
+.sass-cache/
+*.css.map
+*.js.map
+.env
+.env.*
+.idea/
+.vscode/

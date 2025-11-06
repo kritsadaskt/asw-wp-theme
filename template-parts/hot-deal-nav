@@ -1,0 +1,185 @@
+<?php 
+$hotdealnav = $args;
+$logo = $hotdealnav['logo'];
+$cpj = $hotdealnav['cpj'];
+$layer = $hotdealnav['layer'];
+if ($layer == 2) {
+	$action_label = 'จองยูนิต';
+	$action_url = 'href="#!" onclick="navToSec(this)" data-nav="nav-unit-2"';
+}else{
+	$action_label = 'จองเลย';
+	$action_url = 'href="#!"';
+}
+?>
+
+<section id="header-nav">
+	<div class="cont-pd xl:px-0">
+		<div class="header-nav-inner">
+			<div class="-logo">
+				<a href="<?=get_permalink($cpj->ID)?>" class="">
+					<img src="<?=$logo?>" class="w-full">
+				</a>
+			</div>
+			<div class="-nav">
+				<?php if ($layer == 2): ?>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-unit" data-active="1">ยูนิตในโครงการ</div>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-gall" data-active="-1"><span data-lang="th">แกลเลอรี</span><span data-lang="en">Gallery</span></div>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-info" data-active="-1"><span data-lang="th">ข้อมูลโครงการ</span><span data-lang="en">Project Detail</span></div>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-fclt" data-active="-1"><span data-lang="th">สิ่งอำนวยความสะดวก</span><span data-lang="en">Facility</span></div>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-loca" data-active="-1"><span data-lang="th">ทำเลที่ตั้ง</span><span data-lang="en">Location</span></div>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-tour" data-active="-1">Virtual tour 360</div>
+				<?php endif ?>
+				<?php if ($layer == 3): ?>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-unit" data-active="1">แปลน</div>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-info" data-active="-1">ข้อมูลยูนิต</div>
+					<div class="-item" onclick="navToSec(this)" data-nav="nav-room" data-active="-1">บรรยากาศภายในห้อง</div>
+				<?php endif ?>
+			</div>
+			<div class="-nav-mob">
+				<?php if ($layer == 2): ?>
+					<div class="-display" data-nav="nav-unit" data-active="1">ยูนิตในโครงการ</div>
+					<div class="-display" data-nav="nav-gall" data-active="-1"><span data-lang="th">แกลเลอรี</span><span data-lang="en">Gallery</span></div>
+					<div class="-display" data-nav="nav-info" data-active="-1"><span data-lang="th">ข้อมูลโครงการ</span><span data-lang="en">Project Detail</span></div>
+					<div class="-display" data-nav="nav-fclt" data-active="-1"><span data-lang="th">สิ่งอำนวยความสะดวก</span><span data-lang="en">Facility</span></div>
+					<div class="-display" data-nav="nav-loca" data-active="-1"><span data-lang="th">ทำเลที่ตั้ง</span><span data-lang="en">Location</span></div>
+					<div class="-display" data-nav="nav-tour" data-active="-1">Virtual tour 360</div>
+				<?php endif ?>
+				<?php if ($layer == 3): ?>
+					<div class="-display" data-nav="nav-unit" data-active="1">แปลน</div>
+					<div class="-display" data-nav="nav-info" data-active="-1">ข้อมูลยูนิต</div>
+					<div class="-display" data-nav="nav-room" data-active="-1">บรรยากาศภายในห้อง</div>
+				<?php endif ?>
+
+				<div onclick="expandMbNav()">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M7 10L12 15L17 10" stroke="#1D1B1A"/>
+					</svg>
+				</div>
+			</div>
+			<div class="-nav-mob-expand">
+				<?php if ($layer == 2): ?>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-unit" data-active="1">ยูนิตในโครงการ</div>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-gall" data-active="-1"><span data-lang="th">แกลเลอรี</span><span data-lang="en">Gallery</span></div>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-info" data-active="-1"><span data-lang="th">ข้อมูลโครงการ</span><span data-lang="en">Project Detail</span></div>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-fclt" data-active="-1"><span data-lang="th">สิ่งอำนวยความสะดวก</span><span data-lang="en">Facility</span></div>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-loca" data-active="-1"><span data-lang="th">ทำเลที่ตั้ง</span><span data-lang="en">Location</span></div>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-tour" data-active="-1">Virtual tour 360</div>
+				<?php endif ?>
+				<?php if ($layer == 3): ?>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-unit" data-active="1">แปลน</div>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-info" data-active="-1">ข้อมูลยูนิต</div>
+					<div class="-list" onclick="navToSec(this)" data-nav="nav-room" data-active="-1">บรรยากาศภายในห้อง</div>
+				<?php endif ?>
+				<a <?=$action_url?> class="-btn">
+					<?=$action_label?>
+				</a>
+			</div>
+			<div class="-action">
+				<a <?=$action_url?> class="-btn">
+					<?=$action_label?>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	let nowNav = -1
+	let elSelector = []
+	let navH = $('#header-nav').offsetHeight+$('#masthead').offsetHeight;
+	let scrollY = 0;
+
+	let expand = false;
+
+	<?php if ($layer == 3) {
+		?>let elSelectorAll = ['unit','info','room'];<?php
+	} ?>
+	<?php if ($layer == 2) {
+		?>let elSelectorAll = ['unit','gall','info','fclt','loca','tour'];<?php
+	} ?>
+	function checkMenuTop(){
+		navH = $('#header-nav').offsetHeight+$('#masthead').offsetHeight;
+		let y = window.scrollY;
+		scrollY = y;
+		let topEl = []
+		let newNav = 0;
+
+		elSelector = []
+		for(let i of elSelectorAll){
+			let className = '.body-nav .-nav-'+i
+			let el = $(className)
+			if (el != undefined) {
+				elY = el.getBoundingClientRect().y - navH
+				if (elY<=0) {
+					elSelector.push(i)
+					topEl.push(elY)
+				}
+				
+			}
+		}
+		newNav = topEl.length-1
+		if (newNav != nowNav) {
+			nowNav = newNav
+			changeMenuTop()
+		}
+	}
+	function changeMenuTop(){
+		let el = $$('.header-nav-inner .-item')
+		for(let i of el){
+			i.dataset.active = -1
+		}
+		$(`.-item[data-nav="nav-${elSelector[elSelector.length-1]}"]`).dataset.active = 1
+
+		let el_list = $$('.header-nav-inner .-list')
+		for(let i of el_list){
+			i.dataset.active = -1
+		}
+		$(`.-list[data-nav="nav-${elSelector[elSelector.length-1]}"]`).dataset.active = 1
+
+		let el_display = $$('.header-nav-inner .-display')
+		for(let i of el_display){
+			i.dataset.active = -1
+		}
+		$(`.-display[data-nav="nav-${elSelector[elSelector.length-1]}"]`).dataset.active = 1
+	}
+
+	window.onscroll = ()=>{
+		checkMenuTop()
+	}
+
+	function navToSec(el){
+		let className = `.body-nav .-${el.dataset.nav}`
+		let sec = $(className)
+		let elY = sec.getBoundingClientRect().y+scrollY
+		window.scrollTo({
+			top: elY-navH,
+			left: 0,
+			behavior: "smooth",
+		});
+		$$(".-nav-mob-expand")[0].style.top = '-30em';
+	}
+	function expandMbNav() {
+		if(expand == false){
+			expand = true;
+			$$(".-nav-mob-expand")[0].style.top = '3.25em';
+		} else {
+			$$(".-nav-mob-expand")[0].style.top = '-30em';
+			expand = false;
+		}
+	}
+</script>
+
+<style type="text/css">
+	/*-- Mobile Version --*/
+	@media (max-width: 1320px) {
+		.header-nav-inner {
+			grid-template-columns: 120px auto;
+		}
+		#header-nav .-action{
+			display: none;
+		}
+		#header-nav .-nav{
+			display: none;
+		}
+	}
+</style>

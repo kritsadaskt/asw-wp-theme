@@ -1,0 +1,25 @@
+  .btn-line,
+  .btn-facebook,
+  .btn-sale {
+    border-radius: 4px;
+/*    background-color: var(--mc-main-1);*/
+}
+
+.btn-line:hover,
+.btn-facebook:hover,
+.btn-sale:hover {
+    border-radius: 4px;
+/*    background-color: var(--mc-main-2);*/
+}
+
+.btn-sale-desktop .btn-sale {
+    height: 40px;
+}
+
+.btn-sale span {
+/*    color: var(--mc-main-4);*/
+}
+
+.project-footer-wrap {
+    max-width: calc(1280px/24*18 + 2rem)
+}

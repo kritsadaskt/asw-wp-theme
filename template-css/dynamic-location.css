@@ -1,0 +1,42 @@
+#location #location-side-left-bg {
+    display: block;
+}
+
+#location .info-tab .location-tab-txt {
+    padding: 6px 28px;
+}
+
+#location .location-side-tab-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#location .location-side-tab-body::-webkit-scrollbar-track {
+    background: #03112180;
+    border-radius: 8px;
+}
+
+#location .location-side-tab-body::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+    border: 1px solid #20E3E3;
+    box-shadow: 0px 1px 12px #00FFFF;
+    border-radius: 8px;
+}
+
+#location .location-tabs-icon {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    #location #location-side-left-content {
+        padding-top: 28px !important;
+    }
+}
+
+
+#location{
+    --location--element--pagination_chevron:var(--all--element--pagination_chevron);
+}

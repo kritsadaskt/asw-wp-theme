@@ -1,0 +1,189 @@
+
+    --contact--color_swatch--heading_h1
+    --contact--color_swatch--body_text
+    --contact--text_color--text_link
+    --contact--text_color--text_link_hover
+    --contact--button_color--text_color
+    --contact--button_color--button_color
+    --contact--button_color--button_color_hover
+    --contact--tab_line_color_gd
+    --contact--background_image
+    --contact--background_image_mobile
+    --contact--background_color
+}
+
+    --location--color_swatch--heading_h2
+    --location--color_swatch--body_text
+    --location--color_swatch--border_color_h2
+    --location--new_tab_block--item_text
+    --location--new_tab_block--item_text_hover_active
+    --location--new_tab_block--border_color
+    --location--new_tab_block--bg_color
+    --location--new_tab_block--item_text_hover_active_dynamic
+    --location--tab_line_color--color_start
+    --location--tab_line_color--color_end
+    --location--tab_line_color--degree
+    --location--button_color--text_color
+    --location--button_color--button_color
+    --location--button_color--button_color_hover
+    --location--tab_line_color_gd
+    --location--background_image
+    --location--background_image_mobile
+    --location--background_color
+}
+
+    --plan--color_swatch--heading_h2
+    --plan--color_swatch--body_text
+    --plan--color_swatch--border_color_h2
+    --plan--new_tab_block--item_text
+    --plan--new_tab_block--item_text_hover_active
+    --plan--new_tab_block--border_color
+    --plan--new_tab_block--bg_color
+    --plan--new_tab_block--item_text_hover_active_dynamic
+    --plan--tab_line_color--color_start
+    --plan--tab_line_color--color_end
+    --plan--tab_line_color--degree
+    --plan--tab_line_color_gd
+    --plan--background_image
+    --plan--background_image_mobile
+    --plan--background_color
+}
+
+    --video--color_swatch--heading_h2
+    --video--color_swatch--border_color_h2
+    --video--new_tab_block--item_text
+    --video--new_tab_block--item_text_hover_active
+    --video--new_tab_block--border_color
+    --video--new_tab_block--bg_color
+    --video--new_tab_block--item_text_hover_active_dynamic
+    --video--tab_line_color--color_start
+    --video--tab_line_color--color_end
+    --video--tab_line_color--degree
+    --video--tab_line_color_gd
+    --video--background_image
+    --video--background_image_mobile
+    --video--background_color
+}
+
+    --gallery--color_swatch--heading_h2
+    --gallery--color_swatch--border_color_h2
+    --gallery--new_tab_block--item_text
+    --gallery--new_tab_block--item_text_hover_active
+    --gallery--new_tab_block--border_color
+    --gallery--new_tab_block--bg_color
+    --gallery--new_tab_block--item_text_hover_active_dynamic
+    --gallery--tab_line_color--color_start
+    --gallery--tab_line_color--color_end
+    --gallery--tab_line_color--degree
+    --gallery--tab_line_color_gd
+    --gallery--background_image
+    --gallery--background_image_mobile
+    --gallery--background_color
+}
+
+    --facility--color_swatch--heading_h2
+    --facility--color_swatch--heading_h3
+    --facility--color_swatch--body_text
+    --facility--color_swatch--border_color_h2
+    --facility--new_tab_block--item_text
+    --facility--new_tab_block--item_text_hover_active
+    --facility--new_tab_block--border_color
+    --facility--new_tab_block--bg_color
+    --facility--new_tab_block--item_text_hover_active_dynamic
+    --facility--tab_line_color--color_start
+    --facility--tab_line_color--color_end
+    --facility--tab_line_color--degree
+    --facility--tab_line_color_gd
+    --facility--background_image
+    --facility--background_image_mobile
+    --facility--background_color
+}
+
+    --project_information--color_swatch--heading_h2
+    --project_information--color_swatch--body_text
+    --project_information--color_swatch--border_color_h2
+    --project_information--new_tab_block--item_text
+    --project_information--new_tab_block--item_text_hover_active
+    --project_information--new_tab_block--border_color
+    --project_information--new_tab_block--bg_color
+    --project_information--new_tab_block--item_text_hover_active_dynamic
+    --project_information--tab_line_color--color_start
+    --project_information--tab_line_color--color_end
+    --project_information--tab_line_color--degree
+    --project_information--button_color--text_color
+    --project_information--button_color--button_color
+    --project_information--button_color--button_color_hover
+    --project_information--new_progress_color--progress_color_overall
+    --project_information--new_progress_color--progress_color_by_topic
+    --project_information--new_progress_color--number_color
+    --project_information--tab_line_color_gd
+    --project_information--background_image
+    --project_information--background_image_mobile
+    --project_information--background_color
+}
+
+    --project_idea--color_swatch--heading_h2
+    --project_idea--color_swatch--heading_h3
+    --project_idea--color_swatch--body_text
+    --project_idea--color_swatch--border_color_h2
+    --project_idea--tab_line_color_gd
+    --project_idea--background_image
+    --project_idea--background_image_mobile
+    --project_idea--background_color
+}
+
+    --form--color_swatch--heading_h2
+    --form--color_swatch--body_text
+    --form--color_swatch--border_color_h2
+    --form--text_color--text_link
+    --form--text_color--text_link_hover
+    --form--button_color--text_color
+    --form--button_color--button_color
+    --form--button_color--button_color_hover
+    --form--text_form_color--label_color
+    --form--text_form_color--label_color_focus
+    --form--text_form_color--value_color
+    --form--form_color--bg_field
+    --form--form_color--bg_field_focus
+    --form--form_color--border_field
+    --form--form_color--border_field_focus
+    --form--tab_line_color_gd
+    --form--background_image
+    --form--background_image_mobile
+    --form--background_color
+}
+
+    --banner--tab_line_color_gd
+}
+
+    --all--color_swatch--menu_text
+    --all--color_swatch--heading_h1
+    --all--color_swatch--heading_h2
+    --all--color_swatch--heading_h3
+    --all--color_swatch--body_text
+    --all--color_swatch--border_color_h2
+    --all--new_tab_block--item_text
+    --all--new_tab_block--item_text_hover_active
+    --all--new_tab_block--border_color
+    --all--new_tab_block--bg_color
+    --all--new_tab_block--item_bg_hover_active_dynamic
+    --all--tab_line_color--color_start
+    --all--tab_line_color--color_end
+    --all--tab_line_color--degree
+    --all--text_color--text_link
+    --all--text_color--text_link_hover
+    --all--button_color--text_color
+    --all--button_color--button_color
+    --all--button_color--button_color_hover
+    --all--text_form_color--label_color
+    --all--text_form_color--label_color_focus
+    --all--text_form_color--value_color
+    --all--form_color--bg_field
+    --all--form_color--bg_field_focus
+    --all--form_color--border_field
+    --all--form_color--border_field_focus
+    --all--new_progress_color--progress_color_overall
+    --all--new_progress_color--progress_color_by_topic
+    --all--new_progress_color--number_color
+    --all--tab_line_color_gd
+}

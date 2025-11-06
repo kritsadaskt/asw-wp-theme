@@ -1,0 +1,8 @@
+#project-footer.footer-line{
+    height: 8px;
+    background: #fff;
+    border: 1px solid var(--contact--button_color--button_color);
+    box-shadow: 0px 1px 12px var(--contact--button_color--button_color);
+    position: relative;
+    z-index: 10;
+}

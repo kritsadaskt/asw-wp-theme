@@ -1,0 +1,44 @@
+.btn-line,
+.btn-facebook,
+.btn-sale {
+    background-color: var(--contact--button_color--button_color);
+    border-radius: 24px;
+    transition: all 0.5s;
+    color: var(--contact--button_color--text_color);
+    font-weight: 500;
+}
+
+.btn-line span,
+.btn-facebook span,
+.btn-sale span {
+   color: var(--contact--button_color--text_color);
+}
+
+.btn-sale>img {
+    width: auto;
+}
+
+.btn-sale {
+    border-radius: 0;
+}
+
+@media (max-width: 1319px) {
+    .footer-tel span {
+        text-decoration: underline;
+    }
+
+    .btn-sale-mobile {
+        width: 100%
+    }
+
+    .btn-sale {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .btn-sale>img {
+        display: inline;
+    }
+}
+

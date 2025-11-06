@@ -1,0 +1,520 @@
+#info {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#info .container.mx-auto {
+    padding-top: 71px;
+}
+
+#info[data-active="1"] {
+    /* background-image:none; */
+    background-position: center;
+    background-size: cover;
+}
+
+.info-img {
+    box-shadow: 0px 0px 10% 10% #0008;
+}
+
+#info-btn-group {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 16px;
+}
+
+#info-btn-group .info-btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 6px 24px;
+    background: var(--project_information--button_color--button_color);
+    color: var(--project_information--button_color--text_color);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+#info-btn-group .info-btn:hover {
+    background: var(--project_information--button_color--button_color_hover);
+    color: var(--project_information--button_color--text_color);
+}
+
+#info-btn-group .info-btn img {
+    height: 24px;
+    width: auto;
+}
+
+#info-detail-wrap {
+    margin-bottom: 20px;
+}
+
+.info-detail-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    color: var(--project_information--color_swatch--heading_h2);
+}
+
+.info-detail-body {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--project_information--color_swatch--body_text);
+}
+
+#info-detail {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+}
+
+.info-detail-block {
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-column-gap: 16px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.info-img {
+    box-shadow: 0px 60px 40px -40px #0006;
+    display: block;
+}
+
+.info-detail-block::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--project_information--color_swatch--heading_h2);
+    width: 4px;
+    height: 40px;
+}
+
+.info-detail-icon img {
+    height: 35px;
+    width: auto;
+}
+
+.progress-show {
+    display: grid;
+    padding-top: 52px;
+    gap: 32px;
+}
+
+#info .info-tabs-line-block{
+    border-bottom: 1px solid var(--mc-tab-text-color);
+}
+
+/*-- Mobile Version --*/
+@media (max-width: 1319px) {
+    #info .container.mx-auto {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 43px;
+    }
+
+    #info-detail {
+        grid-column-gap: 16px;
+        grid-row-gap: 42px;
+    }
+
+    #info-btn-group {
+        display: none;
+    }
+
+    #info .text-center h2 {
+        font-weight: 400;
+        font-size: 38px !important;
+        line-height: 40px;
+    }
+
+    .info-detail-block {
+        padding-left: 0;
+        padding-top: 4px;
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .info-detail-icon img {
+        height: 30px;
+        margin-left: 16px;
+    }
+
+    #info-detail-wrap {
+        padding-top: 32px;
+        height: 100%;
+        overflow-y: visible;
+        margin-bottom: 0;
+    }
+
+    #info-progress {
+        height: 100% !important;
+        overflow: visible !important;
+    }
+
+    .info-btn {
+        width: 50%;
+    }
+
+    .detail-box::before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #2F6861;
+        width: 4px;
+        height: 40px;
+    }
+
+    .progress-show .progress-item {
+        grid-column: 2 span;
+    }
+}
+/*-- Mobile Version --*/
+@media (max-width: 767px) {
+    #info .container.mx-auto {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+#info .text-center h2 {
+    color: var(--project_information--color_swatch--heading_h2);
+}
+
+#info .info-topic-tab {
+    color: var(--mc-tab-text-color);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#info .info-topic-tab:hover {
+    color: var(--mc-tab-text-hover);
+    transition: .5s ease-in-out;
+}
+
+#info .info-topic-tab.-active {
+    color: var(--mc-tab-text-hover);
+    transition: .5s ease-in-out;
+}
+
+#info .info-topic-tab:after {
+    content: "•";
+    margin-left: 5px;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+#info .info-topic-tab.-active:after {
+    content: "•";
+    opacity: 1;
+}
+
+#info #info-block[data-active="0"] {
+    display: none;
+}
+#info-block {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+
+}
+
+#info-block>div {
+    grid-column: 6 span;
+}
+
+#info-block #info-progress {
+    grid-column: 6 span;
+}
+
+#info-block #info-progress-images {
+    grid-column: 6 span;
+}
+
+#info-detail-block .info-detail-text {
+/*    color: #828A92;*/
+}
+
+@media (max-width : 1319px) {
+    #info-block {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 4px;
+        padding-top: 16px;
+        padding-bottom: 56px;
+    }
+
+    #info-block #info-progress {
+        grid-row: 2/2;
+        grid-column: 6 span;
+    }
+
+    #info-block #info-progress-images {
+        grid-row: 1/2;
+        grid-column: 6 span;
+    }
+}
+#info #info-detail-wrap::-webkit-scrollbar,
+#info #info-progress::-webkit-scrollbar {
+    width: 8px;
+}
+
+#info #info-detail-wrap::-webkit-scrollbar-track,
+#info #info-progress::-webkit-scrollbar-track {
+    background: #BFC4C8;
+    border-radius: 10em;
+}
+
+#info #info-detail-wrap::-webkit-scrollbar-thumb,
+#info #info-progress::-webkit-scrollbar-thumb {
+    background: #828A92;
+    border-radius: 10em;
+    height: 4rem;
+}
+#info-btn-group-mob {
+    padding-top: 40px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+#info-btn-group-mob .info-btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 24px;
+    background: var(--project_information--button_color--button_color);
+    color: var(--project_information--button_color--text_color);
+    border-radius: 4px;
+    width: 75%;
+    height: 100%;
+}
+
+@media (max-width: 1319px) {
+    #info-btn-group-mob {
+        display: flex;
+    }
+}
+#info-progress {
+    height: 450px;
+    overflow: auto;
+
+}
+
+.progress-wrap {
+    padding-left: 80px;
+    max-height: 377px;
+    overflow: auto;
+}
+
+.progress-title-wrap {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.progress-title {
+    width: 100%;
+}
+
+.progress-title h3 {
+    color: var(--project_information--color_swatch--heading_h3);
+}
+.circle-progress {
+    width: 168px;
+    height: auto;
+    stroke-linecap: round;
+}
+
+.circle-progress-value {
+    stroke-width: 8px;
+    stroke: var(--project_information--new_progress_color--progress_color_overall);
+}
+
+.circle-progress-circle {
+    stroke-width: 5px;
+    stroke: #D7D7D7;
+}
+
+.circle-progress-text {
+    fill: var(--project_information--new_progress_color--number_color);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+@media (max-width: 1319px) {
+    .progress-title-wrap {
+        gap: 12px;
+    }
+
+    .circle-progress {
+        width: 108px;
+    }
+}
+.progress-bar .-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 10em;
+    background: #D7D7D7;
+    display: block;
+}
+
+.progress-bar .-bar-inner {
+    height: 12px;
+    position: relative;
+    top: -2px;
+    width: calc(var(--pc)*1%);
+    border-radius: 10em;
+    display: block;
+    transition: all 1s cubic-bezier(0.44, 0.67, 0.07, 0.91);
+}
+
+.progress-bar {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    grid-column-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+}
+
+.progress-bar .-percent {
+    /* color: #828A92; */
+}
+.progress-bar .-percent{
+    text-align: right;
+}
+#info-progress-images {
+    --i: 0;
+    --max: 3;
+}
+
+#info-progress-images .rail-images-wrap {
+    /* aspect-ratio: 640/392; */
+    overflow: hidden;
+    height: calc(100% - 48px);
+}
+
+#info-progress-images .rail-images {
+    display: flex;
+    height: 100%;
+    width: calc(100% * var(--max));
+    transform: translateX(calc(var(--i) * 100% / var(--max) * -1));
+    padding: 24px 0;
+    transition: .5s;
+}
+
+#info-progress-images .images-nav {
+    height: 48px;
+    display: grid;
+    grid-template-columns: auto auto 48px 48px;
+    gap: 8px;
+}
+
+#info-progress-images .images-nav .-counts {
+    text-align: right;
+    padding-right: 24px;
+}
+
+#info-progress-images .images-nav .-counts .-num-count {
+    font-size: 56px;
+    line-height: 56px;
+    color: var(--project_information--new_progress_color--progress_color_overall);
+}
+
+#info-progress-images .images-nav .-counts .-num-max {
+    font-size: 48px;
+    line-height: 48px;
+    color: #BFC4C8; 
+}
+
+#info-progress-images .image-item {
+    width: 100%;
+    height: 100%;
+}
+
+#info-progress-images .image-item::after {
+    position: relative;
+    background-color: #0003;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#info-progress-images .image-item-pic {
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 61.5%;
+}
+
+#info-progress-images .images-nav .-progress-arr {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: var(--mc-main-1);
+    background-image: var(--mc-arrow-up);
+    /* background-size: contain; */
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateZ(-90deg);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#info-progress-images .images-nav .-progress-arr:hover {
+
+    background-color: var(--project_information--new_progress_color--progress_color_overall);
+}
+
+#info-progress-images .images-nav .-progress-arr.-right {
+    transform: rotateZ(90deg);
+}
+
+#info-progress-images[data-end="1"] .images-nav .-progress-arr.-right {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#info-progress-images[data-end="start"] .images-nav .-progress-arr.-left {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (max-width: 1319px) {
+    #info-progress-images .rail-images {
+        padding: 0;
+        padding-bottom: 44px;
+    }
+
+    #info-progress-images .images-nav {
+        display: none;
+    }
+
+}
+
+
+.progress-title h3{
+    color: var(--project_information--new_progress_color--progress_color_by_topic);
+}
+.progress-item{
+    /* color: var(--project_information--new_progress_color--progress_color_by_topic); */
+}

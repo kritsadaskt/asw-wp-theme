@@ -1,0 +1,24 @@
+/*
+Theme Name: AssetWise (Seed Spring)
+Theme URI: https://assetwise.co.th/
+Author: Assetwise IT
+Author URI: https://assetwise.co.th
+Description: Theme for AssetWise Corp website
+Version: 3.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: spring
+Tags: featured-images, custom-menu
+*/
+
+/*
+===========================================
+
+This theme use SCSS, please check
+
+1. css/scss/_variables.scss - for some colors & styles.
+2. css/scss/mobile.scss - will be compiled to css/mobile.css and used for mobile version.
+3. css/scss/desktop.scss - will be compiled to css/desktop.css and used for desktop version.
+4. If you set $GLOBALS['s_style_css'] in functions.php to 'enable', you can add CSS to this file to override all CSS.
+    
+=========================================== 

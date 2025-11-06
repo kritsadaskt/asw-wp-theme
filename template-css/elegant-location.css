@@ -1,0 +1,204 @@
+#location-side-tab-head {
+    grid-column: 1 / span 24;
+}
+
+#location-side-left-content {
+    padding: 0 0rem;
+}
+
+#location-side-tab-head .info-tabs-block-wrap {
+    max-width: unset;
+}
+
+#location {
+    padding-top: 0px;
+    padding-bottom: 45px;
+}
+
+#location #location-side-left {
+    padding-top: 65px;
+}
+
+#location #location-side-right {
+    padding-top: 40px;
+}
+
+#location .location-tabs-icon {
+    margin-left: 0;
+    margin-right: 12px;
+}
+
+#location .title-c,
+.title-b {
+    display: none;
+}
+
+#location .theme-title .title-a {
+    color: var(--location--color_swatch--heading_h2);
+}
+
+#location .location-map {
+    border: 0;
+    border-radius: 0;
+}
+
+#location .info-btn-gg {
+    border-radius: 0;
+}
+
+#location .btn-sale {
+    border-radius: 0;
+}
+
+#location .info-tab.-active .location-tab-txt {
+    color: var(--location--new_tab_block--item_text_hover_active);
+}
+
+#location .info-tab .location-tab-txt {
+    color: var(--location--new_tab_block--item_text);
+    padding: 6px 32px;
+
+}
+
+#location #location-side-tab-body {
+    max-height: 230px;
+}
+
+#location .info-tab .location-tab-txt:hover {
+    color: var(--location--new_tab_block--item_text_hover_active);
+}
+
+#location .info-tabs-block {
+    /* padding-bottom: 7px; */
+    padding: 0;
+    /* border-bottom: 1px solid #545e6766; */
+    background: var(--location--new_tab_block--bg_color);
+    border-radius: 0;
+    color: var(--location--new_tab_block--item_text);
+    background: transparent;
+}
+
+#location .info-tab {
+    position: relative;
+}
+
+#location .info-tab img {
+/*    display: none;*/
+opacity: 0;
+}
+
+#location .info-tab::after {
+    content: " ";
+    background: var(--location--new_tab_block--item_text);
+    position: absolute;
+    left: unset;
+    right: 0;
+    width: 1px;
+    height: 8px;
+    top: calc(50% - 4px);
+}
+
+#location .info-tab:nth-last-child(2):after {
+    height: 0;
+}
+
+#location .location-tabs-icon {
+    --icon: url(/wp-content/uploads/2022/08/6Other.png);
+    --location--new_tab_block--item_text
+    width: 1.5rem;
+    height: 1.5rem;
+    -webkit-mask-image: var(--icon);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}
+
+#location .location-tabs-txt-name,
+#location .location-tabs-icon {
+    transition: all .3s;
+}
+
+#location .info-tab.-active .location-tabs-icon,
+#location .info-tab:hover .location-tabs-icon {
+    background-color: var(--location--new_tab_block--item_text_hover_active);
+}
+
+#location .info-tab .location-tabs-icon {
+    margin-right: 10px;
+    background: var(--location--new_tab_block--item_text);
+}
+
+#location .location-side-tab-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#location .location-side-tab-body::-webkit-scrollbar-track {
+    background: #323A4100;
+    border-radius: 8px;
+}
+
+
+#location .location-side-tab-body::-webkit-scrollbar-thumb {
+    background: #323A41;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 1024px) {
+    #location .theme-title .title-a {
+        text-align: left;
+    }
+
+    #location #location-side-left {
+        padding-top: 0px;
+    }
+
+    #location #location-side-left {
+        padding: 0rem 28px;
+        padding: 0rem 1rem;
+    }
+
+    #location #location-side-right {
+        padding-inline: 1rem;
+    }
+
+    #location #location-side-left-content-button {
+        grid-column: 1/13;
+    }
+
+    #location .info-tabs-block {
+        padding-bottom: 0;
+    }
+
+    #location .info-btn-gg {
+        width: 100%;
+    }
+
+    #location .location-text>p {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    #location .title-a {
+        font-size: 38px;
+        line-height: 40px;
+        padding-top: 43px;
+    }
+
+    #location .info-tab .location-tab-txt {
+        color: var(--location--new_tab_block--item_text);
+        padding: 6px 16px;
+
+    }
+}
+
+#location .info-tabs-blocks {
+    /* border-bottom: 0; */
+}
+#location .info-tabs-block-arrow::after{
+    background-size: 1rem;
+}
+
+#location #location-side-left-content {
+    padding: 0 0rem;
+}

@@ -1,0 +1,122 @@
+#plan .plan-select {
+    margin-top: 40px;
+}
+
+#plan .info-tab-txt {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+#plan .info-tabs-block {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    /* border-bottom: 1px solid #CFD4D9; */
+}
+
+#plan {
+    --mc-chevron-up: url('/wp-content/uploads/2023/03/chevron-up-dark-e1678091797243.png');
+}
+
+#plan .tag {
+    color: var(--plan--color_swatch--heading_h2);
+}
+
+#plan .dynamic-selector-ui {
+    border-radius: 0;
+    border-bottom: 1px solid #C6BCBC;
+    color: #9FA5AB;
+    color: rgb(52,48,47);
+    background-color: #8B8B8B0c;
+}
+
+#plan .info-tabs-block-arrow::after {
+    background-size: 14px;
+}
+
+#plan .theme-title .title-a {
+    color: var(--plan--color_swatch--heading_h2);
+}
+
+#plan .plan-pic img {
+    border-radius: 0;
+}
+
+#plan .info-tab-option {
+    color: rgba(32, 40, 49, 1);
+}
+
+
+#plan .info-tab-option:hover {
+    background-color: var(--plan--color_swatch--body_text);
+    color: var(--plan--color_swatch--heading_h2);
+
+    background-color: var(--plan--element--pagination_color);
+    color: var(--plan--color_swatch--body_text);
+}
+
+#plan .info-tab-options {
+    border-radius: 0px;
+    background-color: white;
+    backdrop-filter: blur(0px);
+}
+
+#plan .info-tab-options::-webkit-scrollbar {
+    width: 6px;
+    padding-right: 10px !important;
+}
+
+#plan .info-tab-options::-webkit-scrollbar-thumb {
+    background: #8B8B8B;
+    border-radius: 8px;
+}
+
+#plan .title-c,
+#plan .title-b {
+    display: none;
+}
+
+#plan .dynamic-selector-ui-wrap{
+    border-radius: 0;
+    background: none;
+}
+
+#plan .-line {
+    background-color: var(--plan--new_tab_block--item_text);
+}
+
+#plan .info-tabs-blocks{
+	border-bottom: 1px solid var(--plan--new_tab_block--item_text);
+}
+
+/*-- Mobile Version --*/
+@media (max-width: 1319px) {
+    #plan .info-tabs-block {
+        padding: 0px;
+    }
+
+    #plan {
+        padding-top: 0px;
+    }
+
+    #plan .title-c,
+    #plan .title-b {
+        display: none;
+    }
+
+    #plan .title-a {
+        font-size: 38px;
+        line-height: 40px;
+        padding-top: 43px;
+    }
+
+    #plan .-line {
+        display: block;
+    }
+}
+
+
+
+#plan .info-tab{
+    background: transparent;
+}

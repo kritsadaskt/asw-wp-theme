@@ -1,0 +1,30 @@
+.-line {
+	height: 8px;
+	width: 1px;
+	background-color: var(--all--new_tab_block--item_text);
+	position: relative;
+	top: 15px;
+}
+
+.-absolute {
+	--w: 20;
+	--l: 0;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: calc(1px*var(--w));
+	transform: translateX(calc(1px*var(--l)));
+	transition: all .4s ease-in-out;
+	height: 2px;
+	background: var(--mc-gd);
+}
+/* .info-tabs-block,
+#info .pro-info-topic,
+.info-tabs-blocks{
+	border-bottom: 1px solid #CFD4D9;
+} */
+
+#info .pro-info-topic,
+.info-tabs-blocks{
+	border-bottom: 1px solid var(--all--new_tab_block--item_text);
+}
