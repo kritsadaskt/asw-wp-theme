@@ -7,6 +7,8 @@ $f_footer = get_field('footer_code');
   .link-footer:hover{
     color: #fff !important;
   }
+
+  
   .logo-footer:hover{
     opacity: 0.8;
     transition: .3s;
