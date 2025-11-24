@@ -156,4 +156,4 @@ if (!is_user_logged_in() AND 0) {
 }
 ?>
 
-<div id="content" class="site-content xxx">
+<div id="content" class="site-content test-class">
