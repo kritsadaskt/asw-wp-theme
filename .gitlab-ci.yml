@@ -8,7 +8,7 @@ deploy_production:
   
   before_script:
     # Install SSH client
-    - apk add --no-cache openssh-client rsync
+    - apk add --no-cache openssh-client rsync git
     
     # Setup SSH
     - mkdir -p ~/.ssh
