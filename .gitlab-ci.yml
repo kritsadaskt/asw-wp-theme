@@ -93,7 +93,7 @@ deploy_production:
   
   environment:
     name: production
-    url: https://new.assetwise.dev
+    url: https://www3.assetwise.dev
 
 # Optional: Deploy to staging on develop branch
 # deploy_staging:
