@@ -8,6 +8,16 @@
  * @package seed
  */
 
+/**
+ * Add S3 URL to upload directory
+ */
+add_filter( 'upload_dir', function( $uploads ) {
+    $s3_url = 'https://asw-medias.s3.ap-southeast-1.amazonaws.com/uploads';
+    $uploads['baseurl'] = $s3_url;
+    $uploads['url'] = $s3_url . $uploads['subdir'];
+    return $uploads;
+} );
+
 /* LAYOUT */
 if (!isset($GLOBALS['s_blog_layout'])) {
     $GLOBALS['s_blog_layout']          = 'full-width';
@@ -403,6 +413,13 @@ function springtheme_ci()
         $theClBg .= ".hover-bg-ci" . ($i + 1) . ":hover{background-color:var(--ci" . ($i + 1) . ")}\n";
     }
     ?>
+
+    <?php if (!empty($theCi)) { ?>
+        <pre class="hidden">
+            <?php echo $theCi; ?>
+        </pre>
+    <?php } ?>
+
     <style type="text/css">
         :root {
             <?php 
@@ -509,12 +526,9 @@ function asw_tpj_header($f){
             --mc-nav-btn-bg-hover: var(--mc-main-2);
             --mc-nav-btn-txt-ready: var(--mc-main-3);
             --mc-nav-btn-txt-hover: var(--mc-main-3);
-            --mc-arrow-up: url('<?= acf_img($f['element']['pagination_arrow'], 'medium')
-                ?>');
-            --mc-chevron-up: url('<?= acf_img($f['element']['pagination_chevron'], 'medium')
-                ?>');
-            --mc-lightbox-arrow: url('<?= acf_img($f['element']['lightbox_arrow'], 'medium')
-                ?>');
+            --mc-arrow-up: url('<?= acf_img($f['element']['pagination_arrow'], 'medium') ?>');
+            --mc-chevron-up: url('<?= acf_img($f['element']['pagination_chevron'], 'medium') ?>');
+            --mc-lightbox-arrow: url('<?= acf_img($f['element']['lightbox_arrow'], 'medium') ?>');
             --mc-pagination-color: <?=$f['element']['pagination_color']?>;
             --mc-main-bg-cl: <?= $f['tab_block']['background_color'] ?>;
             --mc-main-bg-hover: <?= $f['tab_block']['background_hover_color'] ?>;
@@ -2538,7 +2552,7 @@ function asw_project_render_theme($template_name,$common_layout){
     <!-- =====🔺🔺🔺🔺🔺 End Template V2 Loop 🔺🔺🔺🔺🔺===== -->
     <!-- =====👇👇👇👇👇 Start Template V2 Scroll JS 👇👇👇👇👇===== -->
     <?php
-    v2_asw_tpj_scroll_js();
+    asw_tpj_scroll_js();
     ?>
     <!-- =====🔺🔺🔺🔺🔺 End Template V2 Scroll JS 🔺🔺🔺🔺🔺===== -->
     <!-- ~~~~~~~~~~ End Template V2 ~~~~~~~~~~ -->
@@ -2554,177 +2568,6 @@ function act_template_project_css($opt,$template_name,$layout){
         ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/all-<?=$layout?>.css?t=<?=time()?>"><?php
     }
     ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/<?=$template_name?>-<?=$layout?>.css?t=<?=time()?>"><?php
-}
-
-function v2_asw_tpj_scroll_js()
-{
-    ?>
-    <script type="text/javascript">
-        let navItems = []
-        let navItemsMob = []
-        let infoTabBlockArr = $$('.info-tabs-block');
-
-        function setInfoTab() {
-            let j = 0
-            for (let i of infoTabBlockArr) {
-                if (i.querySelector('.info-tabs-blocks') != null) {
-                    let contWidth = i.clientWidth
-                    let blocksWidth = i.querySelector('.info-tabs-blocks').clientWidth
-                    if (blocksWidth > contWidth) {
-                        i.dataset.isOverflow = "1"
-                        i.style.setProperty('--left', 0)
-                        i.dataset.slot = 0
-                        i.dataset.end = 0
-                        i.querySelector('.info-tabs-block-arrow.-right').setAttribute('onclick', `tabInfoSlot(${j},1)`)
-                        i.querySelector('.info-tabs-block-arrow.-left').setAttribute('onclick', `tabInfoSlot(${j},-1)`)
-                    } else {
-                        i.parentElement.style.width = "max-content"
-                    }
-                }
-                j++;
-            }
-        }
-        setInfoTab()
-
-        function tabInfoSlot(j, direction) {
-            let parent = $$('.info-tabs-block')[j]
-            let items = parent.querySelectorAll('.info-tab')
-            let slot = [0]
-            let contWidth = parent.clientWidth - 80
-            let nowSlot = parseInt(parent.dataset.slot)
-            let temp = 0;
-            let left = 0;
-            let shift = 0;
-            for (let i of items) {
-                let width = i.clientWidth
-                if (temp + width < contWidth) {
-                    temp += width
-                } else {
-                    if (slot[slot.length - 1] != left) {
-                        slot.push(left)
-                    }
-                    temp = width
-                }
-                left += width
-            }
-
-
-            let max = slot.length
-
-            let newSlot = ((nowSlot + direction) % max + max) % max
-            shift = contWidth - temp + 18
-
-            parent.dataset.slot = newSlot
-
-            if (newSlot == max - 1) {
-                parent.dataset.end = 1
-                parent.style.setProperty('--left', slot[newSlot] - shift)
-            } else {
-                parent.dataset.end = 0
-                parent.style.setProperty('--left', slot[newSlot])
-            }
-        }
-
-        function navItemsClick(i) {
-            window.scrollTo(0, navItems[i].top)
-        }
-
-        function check_is_on_nav() {
-            let masthead = $('#masthead')
-            let templateNav = $('.template-nav')
-            let headerH = masthead.offsetHeight + templateNav.offsetHeight
-            let pageHeight = window.innerHeight;
-            navItems = []
-            let el = $$('.is-on-nav');
-            let c = 0;
-            let k = -1;
-            for (let i of el) {
-                navItems.push({
-                    i: c,
-                    y: i.getBoundingClientRect().y,
-                    top: i.offsetTop - headerH,
-                    el: i
-                })
-                if (i.getBoundingClientRect().y - headerH <= 1) {
-                    k++
-                }
-                c++
-            }
-            if ($('.theme-menu-item.-active') != null) {
-                $('.theme-menu-item.-active').classList.remove('-active')
-            }
-            if (k >= 0) {
-                $$('.theme-menu-item')[k].classList.add('-active')
-            }
-        }
-
-        function check_scroll() {
-            check_is_on_nav()
-            check_section_fade()
-        }
-
-
-        function check_section_fade() {
-            check_is_on_nav()
-            const s = $$('.section-fade')
-            let pageHeight = window.innerHeight;
-            let bottomGap = pageHeight / 20
-            for (let i of s) {
-                let r = i.getBoundingClientRect();
-                let fromTop = r.y
-                let sHeight = r.height
-                let fromBottom = fromTop - pageHeight
-                let lineOfView = fromBottom + bottomGap
-                if (lineOfView < 0) {
-                    i.dataset.show = 1
-                } else {
-                    i.dataset.show = 0
-                }
-            }
-
-        }
-        document.addEventListener("scroll", check_scroll);
-
-        function scrollToEl(selector) {
-            let masthead = $('#masthead')
-            let templateNav = $('.template-nav')
-            let headerH = masthead.offsetHeight + templateNav.offsetHeight
-            let t = $(selector).offsetTop - headerH
-            window.scrollTo(0, t)
-        }
-
-        function navMobClick() {
-            parent = $('.nav-menu-item-mob')
-            parent.dataset.expand *= -1
-            $('.theme-menu-items-float').dataset.expand = parent.dataset.expand
-        }
-
-
-        check_section_fade()
-        if ($('.theme-menu-item-mob') != null) {
-            $('.nav-menu-item-mob span').innerHTML = $('.theme-menu-item-mob').innerText
-        }
-
-        $('.theme-menu-items-float').style.top = $('#masthead').offsetHeight + $('.template-nav').offsetHeight + 'px'
-        $('.header_blank').style.height = $('.template-nav').offsetHeight + 'px'
-
-
-        function toggleNavMob(i) {
-            navItemsMob = []
-            let el = $$('.is-on-nav-mob')
-            for (let i of el) {
-                navItemsMob.push({
-                    el: i,
-                    top: i.offsetTop - $('#masthead').offsetHeight - $('.template-nav').offsetHeight
-                })
-            }
-            window.scrollTo(0, navItemsMob[i].top)
-            $('.theme-menu-items-float').dataset.expand = -1
-            $('.nav-menu-item-mob').dataset.expand = -1
-            $('.nav-menu-items-mob span').innerHTML = $$('.theme-menu-item-mob')[i].innerText
-        }
-    </script>
-    <?php
 }
 add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
 
