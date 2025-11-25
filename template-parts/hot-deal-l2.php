@@ -6,7 +6,7 @@ $pj_f = get_field('hot_deal_l2');
 $pj_content = get_field('content',$pj_f['project'][0]->ID);
 $cp_pj_un_arg = array('post_type' => 'hot-deal','posts_per_page'=>-1,'post_parent'=>$id);
 $cp_pj_un = new WP_Query($cp_pj_un_arg);
-$theme_img = get_site_url().'/wp-content/themes/seed-spring/img';
+$theme_img = get_site_url().'<?= get_template_directory_uri() ?>img';
 $pj_gallery = '';
 $pj_location = '';
 $logo = get_field('logo',$pj_f['project'][0]->ID)['sizes']['large'];

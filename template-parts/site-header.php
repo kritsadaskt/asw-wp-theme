@@ -310,7 +310,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                 <div class="site-tools flex flex-row items-center gap-4 xl:gap-5">
                     <div class="flex flex-row items-center change-lang pointer" data-lang-count="1" style="-margin-right: 10px;">
                         <div class="-h-lang-this-lang">
-                            <img src="/wp-content/themes/seed-spring/img/th.png" alt="ไทย" />
+                            <img src="<?= get_template_directory_uri() ?>/img/th.png" alt="ไทย" />
                             <h6 class="inline-block site-lang-txt">ไทย</h6>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="--more ml-3">
@@ -340,12 +340,12 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                                 xconsolex.log(thislang);
                                 if (thislang.current_lang) {
                                     document.querySelector('.-h-lang-this-lang .site-lang-txt').innerText = thislang.name;
-                                    document.querySelector('.-h-lang-this-lang img').src = `/wp-content/themes/seed-spring/img/${thislang.slug}.png`;
+                                    document.querySelector('.-h-lang-this-lang img').src = `<?= get_template_directory_uri() ?>/img/${thislang.slug}.png`;
                                 }else{
                                     //ถ้าจะเปิดจีนเหมือนเดิม เอา if ด้านล่างออก
                                     if(lll != 'cn'){
                                         lang_html += `<a href="${thislang.url}" class="-this-lang-${lll}">
-                                        <img src="/wp-content/themes/seed-spring/img/${lll}.png" class="inline" style="width: 24px;margin-right: 5px;">
+                                        <img src="<?= get_template_directory_uri() ?>/img/${lll}.png" class="inline" style="width: 24px;margin-right: 5px;">
                                         <h6 class="inline-block site-lang-txt">${thislang.name}</h6>
                                         </a>`;
                                     }
@@ -638,7 +638,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                 <div id="burger-1" class="bg-ci-blue-300 container relative">
                     <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1-1.png"
                     class="absolute pointer-events-none leaf-burger">
-                    <img src="/wp-content/themes/seed-spring/img/<?=$xlang?>/logo-asw.png"
+                    <img src="<?= get_template_directory_uri() ?>/img/<?=$xlang?>/logo-asw.png"
                     class="flex items-start mt-6 ml-10"  style="max-width: 188px;">
                     <div class="ham-lang-mob">
 

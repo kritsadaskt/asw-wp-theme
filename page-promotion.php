@@ -795,13 +795,13 @@ function pad($num){
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); {
 						$cate_name = wp_get_post_terms( $post->ID, 'promotion_type');
-						$v = get_fields(); 
-						$featured_img = get_field('banner_mobile',$post->ID)['sizes']['medium-large-thumb'];
-						$card_caption = $v['card_caption'];
-						if ($featured_img == '') {
-							$featured_img = get_the_post_thumbnail_url($post->ID,'large');
+						$v = get_fields();
+						if (get_field('banner_mobile', $post->ID) && isset(get_field('banner_mobile', $post->ID)['sizes']['medium-large-thumb'])) {
+							$featured_img = get_field('banner_mobile', $post->ID)['sizes']['medium-large-thumb'];
+						} else {
+							$featured_img = get_the_post_thumbnail_url($post->ID, 'large');
 						}
-						// pre($post->post_parent);
+						$card_caption = $v['card_caption'];
 						?>
 						<div id="" onclick="location.href = '<?= get_permalink()?>'" termID="<?= $cate_name[0]->term_id ?>" class="pointer col-span-1 bg-white promotion-card" data-show="0" data-x="null" style="display: block;" >
 							<div class="grid grid-rows-12-">

@@ -1,7 +1,7 @@
 
 <?php get_header() ?>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js" async></script>
-<link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/css/compare.css">
+<link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>css/compare.css">
 <?php 
 if (pll_current_language()=='en') {
 	$filter_price = get_field('filter_price_range',39867);
@@ -576,16 +576,16 @@ if (!$found_all) {
 													<div class="flex ml-4">
 														<span>
 															<?php if($cate_parent->name == 'บ้านและทาวน์โฮม'){?>
-																<img src="/wp-content/themes/seed-spring/img/minimal-icon/minimal-icon-house.png">
+																<img src="<?= get_template_directory_uri() ?>/img/minimal-icon/minimal-icon-house.png">
 															<?php }else{?>
-																<img src="/wp-content/themes/seed-spring/img/minimal-icon/minimal-icon-condo.png">
+																<img src="<?= get_template_directory_uri() ?>/img/minimal-icon/minimal-icon-condo.png">
 															<?php }?>
 														</span>
 														<?=$cate_parent->name?>
 													</div>
 													<div class="flex ml-4">
 														<span>
-															<img src="/wp-content/themes/seed-spring/img/minimal-icon/minimal-icon-map.png" class="project-card-icon -loca">
+															<img src="<?= get_template_directory_uri() ?>/img/minimal-icon/minimal-icon-map.png" class="project-card-icon -loca">
 														</span>
 														<?=$loca_child->name?>
 													</div>
@@ -639,7 +639,7 @@ if (!$found_all) {
 								</div>
 							</div>
 							<div class="btn-close" @click="removeProjectVueTemp(estate);">
-								<img src="/wp-content/themes/seed-spring/img/icon-close.svg">
+								<img src="<?= get_template_directory_uri() ?>/img/icon-close.svg">
 							</div>
 						</div>
 					</div>
@@ -683,7 +683,7 @@ if (!$found_all) {
 									</div>
 								</div>
 								<div class="btn-close" @click="removeProjectVueTemp(estate);">
-									<img src="/wp-content/themes/seed-spring/img/icon-close.svg">
+									<img src="<?= get_template_directory_uri() ?>/img/icon-close.svg">
 								</div>
 							</div>
 						</div>
@@ -980,7 +980,7 @@ if (!$found_all) {
 
 					$(`.comp-header .-detail .-col.-estate[data-pj-id="<?=$pj_id?>"] .show-estate`).innerHTML += `
 					<button class="btn-close" @click="removeProjectVue(<?=$pj_id?>);" onclick="removeProject(<?=$pj_id?>);">
-					<img src="/wp-content/themes/seed-spring/img/icon-close.svg">
+					<img src="<?= get_template_directory_uri() ?>/img/icon-close.svg">
 					</button>
 					<img class="estate-thumbnail" src="<?=get_the_post_thumbnail_url($data['post']->ID,"medium")?>" alt="<?=$data['post']->post_title?>">
 					<div><h2><?=$data['post']->post_title?></h2>
@@ -1004,7 +1004,7 @@ if (!$found_all) {
 
 					$(`.sticky-top .-detail .-col.-estate[data-pj-id="<?=$pj_id?>"] .show-estate-minimal`).innerHTML += `
 					<button class="btn-close" @click="removeProjectVue(<?=$pj_id?>);" onclick="removeProject(<?=$pj_id?>);">
-					<img src="/wp-content/themes/seed-spring/img/icon-close.svg">
+					<img src="<?= get_template_directory_uri() ?>/img/icon-close.svg">
 					</button>
 					<img class="estate-thumbnail" src="<?=wp_get_attachment_image_url(get_post_thumbnail_id($data['post']->ID, "large"))?>" alt="<?=$data['post']->post_title?>">
 					<div>

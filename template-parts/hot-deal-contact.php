@@ -7,7 +7,7 @@ $pj_contact['telephone_number'] = get_field('telephone_number',$pj->ID);
 $pj_contact['line_id'] = get_field('line_id',$pj->ID);
 $pj_contact['facebook'] = get_field('facebook',$pj->ID);
 $pj_contact['sales_gallery'] = get_field('sales_gallery',$pj->ID);
-$theme_img = get_site_url().'/wp-content/themes/seed-spring/img/hotdeal';
+$theme_img = get_site_url().'<?= get_template_directory_uri() ?>/img/hotdeal';
 ?>
 <style type="text/css">
 	#contact-us{

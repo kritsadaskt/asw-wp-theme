@@ -1624,13 +1624,12 @@ if ($f['featured_1']['is_open'] == 'open') {
 					'order' => 'DESC',
 				);
 
-
 				$loop = new WP_Query($args);
 				$chk = 0;
 				while ($loop->have_posts()):
 					$loop->the_post();
 					$featured_img = wp_get_attachment_image_src($post->ID, 'medium-large-thumb');
-					$v = get_postdata($post->ID);
+					$value = get_post($post->ID);
 					if ($chk == 1) {
 				?>
 						<div class="col-span-1 news-item-<?= $chk ?> relative" data-aos="fade-up" data-aos-duration="500"
@@ -1672,7 +1671,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 								} ?>
 								<div class="home-news-date-sp"></div>
 								<div class="row-span-1 cl-ci-grey-300 home-news-date">
-									<?= asw_date_format($v['Date']) ?>
+									<?= asw_date_format($value->post_date) ?>
 								</div>
 							</div>
 						</div>
@@ -1709,7 +1708,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 								</div>
 								<div class="home-news-date-sp"></div>
 								<div class="row-span-1 cl-ci-grey-300 home-news-date">
-									<?= asw_date_format($v['Date']) ?>
+									<?= asw_date_format($value->post_date) ?>
 								</div>
 							</div>
 						</div>
@@ -1928,26 +1927,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 	</div>
 </section>
 
-<!-- WRS Home Banner -->
-<section id="wrs_banner" class="py-12" style="background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/circle.png'); background-size: cover; background-position: left;">
-	<div class="container mx-auto flex flex-col md:flex-row px-16 md:px-0 gap-7 md:gap-0">
-		<div class="w-full flex md:w-1/2 md:pr-20 md:justify-end">
-			<div class="inner inline-block w-auto">
-				<p class="text-4xl text-neutral-900 font-medium">WE ARE</p>
-				<h3 class="cl-ci-orange-500 text-[5rem] font-bold leading-[0.7] mb-2">HIRING</h3>
-				<p><?php pll_e('โอกาสในการร่วมงานกับองค์กรชั้นนำ') ?></p>
-			</div>
-		</div>
-		<div class="w-full md:w-1/2 flex justify-center md:justify-start pl-6 md:pl-24 border-l-[6px] border-l-[var(--ci-veri-500)]">
-			<div class="inner w-full md:w-1/2 flex flex-col">
-				<ul id="wrs_jobs_list" class="mb-5 flex flex-col gap-1">
-					<li class="text-neutral-700">Loading...</li>
-				</ul>
-				<a href="https://careers.assetwise.co.th/jobs/" class="bg-[var(--ci-veri-500)] hover:bg-[var(--ci-veri-300)] w-fit px-5 py-1 rounded text-white font-medium align-self-end"><?php pll_e('ดูตำแหน่งทั้งหมด') ?></a>
-			</div>
-		</div>
-	</div>
-</section>
+<?php //get_template_part('template-parts/careers-home-section'); ?>
 
 <style type="text/css">
 	.sec-home-filter {
@@ -1987,26 +1967,32 @@ if ($f['featured_1']['is_open'] == 'open') {
 		<div class="lg:flex justify-center grid grid-cols-1 lg:grid-cols-4 lg:gap-2">
 			<div class="px-8 col-span-1 home-bottom-filter pointer" data-clickblank onclick="window.location.href='https://aswland.assetwise.co.th';">
 				<div class="home-bottom-filter-img">
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-1.png">
+					<img src="/wp-content/uploads/2022/10/icon-menu-1.png">
 				</div>
 				<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('เสนอขายที่ดิน') ?></h6>
 			</div>
-      <!--
-			<div class="px-8 col-span-1 home-bottom-filter pointer" data-clickblank onclick="window.location.href='https://procurement.assetwise.co.th';">
-				<div class="home-bottom-filter-img">
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-2.png">
-				</div>
-				<h6 class="text-center cl-ci-grey-200 f26-22"><?php //pll_e('เสนอขายสินค้าและบริการ') ?></h6>
+      
+			<div class="px-8 col-span-1 home-bottom-filter pointer">
+				<a href="https://aswinno.assetwise.co.th/vendorportal/Vendor/Verify" title="" target="_blank" class="flex flex-col md:flex-row items-center">	
+					<div class="home-bottom-filter-img">
+						<img src="/wp-content/uploads/2022/10/icon-menu-2.png">
+					</div>
+					<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('เสนอขายสินค้าและบริการ') ?></h6>
+				</a>
 			</div>
-			<div class="px-8 col-span-1 home-bottom-filter pointer" onclick="window.location.href='#';">
-		<div class="home-bottom-filter-img">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-3.png">
-		</div>
-		<h6 class="text-center cl-ci-grey-200 f26-22">ร่วมงานกับเรา</h6>
-	</div> -->
+     
+			<div class="px-8 col-span-1 home-bottom-filter pointer">
+        <a href="https://careers.assetwise.co.th" title="ร่วมงานกับ AssetWise" target="_blank" class="flex flex-col md:flex-row items-center">
+          <div class="home-bottom-filter-img">
+            <img src="/wp-content/uploads/2022/10/icon-menu-3.png">
+          </div>
+          <h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('ร่วมงานกับเรา'); ?></h6>
+        </a>
+      </div>
+
 			<div class="px-8 col-span-1 home-bottom-filter pointer">
 				<div class="home-bottom-filter-img">
-					<a href="tel:021680000" class=""><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-4.png"></a>
+					<a href="tel:021680000" class=""><img src="/wp-content/uploads/2022/10/icon-menu-4.png"></a>
 				</div>
 				<a href="tel:021680000" class="">
 					<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('ติดต่อเรา') ?></h6>

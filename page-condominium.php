@@ -915,15 +915,12 @@ $endtime = microtime(true); // Bottom of page
 </script>
 
 <?php 
-$pro_type = explode(",", $_GET['type']);
-$pro_loca = explode(",", $_GET['location']);
-$pro_brand = explode(",", $_GET['brand']);
-$pro_price = ($_GET['price']);
-
-// new price
-$pro_price_max = ($_GET['price_max']);
-$pro_price_min = ($_GET['price_min']);
-// end new price
+isset($_GET['type']) ? $pro_type = explode(",", $_GET['type']) : $pro_type = array();
+isset($_GET['location']) ? $pro_loca = explode(",", $_GET['location']) : $pro_loca = array();
+isset($_GET['brand']) ? $pro_brand = explode(",", $_GET['brand']) : $pro_brand = array();
+isset($_GET['price']) ? $pro_price = ($_GET['price']) : $pro_price = '';
+isset($_GET['price_max']) ? $pro_price_max = ($_GET['price_max']) : $pro_price_max = '';
+isset($_GET['price_min']) ? $pro_price_min = ($_GET['price_min']) : $pro_price_min = '';
 
 $lis_type = array();
 $lis_loca = array();
@@ -1864,36 +1861,46 @@ foreach ($pro_brand as $key => $value) {
 			while ( $loop->have_posts() ) : $loop->the_post(); {
 				$featured_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 				$cate_name = wp_get_object_terms( $post->ID, 'project-type');
-				foreach ($cate_name as $pjt_k => $pjt_v) {
-					if ($pjt_v->parent == 0) {
-						$cate_parent = $pjt_v;
-					}else{
-						$cate_brand = $pjt_v;
+
+				if (count($cate_name) > 0) {
+					foreach ($cate_name as $pjt_k => $pjt_v) {
+						if ($pjt_v->parent == 0) {
+							$cate_parent = $pjt_v;
+						}else{
+							$cate_brand = $pjt_v;
+						}
 					}
 				}
+
 				$loca_name = wp_get_object_terms( $post->ID, 'project_location');
-				foreach ($loca_name as $pjt_k => $pjt_v) {
-					if ($pjt_v->parent == 0) {
-						$loca_parent = $pjt_v;
-					}else{
-						$loca_child = $pjt_v;
+				if (count($loca_name) > 0) {
+					foreach ($loca_name as $pjt_k => $pjt_v) {
+						if ($pjt_v->parent == 0) {
+							$loca_parent = $pjt_v;
+						}else{
+							$loca_child = $pjt_v;
+						}
 					}
 				}
 				
 				$stat_name = wp_get_object_terms( $post->ID, 'project_status');
-				$cate_icon = get_field('icon','project-type' . '_' . $cate_parent->term_id);
-				$stat_color = get_field('color','project_status' . '_' . $stat_name[0]->term_id);
-				$stat_label = get_field('label','project_status' . '_' . $stat_name[0]->term_id);
-				$price = get_field('price');
-				$order++;
-				$pj_price = 0;
-				$float_value = (float) $price;
-				if (strval($float_value) == $price) {
-					$pj_price = floatval($price)*100;
+				if (count($stat_name) > 0) {
+					$cate_icon = get_field('icon','project-type' . '_' . $cate_parent->term_id);
+					$stat_color = get_field('color','project_status' . '_' . $stat_name[0]->term_id);
+					$stat_label = get_field('label','project_status' . '_' . $stat_name[0]->term_id);
+					$price = get_field('price');
+					$order++;
+					$pj_price = 0;
+					$float_value = (float) $price;
+					if (strval($float_value) == $price) {
+						$pj_price = floatval($price)*100;
+					}
 				}
-				$logo = get_field('logo')['sizes']['large'];
+				if (get_field('logo')) {
+					$logo = get_field('logo')['sizes']['large'];
+				}
 				?>
-				<div data-compare-id="<?=$post->ID?>" data-compare-selected="0" the="<?=$cate_parent->name?>" cate="<?=$cate_brand->name?>" data-price="<?=$pj_price?>" data-date="<?=$order?>" loca="<?=$loca_child->name?>" type="<?=$stat_label?>" class="home-project-card col-span-1 project-card card-img" style="--i:<?=$order?>;order:calc( var(--i) * var(--sortby) * -1);display: grid;">
+				<div data-compare-id="<?=$post->ID?>" data-compare-selected="0" the="<?= isset($cate_parent->name) ? $cate_parent->name : ''?>" cate="<?= isset($cate_brand->name) ? $cate_brand->name : ''?>" data-price="<?=$pj_price?>" data-date="<?=$order?>" loca="<?= isset($loca_child->name) ? $loca_child->name : ''?>" type="<?=$stat_label?>" class="home-project-card col-span-1 project-card card-img" style="--i:<?=$order?>;order:calc( var(--i) * var(--sortby) * -1);display: grid;">
 					<a href="<?=get_the_permalink()?>" class="" target="_blank">
 						<div data-compare-id="<?=$post->ID?>" class="card-project relative pointer grid grid-cols-2 md:block" data-show="0" data-x="null">
 							<div class="py-4 col-start-2 col-span-1" style="padding-right: 12px;background-color: white;">
@@ -2036,13 +2043,12 @@ foreach ($pro_brand as $key => $value) {
 </script>
 
 <script type="text/javascript">
-	url_min = "<?=$_GET['price_min']?>"
-	url_max = "<?=$_GET['price_max']?>"
-	if ($(`[data-price-max="${url_max}"][data-price-min="${url_min}"]`)) {
-		xconsolex.log('not have')
-		$(`[data-price-max="${url_max}"][data-price-min="${url_min}"]`).click()
-	}else{
-		xconsolex.log('have')
+	isset_url_min = "<?=isset($_GET['price_min']) ? $_GET['price_min'] : ''?>"
+	isset_url_max = "<?=isset($_GET['price_max']) ? $_GET['price_max'] : ''?>"
+	if (isset_url_min != '' && isset_url_max != '') {
+		if ($(`[data-price-max="${isset_url_max}"][data-price-min="${isset_url_min}"]`)) {
+			$(`[data-price-max="${isset_url_max}"][data-price-min="${isset_url_min}"]`).click()
+		}
 	}
 	document.querySelector('#filter_2').dataset.open = -1
 	document.querySelector('#filter_cost').dataset.open = -1

@@ -62,10 +62,12 @@ act_template_project_css($opt,$template_name,$layout);
                                                     <?= $value['text'] ?>
                                                     <ul class="ml-6">
                                                         <?php
-                                                        foreach ($value['bullet'] as $key => $v) {
-                                                            ?>
-                                                            <li class="list-disc"><?= $v['text'] ?></li>
-                                                            <?php
+                                                        if (is_array($value['bullet'])) {
+                                                            foreach ($value['bullet'] as $key => $v) {
+                                                                ?>
+                                                                <li class="list-disc"><?= $v['text'] ?></li>
+                                                                <?php
+                                                            }
                                                         }
                                                         ?>
                                                     </ul>

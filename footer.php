@@ -56,7 +56,7 @@ $f_footer = get_field('footer_code');
    <theboxes class="top spacing -clip">
      <box col="4"><inner class="">
        <a href="/<?=pll_current_language()?>/home" class="">
-         <img src="/wp-content/themes/seed-spring/img/<?=pll_current_language()?>/logo-asw.png" width="45%" class="inline-block asw-logo-footer">
+         <img src="<?= get_template_directory_uri() ?>/img/<?=pll_current_language()?>/logo-asw.png" width="45%" class="inline-block asw-logo-footer">
        </a>
        <div style="padding-top: 32px;">
          <h6 style="padding-bottom: 6px;"><?php pll_e('ติดตามแอสเซทไวส์')?></h6>
@@ -78,7 +78,7 @@ $f_footer = get_field('footer_code');
          </a>
          &nbsp;&nbsp;&nbsp;
          <a href="https://www.tiktok.com/@assetwise?lang=th-TH" target="_blank" class="logo-footer social-hov">
-          <img src="/wp-content/themes/seed-spring/img/tiktok-icon.svg" style="width: 45px;height: 45px;">
+          <img src="<?= get_template_directory_uri() ?>/img/tiktok-icon.svg" style="width: 45px;height: 45px;">
         </a>
       </div>
       <div class="mobile-only mob-footer-phone">
@@ -95,7 +95,7 @@ $f_footer = get_field('footer_code');
 
    <sp class=""></sp>
    <div class="pointer" onclick="show_sub()">
-     <img id="footer_img_btn" src="/wp-content/themes/seed-spring/img/<?=pll_current_language()?>/subscribe.png" class="inline-block pointer" width="100%">
+     <img id="footer_img_btn" src="<?= get_template_directory_uri() ?>/img/<?=pll_current_language()?>/subscribe.png" class="inline-block pointer" width="100%">
    </div>
  </inner></box>
  <sp class="l mobile-only"></sp>

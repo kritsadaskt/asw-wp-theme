@@ -7,17 +7,17 @@ $opt = $args[4];
 $layout = $args[5];
 $content = aswv2_gen_master($master,$content,$layout);
 act_template_project_css($opt,$template_name,$layout);
-$form_pattern = $content['form_pattern'];
-$form_type = $content['form_type'];
-$form_bg = $content['background_image']['sizes']['1536x1536'];
+isset($content['form_pattern']) ? $form_pattern = $content['form_pattern'] : $form_pattern = '';
+isset($content['form_type']) ? $form_type = $content['form_type'] : $form_type = '';
+isset($content['background_image']) && isset($content['background_image']['sizes']['1536x1536']) ? $form_bg = $content['background_image']['sizes']['1536x1536'] : $form_bg = '';
 if ($form_pattern == 'float') {
-	$form_bg = $content['promotion_image']['sizes']['1536x1536'];
+	isset($content['promotion_image']) && isset($content['promotion_image']['sizes']['1536x1536']) ? $form_bg = $content['promotion_image']['sizes']['1536x1536'] : $form_bg = '';
 }
-$telephone_img = acf_img($content['tel_icon'], 'medium');
-$contact_img = acf_img($content['contact_icon'], 'medium');
+isset($content['tel_icon']) ? $telephone_img = acf_img($content['tel_icon'], 'medium') : $telephone_img = '';
+isset($content['contact_icon']) ? $contact_img = acf_img($content['contact_icon'], 'medium') : $contact_img = '';
 
-$tel_html = "<a href=\"tel:{$content['telephone_label']}\" class=\"form-icon inline-flex items-center content-center\" target=\"_blank\"><span class=\"pr-3\"><img src=\"{$telephone_img}\" ></span><span class=\"underline\">{$content['telephone_label']}</span></a>";
-$con_html = "<a href=\"{$content['contact_url']}\" class=\"form-icon inline-flex items-center content-center\" target=\"_blank\"><span class=\"pr-3\"><img src=\"{$contact_img}\" alt=\"\"></span><span class=\"underline\">{$content['contact_label']}</span></a>";
+isset($content['telephone_label']) ? $tel_html = "<a href=\"tel:{$content['telephone_label']}\" class=\"form-icon inline-flex items-center content-center\" target=\"_blank\"><span class=\"pr-3\"><img src=\"{$telephone_img}\" ></span><span class=\"underline\">{$content['telephone_label']}</span></a>" : $tel_html = '';
+isset($content['contact_url']) ? $con_html = "<a href=\"{$content['contact_url']}\" class=\"form-icon inline-flex items-center content-center\" target=\"_blank\"><span class=\"pr-3\"><img src=\"{$contact_img}\" alt=\"\"></span><span class=\"underline\">{$content['contact_label']}</span></a>" : $con_html = '';
 ?>
 <div id="register_form"></div>
 <section id="form" class="bg-cover lg:hidden form-mob">

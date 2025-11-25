@@ -7,7 +7,7 @@ $opt = $args[4];
 $layout = $args[5];
 $content = aswv2_gen_master($master,$content,$layout);
 act_template_project_css($opt,$template_name,$layout);
-$bg = $content['information_background']['sizes']['1536x1536'];
+isset($content['information_background']) ? $bg = $content['information_background']['sizes']['1536x1536'] : $bg = '';
 ?>
 <section id="info" class="is-on-nav is-on-nav-mob">
 	<div class="container mx-auto section-fade">
@@ -82,12 +82,14 @@ $bg = $content['information_background']['sizes']['1536x1536'];
 										<?= $value['text'] ?>
 										<ul class="ml-6">
 											<?php
-											foreach ($value['bullet'] as $key => $v) {
-												?>
-												<li class="list-disc">
-													<?= $v['text'] ?>
-												</li>
-												<?php
+											if (is_array($value['bullet'])) {
+												foreach ($value['bullet'] as $key => $v) {
+													?>
+													<li class="list-disc">
+														<?= $v['text'] ?>
+													</li>
+													<?php
+												}
 											}
 											?>
 										</ul>

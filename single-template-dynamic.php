@@ -6,7 +6,7 @@ Template Post Type: house, condominium
 get_header();
 $f = get_fields();
 ?>
-<script src="/wp-content/themes/seed-spring/js/circle-progress.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/js/circle-progress.min.js"></script>
 <?php asw_tpj_header($f); ?>
 <style type="text/css">
 	:root{

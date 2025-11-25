@@ -1596,28 +1596,28 @@ function theme_overide_style($c)
         $section = "info";
         break;
     }
-    $bg_img = acf_img($c['bg_img']);
-    $bg_img_mobile = acf_img($c['bg_img_mobile']);
-    $bg_color = $c['bg_color'];
-    $text_color = $c['text_color'];
+    isset($c['bg_img']) ? $bg_img = acf_img($c['bg_img']) : $bg_img = '';
+    isset($c['bg_img_mobile']) ? $bg_img_mobile = acf_img($c['bg_img_mobile']) : $bg_img_mobile = '';
+    isset($c['bg_color']) ? $bg_color = $c['bg_color'] : $bg_color = '';
+    isset($c['text_color']) ? $text_color = $c['text_color'] : $text_color = '';
 
-    $swatch = $c['color_swatch'];
-    $element =  $c['element'];
+    isset($c['color_swatch']) ? $swatch = $c['color_swatch'] : $swatch = '';
+    isset($c['element']) ? $element =  $c['element'] : $element = '';
 
     $css = $c['css'];
-    $gd_start = ($c['gradient']['start'] != '') ? $c['gradient']['start'] : $swatch['mc_1'];
-    $gd_stop = ($c['gradient']['stop'] != '') ? $c['gradient']['stop'] : $swatch['mc_5'];
-    $gd_deg = ($c['gradient']['deg'] != '') ? $c['gradient']['deg'] : 90;
+    isset($c['gradient']['start']) ? $gd_start = ($c['gradient']['start'] != '') ? $c['gradient']['start'] : $swatch['mc_1'] : $gd_start = '';
+    isset($c['gradient']['stop']) ? $gd_stop = ($c['gradient']['stop'] != '') ? $c['gradient']['stop'] : $swatch['mc_5'] : $gd_stop = '';
+    isset($c['gradient']['deg']) ? $gd_deg = ($c['gradient']['deg'] != '') ? $c['gradient']['deg'] : 90 : $gd_deg = 90;
     
     
-    $main_bg_color = $c['tab_block']['background_color'];
-    $main_bg_hover = $c['tab_block']['background_hover_color'];
+    isset($c['tab_block']['background_color']) ? $main_bg_color = $c['tab_block']['background_color'] : $main_bg_color = '';
+    isset($c['tab_block']['background_hover_color']) ? $main_bg_hover = $c['tab_block']['background_hover_color'] : $main_bg_hover = '';
 
-    $tab_color = $c['tab_block']['text_color'];
-    $tab_color_hover = $c['tab_block']['text_hover_color'];
+    isset($c['tab_block']['text_color']) ? $tab_color = $c['tab_block']['text_color'] : $tab_color = '';
+    isset($c['tab_block']['text_hover_color']) ? $tab_color_hover = $c['tab_block']['text_hover_color'] : $tab_color_hover = '';
 
-    $border_color = $c['tab_block']['border_color'];
-    $parent_bg = $c['tab_block']['parent_bg'];
+    isset($c['tab_block']['border_color']) ? $border_color = $c['tab_block']['border_color'] : $border_color = '';
+    isset($c['tab_block']['parent_bg']) ? $parent_bg = $c['tab_block']['parent_bg'] : $parent_bg = '';
 
 
     ?>
@@ -2003,7 +2003,7 @@ function admin_cf7_footer() {
             }
         </style>
         <?php
-        if ($_REQUEST['page'] == 'wpcf7') {
+        if (isset($_REQUEST['page']) && $_REQUEST['page'] == 'wpcf7') {
             $is_cf7 == true;
             $cf7_id = $_REQUEST['post'];
             if ($cf7_id != '') {
@@ -2293,7 +2293,11 @@ function wpa_promotion_post_link( $post_link, $id = 0 ){
             if ($parent) {
                 $parent_ID = $parent->ID;
                 $parent_terms = wp_get_object_terms( $parent_ID, 'promotion_type' );
-                return str_replace( '%promotion_type%' , $parent_terms[0]->slug , $post_link );
+                if (count($parent_terms) > 0) {
+                    return str_replace( '%promotion_type%' , $parent_terms[0]->slug , $post_link );
+                } else {
+                    return $post_link;
+                }
             }
         }
     }
@@ -2395,10 +2399,14 @@ function aswv2_gen_master($master_style,$content,$layout){
                 foreach ($content_style as $csk => $csv) {
                     // pre($csk);
                     // pre('from');
-                    // pre($csv);
+                    //pre($csv);
                     if ($csv == '') {
                         // pre('--- '.$csv.' blank so use master');
-                        $mix_content[$key][$csk] = $master_style[$key][$csk];
+                        // pre('x----x----x' . $mix_content[$key][$csk]);
+                        // pre('x----x----x' . $master_style[$key][$csk]);
+                        if ($mix_content[$key][$csk] === '') {
+                            $mix_content[$key][$csk] = $master_style[$key][$csk];
+                        }
                     }
                     // pre('to');
                     // pre($mix_content[$key][$csk]);
@@ -2474,8 +2482,8 @@ function asw_project_render_theme($template_name,$common_layout){
     ?>
     <!-- ~~~~~~~~~~ Start Template V2 ~~~~~~~~~~ -->
     <!-- =====👇👇👇👇👇 Start Template V2 Header 👇👇👇👇👇===== -->
-    <script src="/wp-content/themes/seed-spring/js/circle-progress.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/all.css?t=<?=time()?>">
+    <script src="<?= get_template_directory_uri() ?>/js/circle-progress.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/all.css?t=<?=time()?>">
     
     <?php
     
@@ -2508,7 +2516,7 @@ function asw_project_render_theme($template_name,$common_layout){
     echo "--all--color_gradient: linear-gradient(calc(1deg*var(--all--color_gradient--degree)), var(--all--color_gradient--color_start), var(--all--color_gradient--color_end));";
     echo "}</style>";
     ?>
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/default-<?=$template_name?>-style.css?t=<?=time()?>">
+    <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/default-<?=$template_name?>-style.css?t=<?=time()?>">
     <!-- =====🔺🔺🔺🔺🔺 End Template V2 Header 🔺🔺🔺🔺🔺===== -->
     <!-- =====👇👇👇👇👇 Start Template V2 Nav 👇👇👇👇👇===== -->
     <?php
@@ -2565,9 +2573,9 @@ function asw_project_render_theme($template_name,$common_layout){
 
 function act_template_project_css($opt,$template_name,$layout){
     if ($opt == 'all') {
-        ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/all-<?=$layout?>.css?t=<?=time()?>"><?php
+        ?><link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/all-<?=$layout?>.css?t=<?=time()?>"><?php
     }
-    ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/<?=$template_name?>-<?=$layout?>.css?t=<?=time()?>"><?php
+    ?><link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/<?=$template_name?>-<?=$layout?>.css?t=<?=time()?>"><?php
 }
 add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
 
@@ -2729,4 +2737,5 @@ function asw_front_page_scripts() {
         <?php
     }
 }
-add_action('wp_footer', 'asw_front_page_scripts');
+
+//add_action('wp_footer', 'asw_front_page_scripts');

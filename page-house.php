@@ -917,15 +917,12 @@ $endtime = microtime(true); // Bottom of page
 </script>
 
 <?php 
-$pro_type = explode(",", $_GET['type']);
-$pro_loca = explode(",", $_GET['location']);
-$pro_brand = explode(",", $_GET['brand']);
-$pro_price = ($_GET['price']);
-
-// new price
-$pro_price_max = ($_GET['price_max']);
-$pro_price_min = ($_GET['price_min']);
-// end new price
+isset($_GET['type']) ? $pro_type = explode(",", $_GET['type']) : $pro_type = array();
+isset($_GET['location']) ? $pro_loca = explode(",", $_GET['location']) : $pro_loca = array();
+isset($_GET['brand']) ? $pro_brand = explode(",", $_GET['brand']) : $pro_brand = array();
+isset($_GET['price']) ? $pro_price = ($_GET['price']) : $pro_price = '';
+isset($_GET['price_max']) ? $pro_price_max = ($_GET['price_max']) : $pro_price_max = '';
+isset($_GET['price_min']) ? $pro_price_min = ($_GET['price_min']) : $pro_price_min = '';
 
 $lis_type = array();
 $lis_loca = array();

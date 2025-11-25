@@ -1,7 +1,7 @@
 <?php
 $value = $args;
 
-$theme_img = get_site_url().'/wp-content/themes/seed-spring/img';
+$theme_img = get_site_url().'<?= get_template_directory_uri() ?>img';
 $vf = get_field('hot_deal_l3',$value->ID);
 $full_price = setComma($vf['full_price']);
 $sell_price = setComma($vf['sell_price']);
