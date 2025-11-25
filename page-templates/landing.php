@@ -18,6 +18,7 @@
     <a  class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'seed' ); ?></a>
     <div id="page" class="site">
         <div id="content" class="site-content">
+            <p>Hello World</p>
             <div class="s-container">
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main -hide-title">
