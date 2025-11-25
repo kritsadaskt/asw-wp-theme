@@ -2259,7 +2259,7 @@ wp_reset_postdata();
 		}
 
 		if (document.querySelector('#home_promotion_slides_wrap') != null) {
-			document.querySelector('#home_promotion_slides_wrap').style.setProperty('--max', <?= $promo_chk * 3 ?>)
+			document.querySelector('#home_promotion_slides_wrap').style.setProperty('--max', <?php echo $promo_chk * 3; ?>)
 		}
 		let waitingPromotionLoop = null
 

@@ -119,7 +119,7 @@ if (!is_user_logged_in() AND 0) {
         <div id="loadscreen" data-loaded="0">
          <div class="-inner">
             <lottie-player class="load-img" src="/wp-content/themes/seed-spring/css/load.json" background="transparent"  speed="1"  loop autoplay></lottie-player>
-            <img src="https://wordpress-988892-3470712.cloudwaysapps.comhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/CleanShot-2566-05-08-at-04.57.00@2x.png">
+            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/CleanShot-2566-05-08-at-04.57.00@2x.png">
         </div>
     </div>
     <div class="scroll-to-top"></div>

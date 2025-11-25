@@ -12,7 +12,7 @@
  * Add S3 URL to upload directory
  */
 add_filter( 'upload_dir', function( $uploads ) {
-    $s3_url = 'https://asw-medias.s3.ap-southeast-1.amazonaws.com/uploads';
+    $s3_url = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads';
     $uploads['baseurl'] = $s3_url;
     $uploads['url'] = $s3_url . $uploads['subdir'];
     return $uploads;
@@ -253,8 +253,8 @@ function seed_scripts()
     wp_enqueue_style('s-mobile', get_theme_file_uri('/css/mobile.css'), array(), filemtime(get_theme_file_path('/css/mobile.css')));
     wp_enqueue_style('s-desktop', get_theme_file_uri('/css/desktop.css'), array(), filemtime(get_theme_file_path('/css/desktop.css')), '(min-width: 992px)');
     wp_enqueue_style('s-ie', get_theme_file_uri('/css/ie.css'), array(), filemtime(get_theme_file_path('/css/ie.css')), '(-ms-high-contrast: none), (-ms-high-contrast: active)');
-    wp_enqueue_style('spring-jayss', get_theme_file_uri('/css/jayss2/jayss-wp.css?t=') . time(), array(), get_theme_file_uri('/css/jayss2/jayss-wp.css?t=') . time());
-    wp_enqueue_style('s-style', get_theme_file_uri('/style.css?t=' . time()), array(), filemtime(get_theme_file_path('/style.css?t=' . time())));
+    wp_enqueue_style('spring-jayss', get_theme_file_uri('/css/jayss2/jayss-wp.css'), array(), filemtime(get_theme_file_path('/css/jayss2/jayss-wp.css')));
+    wp_enqueue_style('s-style', get_theme_file_uri('/style.css'), array(), filemtime(get_theme_file_path('/style.css')));
 
     if ($GLOBALS['s_style_css'] == 'enable') {
         wp_enqueue_style('s-style', get_stylesheet_uri());
