@@ -11,12 +11,12 @@ if ($qr->post_count) {
 	?>
 	<div class="cont-pd py-4 flex flex-row items-center">
 		<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="/<?=pll_current_language()?>/hot-deal" class=""><?php pll_e('Hot Deal')?></a>
 	</div>
 	<div class="cont-pd my-4">
 		<div class="text-center pb-16 mt-12">
-			<img src="/wp-content/uploads/2023/05/projects-search.png" style="max-width:286px" class="mb-5">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/projects-search.png" style="max-width:286px" class="mb-5">
 			<div><?php pll_e('ขออภัย ไม่มีแคมเปญในช่วงเวลานี้') ?></div>
 		</div>
 	</div>

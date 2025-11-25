@@ -24,8 +24,8 @@
 </style>
 
 <section id="heroBanner">
-  <img src="https://assetwise.test/wp-content/uploads/2025/04/asw-club_grow-together_desktop_banner.jpg" alt="Grow Together" class="img-fluid hidden md:block">
-  <img src="https://assetwise.test/wp-content/uploads/2025/04/asw-club_grow-together_mobile_banner.jpg" alt="Grow Together" class="img-fluid md:hidden">
+  <img src="https://assetwise.testhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2025/04/asw-club_grow-together_desktop_banner.jpg" alt="Grow Together" class="img-fluid hidden md:block">
+  <img src="https://assetwise.testhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2025/04/asw-club_grow-together_mobile_banner.jpg" alt="Grow Together" class="img-fluid md:hidden">
 </section>
 
 <section id="info">

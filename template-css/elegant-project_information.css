@@ -65,7 +65,7 @@
 
   .list-disc li::before {
     content: "";
-    background-image: url("/wp-content/uploads/2023/03/list_checked.png");
+    background-image: url("https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/list_checked.png");
     width: 15px;
     height: 15px;
     display: inline-flex;

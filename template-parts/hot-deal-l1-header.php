@@ -178,7 +178,7 @@ $fim = get_the_post_thumbnail_url($cp_id, '1536x1536');
 
 <div class="cont py-6 flex flex-row items-center" style="white-space: nowrap;">
 	<a href="/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก') ?></a>
-	<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 	<a href="" class="truncate"><?=$cp_title?></a>
 </div>
 <div class="mt-1 mb-6">

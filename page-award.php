@@ -469,8 +469,8 @@ function pad($num){
 			?> 
 		</div>
 		<!-- <div id="home-slider-arrow">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
 		</div>
 		<div id="home-slider-count">
 			<div >
@@ -658,7 +658,7 @@ function pad($num){
 		}
 	</style>
 	<div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-		<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 	</div>
 	<div id="home-slider-count-mob">
 		<div >
@@ -671,7 +671,7 @@ function pad($num){
 			<span class="-num-next-num">02</span><span style="margin-left: 3px;color: var(--ci-grey-400);font-weight: 300;font-size: 20px;">/<span class="-num-max"><?=pad($data_active+1)?></span></span></h5></div>
 		</div>
 		<div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 		</div>
 		<script type="text/javascript">
 			let mhbannerAutoPlay = 1;
@@ -711,7 +711,7 @@ function pad($num){
 <div class="cont-pd pt-4">
 	<div class="flex flex-row items-center">
 		<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="/<?=pll_current_language()?>/about-us" class=""><?php pll_e('รู้จักแอสเซทไวส์')?></a>
 	</div>
 </div>
@@ -719,7 +719,7 @@ function pad($num){
 <!--=== The Section Boxes : about us ===-->
 <section id="about-us" class="">
 	<!-- <div id="bg-circle" class="absolute">
-		<img src="/wp-content/uploads/2022/12/circle.png">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/circle.png">
 	</div> -->
 	<div class="cont-pd  pt-2 xl:pt-10 -pb-10">
 		<div id="about-info-section"></div>
@@ -923,8 +923,8 @@ function pad($num){
 					<?php }
 					?>
 				</div>
-				<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)" style="z-index: 9;">
-				<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)" style="z-index: 9;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)" style="z-index: 9;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)" style="z-index: 9;">
 			</div>
 		</div>
 	</div>

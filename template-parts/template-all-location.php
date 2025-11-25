@@ -625,7 +625,7 @@ switch ($template) {
         }
 
         #location .info-tab .location-tabs-icon {
-            --icon: url(/wp-content/uploads/2022/08/6Other.png);
+            --icon: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/08/6Other.png);
             background: #545E67;
             width: 1.5rem;
             height: 1.5rem;
@@ -884,7 +884,7 @@ switch ($template) {
         }
 
         .location-tabs-icon {
-            --icon: url(/wp-content/uploads/2022/08/6Other.png);
+            --icon: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/08/6Other.png);
             background: white;
             width: 1.5rem;
             height: 1.5rem;
@@ -1047,7 +1047,7 @@ switch ($template) {
         }
 
         #location .location-tabs-icon {
-            --icon: url(/wp-content/uploads/2022/08/6Other.png);
+            --icon: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/08/6Other.png);
             background: var(--mc-tab-text-color);
             width: 1.5rem;
             height: 1.5rem;

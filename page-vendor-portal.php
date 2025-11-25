@@ -18,7 +18,7 @@ get_header();
 <section class="py-10">
   <div class="container mx-auto flex flex-col md:flex-row gap-4">
     <div class="md:w-2/5 lg:w-1/2 flex justify-center items-center">
-      <img src="https://assetwise.co.th/wp-content/uploads/2025/07/featured-image-left.svg" alt="Vendor Portal" class="w-1/2 md:w-4/5 md:mr-0 mx-auto">
+      <img src="https://assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2025/07/featured-image-left.svg" alt="Vendor Portal" class="w-1/2 md:w-4/5 md:mr-0 mx-auto">
     </div>
     <div class="md:w-3/5 lg:w-1/2 flex flex-col justify-center items-center">
       <h1 class="!text-5xl lg:!text-6xl font-bold uppercase text-center text-[var(--ci-blue-300)] leading-none mb-0"><?php pll_e('Vendor Portal', 'vendor-portal'); ?></h1>
@@ -51,7 +51,7 @@ get_header();
     <h2 class="text-center text-4xl text-white font-medium"><?php pll_e('คู่มือการใช้งาน', 'vendor-portal'); ?></h2>
     <div class="h-5"></div>
     <div class="video-container w-11/12 md:w-4/5 mx-auto">
-      <video src="https://aswinno.assetwise.co.th/VendorPortal/upload/content/OnlineBilling.mp4" width="100%" controls class="rounded-lg shadow-lg" poster="https://assetwise.co.th/wp-content/uploads/2025/07/vendor-portal-poster.jpeg"></video>
+      <video src="https://aswinno.assetwise.co.th/VendorPortal/upload/content/OnlineBilling.mp4" width="100%" controls class="rounded-lg shadow-lg" poster="https://assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2025/07/vendor-portal-poster.jpeg"></video>
     </div>
     <div class="h-7"></div>
     <div class="manual-dl flex justify-center">

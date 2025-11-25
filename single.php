@@ -220,9 +220,9 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 			?>
 			<div class="s-container pt-3 xl:pt-4 truncate px-4 xl:mx-auto flex flex-row items-center -bc">
 				<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-				<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 				<a href="/<?=pll_current_language()?>/blog" class="cl-ci-blue-400"><?php pll_e('บล็อก')?></a>
-				<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 				<a href="#!" class=""><?php the_title() ?></a>
 			</div>
 			<?php
@@ -230,9 +230,9 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 
 			<div class="s-container pt-3 xl:pt-4 truncate px-4 xl:mx-auto flex flex-row items-center">
 				<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-				<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 				<a href="/<?=pll_current_language()?>/news" class="cl-ci-blue-400"><?php pll_e('ข่าวสาร')?></a>
-				<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 				<a href="#!" class=""><?php the_title() ?></a>
 			</div>
 
@@ -286,8 +286,8 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 					<div>
 						<div class="absolute w-full top-1/2 related-project-arrow">
 							<div class=" cont-pd">
-								<img id="home-pro-arrow-1" src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="absolute pointer  " onclick="singleProjectArrow(-1)" style="opacity: 0; z-index: -1;">
-								<img id="home-pro-arrow-2" src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="absolute pointer  " onclick="singleProjectArrow(1)" style="z-index: 9; top: 51%; opacity: 1;">
+								<img id="home-pro-arrow-1" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="absolute pointer  " onclick="singleProjectArrow(-1)" style="opacity: 0; z-index: -1;">
+								<img id="home-pro-arrow-2" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="absolute pointer  " onclick="singleProjectArrow(1)" style="z-index: 9; top: 51%; opacity: 1;">
 							</div>
 						</div>
 						<div class="container mx-auto">
@@ -298,7 +298,7 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 										<!-- <h1 class="block lg:hidden">โครงการที่แนะนำ</h1> -->
 									</div>
 									<h5 class="col-span-3 text-right">
-										<a href="/project-search/" class="see-more"><?php pll_e('ดูทั้งหมด')?><img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;">
+										<a href="/project-search/" class="see-more"><?php pll_e('ดูทั้งหมด')?><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;">
 										</a>
 									</h5>
 
@@ -350,13 +350,13 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 														<div class="bottom-left">
 															<div class="flex flex-row items-center" style="line-height: 28px;">
 																<?php if ($cate_parent->slug == 'condominium') { ?>
-																	<img src="/wp-content/uploads/2022/09/Vector.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('คอนโดมิเนียม')?>
+																	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Vector.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('คอนโดมิเนียม')?>
 																<?php } else if ($cate_parent->slug == 'house') { ?>
-																	<img src="/wp-content/uploads/2022/10/Icon-in-input.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('บ้านและทาวน์โฮม')?>
+																	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('บ้านและทาวน์โฮม')?>
 																<?php } ?>
 															</div>
 															<div class="flex flex-row items-center" style="line-height: 28px;margin-top: 6px;">
-																<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?= $loca_child->name ?>
+																<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?= $loca_child->name ?>
 															</div>
 														</div>
 														<div class="bottom-right cl-white" style="text-align: right;font-weight: 400;font-size: 17px;line-height: 20px;">
@@ -606,7 +606,7 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 							<h1 class=""><?php pll_e('ข่าวสารอื่นๆ')?></h1>
 						</div>
 						<h5 class="col-span-1 text-right">
-							<a href="/news-archive" class="cl-ci-blue-300see-more"><?php pll_e('ดูทั้งหมด')?><img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 24px;">
+							<a href="/news-archive" class="cl-ci-blue-300see-more"><?php pll_e('ดูทั้งหมด')?><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 24px;">
 							</a>
 						</h5>
 					</div>
@@ -857,9 +857,9 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 						</style>
 						<!--=== The Section Boxes : related post ===-->
 						<section id="related-post" class="sec-related-post padding-l-vtc bg-ci-blue-300 cl-white">
-							<img src="/wp-content/uploads/2022/10/Vector-2.png" class="absolute pointer-events-none" style="top: 0; left: 0;opacity: 0.1;">
-							<img src="/wp-content/uploads/2022/10/Vector-3.png" class="absolute pointer-events-none" style="top: 0; left: 0;opacity: 0.1;">
-							<img src="/wp-content/uploads/2022/10/เงากิ่งไม้-2.png" class="absolute pointer-events-none leaf08">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-2.png" class="absolute pointer-events-none" style="top: 0; left: 0;opacity: 0.1;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-3.png" class="absolute pointer-events-none" style="top: 0; left: 0;opacity: 0.1;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/เงากิ่งไม้-2.png" class="absolute pointer-events-none leaf08">
 							<div class="cont-pd">
 								<div class="grid grid-cols-3 px-4 lg:px-0">
 									<div class="col-span-2">
@@ -894,7 +894,7 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 										</h1>
 									</div>
 									<h5 class="col-span-1 text-right">
-										<a href="/<?= $p_cate[0]->slug; ?>" class="see-more"><?php pll_e('ดูทั้งหมด')?><img src="/wp-content/uploads/2022/09/arrow-r.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;">
+										<a href="/<?= $p_cate[0]->slug; ?>" class="see-more"><?php pll_e('ดูทั้งหมด')?><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;">
 										</a>
 									</h5>
 

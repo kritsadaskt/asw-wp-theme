@@ -81,7 +81,7 @@
 		cursor: pointer;
 	}
 	.-jbl-i.--close span{
-		background-image: url('/wp-content/uploads/2023/03/menu.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/menu.png');
 	}
 	.-jbl-i.--download{
 		margin-left: 20px;
@@ -93,13 +93,13 @@
 		display: flex;
 	}
 	.-jbl-i.--download span{
-		background-image: url('/wp-content/uploads/2023/03/bx_phone-call.png')
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/bx_phone-call.png')
 	}
 	.-jbl-i.--zoom{
 		width: 48px;
 	}
 	.-jbl-i.--zoom span{
-		background-image: url('/wp-content/uploads/2023/03/Group-517.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-517.png');
 		opacity: .3;
 	}
 	.jb-lightbox-section[data-is-zoom="1"] .-jbl-i.--zoom-out span{
@@ -109,10 +109,10 @@
 		opacity: .3;
 	}
 	.-jbl-i.--zoom-out span{
-		background-image: url('/wp-content/uploads/2023/03/Group-1069.png')
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-1069.png')
 	}
 	.-jbl-i.--zoom-in span{
-		background-image: url('/wp-content/uploads/2023/03/Group-1068.png')
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-1068.png')
 	}
 	.-jbl-arrow {
 		display: flex;

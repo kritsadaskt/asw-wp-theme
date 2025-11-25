@@ -940,7 +940,7 @@ function asw_tpj_header($f){
             .nav-menu-item-mob::after {
                 content: " ";
                 position: absolute;
-                background-image: url('/wp-content/uploads/2023/03/arrow-menu.png');
+                background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/arrow-menu.png');
                 background-size: contain;
                 background-repeat: no-repeat;
                 width: 10px;
@@ -1288,7 +1288,7 @@ function asw_tpj_header($f){
             height: 40px;
             border-radius: 100%;
             background-color: rgba(29, 159, 155, 1);
-            background-image: url('/wp-content/uploads/2023/03/Group-1381.png');
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-1381.png');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -1304,7 +1304,7 @@ function asw_tpj_header($f){
         }
 
         .contact_fb {
-            background-image: url('/wp-content/uploads/2023/03/Logo.png');
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Logo.png');
             background-color: #fff;
             border: 1px solid rgba(84, 94, 103, 1);
             background-size: 10px;
@@ -1315,7 +1315,7 @@ function asw_tpj_header($f){
         }
 
         .contact_tel {
-            background-image: url('/wp-content/uploads/2023/03/Vector-4.png');
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Vector-4.png');
             background-color: #fff;
             border: 1px solid rgba(84, 94, 103, 1);
             background-size: 17px;
@@ -1326,7 +1326,7 @@ function asw_tpj_header($f){
         }
 
         .contact_ln {
-            background-image: url('/wp-content/uploads/2023/03/Subtract.png');
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Subtract.png');
             background-color: #fff;
             border: 1px solid rgba(84, 94, 103, 1);
             background-size: 22px;
@@ -1337,15 +1337,15 @@ function asw_tpj_header($f){
         }
 
         .contact_fb:hover {
-            background-image: url('/wp-content/uploads/2023/03/Artboard-2.png')
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-2.png')
         }
 
         .contact_tel:hover {
-            background-image: url('/wp-content/uploads/2023/03/Artboard-1.png')
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-1.png')
         }
 
         .contact_ln:hover {
-            background-image: url('/wp-content/uploads/2023/03/Artboard-3.png')
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-3.png')
         }
 
         .contact_close {
@@ -1355,7 +1355,7 @@ function asw_tpj_header($f){
             height: 32px;
             margin-top: 24px;
             margin-bottom: 0;
-            background-image: url('/wp-content/uploads/2023/03/Group-889.png');
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-889.png');
             background-size: 10px;
             background-position: center;
             background-repeat: no-repeat;
@@ -1691,7 +1691,7 @@ function rgb_to_rgb($str)
 function theme_gen_visual_tour($zip_filepath)
 {
     // $zip_filepath = $content['virtual_file']['url'];
-    $zip_filepath = explode(site_url() . '/wp-content/uploads', $zip_filepath)[1];
+    $zip_filepath = explode(site_url() . 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads', $zip_filepath)[1];
     $zip_filepath_hash = md5($zip_filepath);
     $zif_file_source = __DIR__ . '/../../uploads' . $zip_filepath;
     $dir = __DIR__ . "/../../assetwise-360/" . $zip_filepath_hash . "/index.html";
@@ -1718,15 +1718,15 @@ function theme_gen_visual_tour($zip_filepath)
 add_filter('acfe/flexible/thumbnail/layout=banner', 'acf_pj_banner', 10, 3);
 function acf_pj_banner($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_banner_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_banner_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_banner_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_banner_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2022/08/Hero-Banner-Elegant.jpg';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/08/Hero-Banner-Elegant.jpg';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/02/banner-delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/banner-delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/01/banner-kaveava.jpg';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/banner-kaveava.jpg';
     }
     return $img;
 }
@@ -1734,135 +1734,135 @@ function acf_pj_banner($thumbnail, $field, $layout)
 add_filter('acfe/flexible/thumbnail/layout=form', 'acf_pj_form', 10, 3);
 function acf_pj_form($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_form_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_form_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/CleanShot_2566-03-19_at_11.19.212x.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/CleanShot_2566-03-19_at_11.19.212x.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_form_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_form_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=project_idea', 'acf_pj_project_idea', 10, 3);
 function acf_pj_project_idea($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_concept_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_concept_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/project-idea.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/project-idea.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_concept_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_concept_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=project_information', 'acf_pj_project_information', 10, 3);
 function acf_pj_project_information($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_project_information_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_project_information_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/project-infornation.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/project-infornation.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_project_information_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_project_information_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=facility', 'acf_pj_facility', 10, 3);
 function acf_pj_facility($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_facility_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_facility_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/facility.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/facility.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_facility_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_facility_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=gallery', 'acf_pj_gallery', 10, 3);
 function acf_pj_gallery($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_gallery_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallery_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_gallery_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallery_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/gallery.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/gallery.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_gallerry_deligghtful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallerry_deligghtful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_gallerry_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallerry_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=video', 'acf_pj_video', 10, 3);
 function acf_pj_video($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_video_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_video_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/Video.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Video.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_video_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_video_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=plan', 'acf_pj_plan', 10, 3);
 function acf_pj_plan($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_plan_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_plan_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/Section-Plan.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Section-Plan.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_plan_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_plan_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=location', 'acf_pj_location', 10, 3);
 function acf_pj_location($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_location_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_location_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/03/Section-Location.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Section-Location.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_location_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_location_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=contact', 'acf_pj_contact', 10, 3);
 function acf_pj_contact($thumbnail, $field, $layout)
 {
-    $img = '/wp-content/uploads/2023/03/acf_contact_modern.png';
+    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = '/wp-content/uploads/2023/03/acf_contact_modern.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = '/wp-content/uploads/2023/05/Contact.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Contact.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = '/wp-content/uploads/2023/03/acf_contact_delightful.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = '/wp-content/uploads/2023/03/acf_contact_dynamic.png';
+        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_dynamic.png';
     }
     return $img;
 }
@@ -1870,7 +1870,7 @@ function acf_pj_contact($thumbnail, $field, $layout)
 add_filter('acfe/flexible/thumbnail/layout=related_location', 'acf_pj_related_location', 10, 3);
 function acf_pj_related_location($thumbnail, $field, $layout)
 {
-    return '/wp-content/uploads/2023/03/Related-Project.png';
+    return 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Related-Project.png';
 }
 
 
@@ -1985,7 +1985,7 @@ function admin_cf7_footer() {
 
             } */
             body[data-use-template="single-template-dynamic.php"] a[data-layout="banner"] .acfe-flexible-layout-thumbnail.acfe-flexible-layout-thumbnail-no-modal {
-                background-image:url(/wp-content/uploads/2023/01/banner-kaveava.jpg) !important;
+                background-image:url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/banner-kaveava.jpg) !important;
             }
         </style>
         <?php
@@ -2831,7 +2831,7 @@ if(isset($_GET['temp_send_mail_promotion'])){
 function custom_login_logo() {
     echo '<style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url("https://assetwise.co.th/wp-content/uploads/2024/11/asw_logo1x1-e1731487149678.png");
+            background-image: url("https://assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2024/11/asw_logo1x1-e1731487149678.png");
             background-size: contain;
             height: 95px;
             width: 140px;

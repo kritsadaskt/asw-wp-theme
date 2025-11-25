@@ -58,8 +58,8 @@
 	}
 </style>
 <section id="all_project" class="sec-all-pro padding-l-vtc-">
-	<img src="/wp-content/uploads/2022/11/leaves-shadow-4.png" class="absolute pointer-events-none leaf09">
-	<img src="/wp-content/uploads/2022/11/leaves-shadow2-1.png" class="absolute pointer-events-none leaf10">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow-4.png" class="absolute pointer-events-none leaf09">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow2-1.png" class="absolute pointer-events-none leaf10">
 	<div class="cont-pd text-center">
 		<div class="">
 			<div id="show_pro_foot" class="flex flex-row justify-center">
@@ -80,7 +80,7 @@
 			<sp class="hidden vl md:block"></sp>
 			<div id="show-condo">
 				<span class="flex flex-row items-center justify-center" style="padding-top: 1rem;padding-bottom: 1rem;">
-					<img src="/wp-content/uploads/2022/09/Vector.png" style="height:24px;margin:0;margin-right: 12px;">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Vector.png" style="height:24px;margin:0;margin-right: 12px;">
 					<h6 class=""><?php pll_e('คอนโดมิเนียม') ?></h6>
 				</span>
 				<sp class="l hidden md:block"></sp>
@@ -114,7 +114,7 @@
 			<sp class="s"></sp>
 			<div id="show-townhome">
 				<span class="flex flex-row items-center justify-center txt-townhome">
-					<img src="/wp-content/uploads/2022/10/Icon-in-input.png"
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png"
 						style="filter: grayscale(100%);height:24px;margin:0;margin-right: 12px;">
 					<h6 class=""><?php pll_e('บ้านและทาวน์โฮม') ?></h6>
 				</span>

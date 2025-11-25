@@ -174,7 +174,7 @@ h2.p-page-facility{
     /*-- Mobile Version --*/
     @media (max-width: 1319px) {
         .facility-img {
-            background-image: url('/wp-content/uploads/2023/02/image-463.png');
+            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/image-463.png');
             display: block;
             background-size: cover;
             height: 100%;

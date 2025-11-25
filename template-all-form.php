@@ -249,7 +249,7 @@ $con_html = "<a href=\"{$content['contact_url']}\" class=\"form-icon inline-flex
 
 	#form .wpcf7-not-valid-tip::before {
 		content: " ";
-		background-image: url('/wp-content/uploads/2023/03/invalid.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/invalid.png');
 		width: 16px;
 		height: 16px;
 		background-size: contain;

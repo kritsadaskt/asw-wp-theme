@@ -62,19 +62,19 @@ $f_footer = get_field('footer_code');
          <h6 style="padding-bottom: 6px;"><?php pll_e('ติดตามแอสเซทไวส์')?></h6>
          <div class="flex">
           <a href="https://th-th.facebook.com/AssetWiseThailand/" target="_blank" class="logo-footer social-hov">
-            <img src="/wp-content/uploads/2022/11/Social-media.png" style="width: 45px;height: 45px;">
+            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Social-media.png" style="width: 45px;height: 45px;">
           </a>
           &nbsp;&nbsp;&nbsp;
           <a href="https://page.line.me/assetwise?openQrModal=true" target="_blank" class="logo-footer social-hov">
-           <img src="/wp-content/uploads/2022/11/Social-media-1.png" style="width: 45px;height: 45px;">
+           <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Social-media-1.png" style="width: 45px;height: 45px;">
          </a>
          &nbsp;&nbsp;&nbsp;
          <a href="https://www.instagram.com/assetwisethailand/" target="_blank" class="logo-footer social-hov">
-           <img src="/wp-content/uploads/2022/11/Social-media-2.png" style="width: 45px;height: 45px;">
+           <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Social-media-2.png" style="width: 45px;height: 45px;">
          </a>
          &nbsp;&nbsp;&nbsp;
          <a href="https://www.youtube.com/c/AssetwiseChannel" target="_blank" class="logo-footer social-hov">
-           <img src="/wp-content/uploads/2022/11/Social-media-3.png" style="width: 45px;height: 45px;">
+           <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Social-media-3.png" style="width: 45px;height: 45px;">
          </a>
          &nbsp;&nbsp;&nbsp;
          <a href="https://www.tiktok.com/@assetwise?lang=th-TH" target="_blank" class="logo-footer social-hov">
@@ -82,14 +82,14 @@ $f_footer = get_field('footer_code');
         </a>
       </div>
       <div class="mobile-only mob-footer-phone">
-       <img src="/wp-content/uploads/2022/11/Vector.png" class="inline">
+       <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector.png" class="inline">
        <a href="tel:02-168-0000" class="inline" style="font-size: 24px;font-weight: 400;line-height: 28px;color: #47CBC7">02-168-0000</a>
      </div>
    </div>
    <div class="desktop-only">
      <sp class=""></sp>
      <a href="tel:02-168-0000" class="">
-       <img src="/wp-content/uploads/2022/09/Call-1.png" class="inline-block" width="40%">
+       <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Call-1.png" class="inline-block" width="40%">
      </a>
    </div>
 

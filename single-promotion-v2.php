@@ -106,9 +106,9 @@
 
 	<div class="cont-pd py-6 flex flex-row items-center">
 		<a href="/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="/promotion" class="cl-ci-blue-400"><?php pll_e('โปรโมชั่น')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="#!" class=""><?php the_title() ?></a>
 	</div>
 
@@ -186,7 +186,7 @@
 				?>
 				<div class="s-container">
 					<div>
-						<img class="promo-leaf01" src="/wp-content/uploads/2022/11/shutterstock_1574382076-1.png">
+						<img class="promo-leaf01" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1.png">
 					</div>
 					<h1>โครงการที่เข้าร่วม</h1>
 					<sp style="height: 52px;" ></sp>
@@ -241,8 +241,8 @@
 			// pre($v['project_description']);
 					?>
 					<div >
-						<img class="promo-leaf01" src="/wp-content/uploads/2022/11/shutterstock_1574382076-1.png">
-						<img class="promo-leaf02" src="/wp-content/uploads/2022/11/Group-793.png">
+						<img class="promo-leaf01" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1.png">
+						<img class="promo-leaf02" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-793.png">
 					</div>
 					<div class="s-container relative">
 						<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
@@ -277,7 +277,7 @@
 								<sp class="h-12"></sp>
 								<h5 class="">
 									<a href="<?= $v['project'][0]->guid ?>" class=""><?php pll_e('อ่านเพิ่มเติม')?>
-										<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;">
+										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;">
 									</a>
 								</h5>
 
@@ -431,8 +431,8 @@
 	<div class="relative">
 		<div class="grid grid-cols-12">
 			<div class="col-span-12 md:col-span-12 lg:col-span-7 pt-20 pb-24 s-container">
-				<!-- <img src="/wp-content/uploads/2022/12/w-bg.png" class="absolute" style="top: 0; left: 0;opacity: 0.1;"> -->
-				<div class="w-bg absolute bg-contain bg-no-repeat w-full h-full pointer-events-none" style="opacity: 0.1; top: 0; left: 0;background-image:url('/wp-content/uploads/2022/12/w-bg.png');"></div>
+				<!-- <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/w-bg.png" class="absolute" style="top: 0; left: 0;opacity: 0.1;"> -->
+				<div class="w-bg absolute bg-contain bg-no-repeat w-full h-full pointer-events-none" style="opacity: 0.1; top: 0; left: 0;background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/w-bg.png');"></div>
 				<h1 class=""><?php pll_e('ลงทะเบียนรับสิทธิพิเศษ')?></h1>
 				<sp class="h-4 md:h-16"></sp>
 				<div class="grid grid-cols-2 gap-4 px-0 xl:px-24">
@@ -576,7 +576,7 @@
 				</div>
 				<h5 class="col-span-2 text-right pt-3">
 					<a href="/promotion" class=""><?php pll_e('ดูทั้งหมด')?>
-						<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;"></a>
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;"></a>
 					</h5>
 				</div>
 				<sp style="height: 48px;"></sp>

@@ -136,7 +136,7 @@
 
 
     .sub-group-items .-img {
-        /* --img: url(/wp-content/uploads/2023/05/image-362.png); */
+        /* --img: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/image-362.png); */
         background-image: var(--img);
         background-position: center;
         background-size: cover;
@@ -401,9 +401,9 @@
                     <?php
                     // }
                     ?>
-                    <img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="sub-nav-arrow --r"
+                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="sub-nav-arrow --r"
                     onclick="sub_arrow(1)">
-                    <img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="sub-nav-arrow --l"
+                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="sub-nav-arrow --l"
                     onclick="sub_arrow(-1)">
                 </div>
             </div>

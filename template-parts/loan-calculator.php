@@ -1,7 +1,7 @@
 <style>
   @media (min-width: 768px) {
     #loan_calc_section {
-      background-image: url('https://assetwise.co.th/wp-content/uploads/2025/03/loan_calc_left-bg.jpg');
+      background-image: url('https://assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2025/03/loan_calc_left-bg.jpg');
       background-size: 60% auto;
       background-position: left bottom;
       background-repeat: no-repeat;
@@ -16,7 +16,7 @@
 
   @media (max-width: 767px) {
     #loan_calc_section {
-      background-image: url('https://assetwise.co.th/wp-content/uploads/2025/03/loan_calc_right-bg-2.png');
+      background-image: url('https://assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2025/03/loan_calc_right-bg-2.png');
       background-size: 53% auto;
       background-position: 120% -30px;
       background-repeat: no-repeat;

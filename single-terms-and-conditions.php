@@ -40,7 +40,7 @@
 </style>
 <div class="">
 	<div class="cont-pd padding-vtc breadcrumb-privacy">
-		<a href="/<?=pll_current_language()?>/home" class="bread-home"><?php pll_e('หน้าแรก')?></a> <img src="/wp-content/uploads/2023/03/breadcrumbs.png" style="display: inline;vertical-align: baseline;height: 12px;width: 8px;margin-left: 12px;margin-right: 12px;top: -1px;"> <?php pll_e('นโยบายคุ้มครองข้อมูลส่วนบุคคล')?>
+		<a href="/<?=pll_current_language()?>/home" class="bread-home"><?php pll_e('หน้าแรก')?></a> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/breadcrumbs.png" style="display: inline;vertical-align: baseline;height: 12px;width: 8px;margin-left: 12px;margin-right: 12px;top: -1px;"> <?php pll_e('นโยบายคุ้มครองข้อมูลส่วนบุคคล')?>
 	</div>
 </div>
 

@@ -315,9 +315,9 @@ function pad($num)
 				?>
 			</div>
 			<div id="home-slider-arrow">
-				<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l"
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l"
 				onclick="changeSlider(-1);stopAutoplay()">
-				<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r"
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r"
 				onclick="changeSlider(1);stopAutoplay()">
 			</div>
 			<div id="home-slider-count">
@@ -520,7 +520,7 @@ function pad($num)
 			}
 		</style>
 		<div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 		</div>
 		<div id="home-slider-count-mob">
 			<div>
@@ -540,7 +540,7 @@ function pad($num)
 		</div>
 	</div>
 	<div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-		<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 	</div>
 	<script type="text/javascript">
 		let mhbannerAutoPlay = 1;
@@ -765,8 +765,8 @@ function pad($num)
 if ($f['is_open']=='open') {
 	?>
 	<div class="bg-yellow-200-" id="desktop_promotion">
-		<img src="/wp-content/uploads/2022/10/เงากิ่งไม้-1.png" class="absolute pointer-events-none leaf01">
-		<img src="/wp-content/uploads/2022/10/leaves-shadow-1.png" class="absolute pointer-events-none leaf03">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/เงากิ่งไม้-1.png" class="absolute pointer-events-none leaf01">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/leaves-shadow-1.png" class="absolute pointer-events-none leaf03">
 		<div class="cont-pd">
 			<div id="home-slider-wrap-cont">
 				<div id="home-slider-wrap-cont_header" data-aos="fade-up">
@@ -821,7 +821,7 @@ if ($f['is_open']=='open') {
 					<sp class="xl"></sp>
 					<h5 class="see-more cl-white"><a href="/promotion" class="">
 						<span class="cl-white f30-24">ดูทั้งหมด</span> <img
-						src="/wp-content/uploads/2022/09/arrow-r.png" class="inline-block"
+						src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png" class="inline-block"
 						style="width:30px">
 					</a></h5>
 					<sp class="xl"></sp>
@@ -830,7 +830,7 @@ if ($f['is_open']=='open') {
 
 			<box col="9" id="home_promotion_slides_wrap_box">
 				<inner class="" id="home_promotion_slides_wrap_inner" data-items="<?= $promo_chk ?>">
-					<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r --l"
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r --l"
 					onclick="show_promo_arrow(-1)">
 					<div id="home_promotion_slides_wrap">
 						<div id="home_promotion_slides_num">
@@ -862,7 +862,7 @@ if ($f['is_open']=='open') {
 							}
 							?>
 						</div>
-						<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r"
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r"
 						onclick="show_promo_arrow(1)">
 					</div>
 				</inner>
@@ -932,7 +932,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 					<div id="booking1"
 					class="row-start-1 row-span-1 md:col-span-6 booking_para 2xl:col-span-7">
 					<div class="bg-cover blank bg-booking"
-					style="background-image:url('/wp-content/uploads/2022/09/Rectangle-523.png');height: 100%;">
+					style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Rectangle-523.png');height: 100%;">
 				</div>
 			</div>
 			<div id="booking2" class="row-span-1 md:col-span-6 md:my-12 2xl:col-span-5">
@@ -949,7 +949,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 						<a href="#!" class="text-2xl">
 							<h5 class="see-more">
 								<span class="cl-white f30-28" style="font-weight: 500;">ดูทั้งหมด</span>
-								<img src="/wp-content/uploads/2022/09/arrow-r.png" class="inline-block"
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png" class="inline-block"
 								style="width:30px">
 							</h5>
 						</a>
@@ -1118,7 +1118,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 
 		.mobile-360-pic {
 			position: static !important;
-			background-image: url('/wp-content/uploads/2022/09/Rectangle-522.png');
+			background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Rectangle-522.png');
 			background-size: cover;
 			background-position: center;
 		}
@@ -1151,10 +1151,10 @@ if ($f['featured_1']['is_open'] == 'open') {
 	}
 </style>
 <section id="feature" class="padding-l-vtc" style="background-color: #EDF2F6;z-index: 2;padding-bottom: 7rem;">
-	<img src="/wp-content/uploads/2022/10/Vector-1.png" class="absolute pointer-events-none leaf04">
-	<img src="/wp-content/uploads/2022/11/Vector-12.png" class="absolute pointer-events-none leaf04-1">
-	<img src="/wp-content/uploads/2022/10/Vector-5.png" class="absolute pointer-events-none leaf05">
-	<img src="/wp-content/uploads/2022/11/Vector-11.png" class="absolute pointer-events-none leaf05-1">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-1.png" class="absolute pointer-events-none leaf04">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-12.png" class="absolute pointer-events-none leaf04-1">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-5.png" class="absolute pointer-events-none leaf05">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-11.png" class="absolute pointer-events-none leaf05-1">
 	<div class="-px-4 -md:px-20 cont-pd three-block">
 		<sp class="xl"></sp>
 		<?php
@@ -1165,12 +1165,12 @@ if ($f['featured_1']['is_open'] == 'open') {
 			data-aos="fade-up">
 			<div class="row-span-1 md:col-span-1 flex items-center relative bg-360 mobile-360-pic">
 				<div class="bg-cover blank desktop-360-pic" ratio="3:2"
-				style="background-image:url('/wp-content/uploads/2022/09/Rectangle-522.png');width: calc(100% + 30px);z-index: 2;">
+				style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Rectangle-522.png');width: calc(100% + 30px);z-index: 2;">
 			</div>
 		</div>
 		<div class="row-span-1 xl:col-span-1 flex items-center">
 			<div class="bg-ci-orange-500 line01"></div>
-			<img src="/wp-content/uploads/2022/11/image-73-1.png" class="im_360">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/image-73-1.png" class="im_360">
 			<div class="p-4 pb-8 pl-8 md:pb-4 md:pl-0">
 				<h1 class="b4 cl-ci-blue-300 ">360 VIRTUAL<br>GALLERY</h1>
 				<div class="p-4 md:pl-8 md:pr-8 cl-ci-grey-300" style="font-size: 22px;line-height: 28px;">
@@ -1181,7 +1181,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 					<a href="/360-virtual-tour" class="">
 						<h5 class="see-more cl-ci-blue-300">
 							<span class="f30-28" style="font-weight: 500;">ดูทั้งหมด</span>
-							<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
 							style="width:30px">
 						</h5>
 					</a>
@@ -1206,7 +1206,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 					<div class="row-span-1 md:col-start-8 md:col-span-5">
 						<div class="relative bg-finn">
 							<div class="bg-cover blank desktop-finn-pic" ratio="4:3"
-							style="background-image:url('/wp-content/uploads/2022/09/Rectangle-570.png');top: 2vw;z-index: 2;">
+							style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Rectangle-570.png');top: 2vw;z-index: 2;">
 						</div>
 					</div>
 				</div>
@@ -1223,7 +1223,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 				<a href="https://aswinno.assetwise.co.th/FINPlus">
 					<h5 class="see-more cl-ci-blue-300 ml-4 md:ml-8">
 						<span style="font-weight: 500;" class="f30-28">ยื่นสินเชื่อออนไลน์</span>
-						<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
 						style="width:30px">
 					</h5>
 				</a>
@@ -1247,7 +1247,7 @@ if ($f['finplus-is-open'] == 'open' && $f['app-is-open'] == 'close') {
 				<div class="row-span-1 md:col-start-8 md:col-span-5">
 					<div class="relative bg-finn2">
 						<div class="bg-cover blank desktop-finn-pic" ratio="4:3"
-						style="background-image:url('/wp-content/uploads/2022/09/Rectangle-570.png');top: 2vw;z-index: 2;">
+						style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Rectangle-570.png');top: 2vw;z-index: 2;">
 					</div>
 				</div>
 			</div>
@@ -1264,7 +1264,7 @@ if ($f['finplus-is-open'] == 'open' && $f['app-is-open'] == 'close') {
 			<a href="https://aswinno.assetwise.co.th/FINPlus">
 				<h5 class="see-more cl-ci-blue-300 ml-4 md:ml-8">
 					<span style="font-weight: 500;" class="f30-28">ยื่นสินเชื่อออนไลน์</span>
-					<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
 					style="width:30px">
 				</h5>
 			</a>
@@ -1286,7 +1286,7 @@ if ($f['app-is-open'] == 'open' && $f['finplus-is-open'] == 'open') {
 	<div class="pb-4 pt-5 md:pt-10" style="padding-right:0 !important">
 		<div class="grid md:grid-cols-12 gap-4">
 			<div class="row-span-1 md:col-start-8 md:col-span-5 aapp">
-				<img src="/wp-content/uploads/2022/09/Group-840-e1664441008972.png"
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Group-840-e1664441008972.png"
 				class="relative md:top-6 aapp-img">
 			</div>
 			<div
@@ -1301,10 +1301,10 @@ if ($f['app-is-open'] == 'open' && $f['finplus-is-open'] == 'open') {
 			<sp class="l hidden md:block"></sp>
 			<div class="app-btn-wrap">
 				<a href="https://apps.apple.com/th/app/assetwise/id1436265481" class="">
-					<img src="/wp-content/uploads/2022/09/google-play-1.png" class="app-btn">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play-1.png" class="app-btn">
 				</a>
 				<a href="https://play.google.com/store/search?q=assetwise&c=apps&hl=en" class="">
-					<img src="/wp-content/uploads/2022/09/google-play.png" class="app-btn">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play.png" class="app-btn">
 				</a>
 			</div>
 		</div>
@@ -1324,7 +1324,7 @@ if ($f['app-is-open'] == 'open' && $f['finplus-is-open'] == 'close') {
 	<div class="pb-4 pt-5 md:pt-10" style="padding-right:0 !important">
 		<div class="grid md:grid-cols-12 gap-4">
 			<div class="row-span-1 md:col-start-8 md:col-span-5 aapp">
-				<img src="/wp-content/uploads/2022/09/Group-840-e1664441008972.png"
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Group-840-e1664441008972.png"
 				class="relative md:top-6 aapp-img">
 			</div>
 			<div
@@ -1339,10 +1339,10 @@ if ($f['app-is-open'] == 'open' && $f['finplus-is-open'] == 'close') {
 			<sp class="l hidden md:block"></sp>
 			<div class="app-btn-wrap">
 				<a href="https://apps.apple.com/th/app/assetwise/id1436265481" class="">
-					<img src="/wp-content/uploads/2022/09/google-play-1.png" class="app-btn" style="width: 300px">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play-1.png" class="app-btn" style="width: 300px">
 				</a>
 				<a href="https://play.google.com/store/search?q=assetwise&c=apps&hl=en" class="">
-					<img src="/wp-content/uploads/2022/09/google-play.png" class="app-btn" style="width: 300px">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play.png" class="app-btn" style="width: 300px">
 				</a>
 			</div>
 		</div>
@@ -1374,8 +1374,8 @@ if ($f['app-is-open'] == 'open' && $f['finplus-is-open'] == 'close') {
 <!--=== The Section Boxes : news ===-->
 <section id="news" class=""
 style="z-index: 3;background-color: white;padding-top: 4rem;padding-bottom: 3rem;overflow:hidden;">
-<img src="/wp-content/uploads/2022/10/shutterstock_1574382076-1.png" class="absolute pointer-events-none leaf06">
-<img src="/wp-content/uploads/2022/11/Group-793-1.png" class="absolute pointer-events-none leaf07">
+<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/shutterstock_1574382076-1.png" class="absolute pointer-events-none leaf06">
+<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-793-1.png" class="absolute pointer-events-none leaf07">
 
 <div class="cont-pd" style="z-index: 3;"> <!-- px-4 md:px-20 -->
 	<div class="grid grid-cols-2">
@@ -1387,7 +1387,7 @@ style="z-index: 3;background-color: white;padding-top: 4rem;padding-bottom: 3rem
 		<div class="col-span-1 text-right pr-0 p-6">
 			<a href="/news" class="see-more flex justify-end pointer cl-ci-blue-300">
 				<h5 class="cl-ci-blue-300 f30-28">ดูทั้งหมด</h5> <img
-				src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
+				src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
 				style="width:30px;margin:0;margin-left: 10px;">
 			</a>
 		</div>
@@ -1788,11 +1788,11 @@ wp_reset_postdata();
 </style>
 <!--=== The Section Boxes : blog ===-->
 <section id="blog" class="sec-blog">
-	<img src="/wp-content/uploads/2022/10/Vector-2.png" class="absolute pointer-events-none"
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-2.png" class="absolute pointer-events-none"
 	style="top: 0; left: 0;opacity: 0.1;">
-	<img src="/wp-content/uploads/2022/10/Vector-3.png" class="absolute pointer-events-none"
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-3.png" class="absolute pointer-events-none"
 	style="top: 0; left: 0;opacity: 0.1;">
-	<img src="/wp-content/uploads/2022/10/เงากิ่งไม้-2.png" class="absolute pointer-events-none leaf08">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/เงากิ่งไม้-2.png" class="absolute pointer-events-none leaf08">
 	<div class="cont-pd">
 		<div class="grid grid-cols-2">
 			<div class="col-span-1">
@@ -1802,7 +1802,7 @@ wp_reset_postdata();
 			</div>
 			<div class="col-span-1 cl-white flex items-center justify-end" style="z-index: 2;">
 				<a href="/blog" class="see-more flex justify-end pointer cl-white">
-					<h5 class="f30-28">ดูทั้งหมด</h5> <img src="/wp-content/uploads/2022/09/arrow-r.png"
+					<h5 class="f30-28">ดูทั้งหมด</h5> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png"
 					class="inline-block" style="width:30px;margin:0;margin-left: 10px;">
 				</a>
 			</div>
@@ -1961,26 +1961,26 @@ wp_reset_postdata();
 			<div class="px-8 col-span-1 home-bottom-filter pointer"
 			onclick="window.location.href='https://aswland.assetwise.co.th';">
 			<div class="home-bottom-filter-img">
-				<img src="/wp-content/uploads/2022/10/icon-menu-1.png">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-1.png">
 			</div>
 			<h6 class="text-center cl-ci-grey-200 f26-22">เสนอขายที่ดิน</h6>
 		</div>
 		<div class="px-8 col-span-1 home-bottom-filter pointer"
 		onclick="window.location.href='https://procurement.assetwise.co.th';">
 		<div class="home-bottom-filter-img">
-			<img src="/wp-content/uploads/2022/10/icon-menu-2.png">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-2.png">
 		</div>
 		<h6 class="text-center cl-ci-grey-200 f26-22">เสนอขายสินค้าและบริการ</h6>
 	</div>
 	<div class="px-8 col-span-1 home-bottom-filter pointer" onclick="window.location.href='#';">
 		<div class="home-bottom-filter-img">
-			<img src="/wp-content/uploads/2022/10/icon-menu-3.png">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-3.png">
 		</div>
 		<h6 class="text-center cl-ci-grey-200 f26-22">ร่วมงานกับเรา</h6>
 	</div>
 	<div class="px-8 col-span-1 home-bottom-filter pointer" onclick="window.location.href='#';">
 		<div class="home-bottom-filter-img">
-			<img src="/wp-content/uploads/2022/10/icon-menu-4.png">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-4.png">
 		</div>
 		<h6 class="text-center cl-ci-grey-200 f26-22">ติดต่อเรา</h6>
 	</div>
@@ -2060,8 +2060,8 @@ wp_reset_postdata();
 	}
 </style>
 <section id="all_project" class="sec-all-pro padding-l-vtc-">
-	<img src="/wp-content/uploads/2022/11/leaves-shadow-4.png" class="absolute pointer-events-none leaf09">
-	<img src="/wp-content/uploads/2022/11/leaves-shadow2-1.png" class="absolute pointer-events-none leaf10">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow-4.png" class="absolute pointer-events-none leaf09">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow2-1.png" class="absolute pointer-events-none leaf10">
 	<div class="cont-pd text-center">
 		<div class="">
 			<div id="show_pro_foot" class="flex flex-row justify-center" style="">
@@ -2088,7 +2088,7 @@ wp_reset_postdata();
 			<sp class="hidden vl md:block"></sp>
 			<div id="show-condo">
 				<span class="flex flex-row items-center justify-center" style="padding-top: 1rem;padding-bottom: 1rem;">
-					<img src="/wp-content/uploads/2022/09/Vector.png" style="height:24px;margin:0;margin-right: 12px;">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Vector.png" style="height:24px;margin:0;margin-right: 12px;">
 					<h6 class="">คอนโดมิเนียม</h6>
 				</span>
 				<sp class="l hidden md:block"></sp>
@@ -2114,7 +2114,7 @@ wp_reset_postdata();
 			<sp class="s"></sp>
 			<div id="show-townhome">
 				<span class="flex flex-row items-center justify-center txt-townhome">
-					<img src="/wp-content/uploads/2022/10/Icon-in-input.png"
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png"
 					style="filter: grayscale(100%);height:24px;margin:0;margin-right: 12px;">
 					<h6 class="">บ้านและทาวน์โฮม</h6>
 				</span>

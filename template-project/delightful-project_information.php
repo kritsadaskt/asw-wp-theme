@@ -68,7 +68,7 @@ act_template_project_css($opt,$template_name,$layout);
                                 <?php if ($content['more_information']['url'] != '') : ?>
                                     <a  target="_blank" href="<?= $content['more_information']['url'] ?>" class="info-btn">
                                         <div>
-                                            <img src="/wp-content/uploads/2023/03/Download.png" alt="">
+                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Download.png" alt="">
                                             <p><?php pll_e('ดาวน์โหลดเพิ่มเติม')?></p>
                                         </div>
                                     </a>
@@ -76,7 +76,7 @@ act_template_project_css($opt,$template_name,$layout);
                                 <?php if ($content['more_condition'] != '') : ?>
                                     <a  target="_blank" href="<?= $content['more_condition'][0]->guid ?>" class="pl-4 info-btn">
                                         <div>
-                                            <img src="/wp-content/uploads/2023/03/Information.png" alt="">
+                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Information.png" alt="">
                                             <p><?php pll_e('ข้อมูลเงื่อนไขเพิ่มเติม')?></p>
                                         </div>
                                     </a>
@@ -93,7 +93,7 @@ act_template_project_css($opt,$template_name,$layout);
                                 <?php if ($content['more_information']['url'] != '') : ?>
                                     <a href="<?= $content['more_information']['url'] ?>" class="info-btn">
                                         <div class="">
-                                            <img src="/wp-content/uploads/2023/03/Download.png" alt="">
+                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Download.png" alt="">
                                             <p><?php pll_e('ดาวน์โหลดเพิ่มเติม')?></p>
                                         </div>
                                     </a>
@@ -101,7 +101,7 @@ act_template_project_css($opt,$template_name,$layout);
                                 <?php if ($content['more_condition'] != '') : ?>
                                     <a href="<?= $content['more_condition'][0]->guid ?>" class="info-btn pt-2">
                                         <div class="">
-                                            <img src="/wp-content/uploads/2023/03/Information.png" alt="">
+                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Information.png" alt="">
                                             <p><?php pll_e('ข้อมูลเงื่อนไขเพิ่มเติม')?></p>
                                         </div>
                                     </a>

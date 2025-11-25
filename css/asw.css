@@ -2521,7 +2521,7 @@ cont-pd {
 }
 
 :root {
-	--mc-lightbox-arrow: url('/wp-content/uploads/2023/03/slide-arrow-l-e1680155229211.png');
+	--mc-lightbox-arrow: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/slide-arrow-l-e1680155229211.png');
 }
 
 #contact-form {
@@ -2621,7 +2621,7 @@ cont-pd {
 #contact-form .wpcf7 .wpcf7-not-valid-tip::before,
 #contact-form #form_check_ok_alert::before {
 	content: " ";
-	background-image: url(/wp-content/uploads/2023/03/invalid.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/invalid.png);
 	width: 16px;
 	height: 16px;
 	background-size: contain;
@@ -2657,7 +2657,7 @@ cont-pd {
 
 #contact-form .codedropz-upload-inner h3::before {
 	content: "";
-	background-image: url(/wp-content/uploads/2023/04/Group.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group.png);
 	background-size: contain;
 	display: block;
 	width: 24px;
@@ -2672,7 +2672,7 @@ cont-pd {
 
 #contact-form a.cd-upload-btn::before {
 	content: "";
-	background-image: url(/wp-content/uploads/2023/04/material-symbols_attach-file.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/material-symbols_attach-file.png);
 	background-size: contain;
 	display: block;
 	width: 32px;
@@ -2698,7 +2698,7 @@ cont-pd {
 }
 
 #contact-form .dnd-upload-status .dnd-upload-image span.file {
-	background-image: url(/wp-content/uploads/2023/04/Png.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Png.png);
 	height: 40px;
 	width: 40px;
 }
@@ -2764,7 +2764,7 @@ cont-pd {
 	height: 24px;
 	width: 24px;
 	margin-right: 16px;
-	background-image: url(/wp-content/uploads/2023/04/Icon-Close-1.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Icon-Close-1.png);
 }
 
 #contact-form .dnd-upload-status .dnd-upload-details .name>span {
@@ -2854,7 +2854,7 @@ cont-pd {
 	position: absolute;
 	top: 16px;
 	left: 16px;
-	background-image: url(/wp-content/uploads/2023/03/invalid.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/invalid.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 32px;
@@ -2887,7 +2887,7 @@ cont-pd {
 	position: absolute;
 	top: 16px;
 	left: 16px;
-	background-image: url(/wp-content/uploads/2023/04/Group-1147.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1147.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 32px;
@@ -3255,7 +3255,7 @@ div#header-nav-items {
 }
 
 .card-360 .-footer i.-line {
-	background-image: url(/wp-content/uploads/2023/05/Line.png);
+	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Line.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 24px;
@@ -3440,11 +3440,11 @@ div#header-nav-items {
 }
 
 .card-360 .-cont-footer .-location:before {
-	background-image: url('/wp-content/uploads/2023/05/Icon.png');
+	background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Icon.png');
 }
 
 .card-360 .-cont-footer .-type:before {
-	background-image: url('/wp-content/uploads/2023/05/Icon-1.png');
+	background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Icon-1.png');
 }
 
 .card-360.-card-360-max .-inner {

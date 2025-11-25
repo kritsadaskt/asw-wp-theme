@@ -72,23 +72,23 @@ $f = $args[1];
             <div class="col-span-8" id="project-footer-side-2">
                 <div class="footer-info">
                     <div class="footer-tel icon-btn">
-                        <img src="/wp-content/uploads/2023/02/Call.png" alt="">
+                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Call.png" alt="">
                         <?= $content['telephone_number'] ?>
                     </div>
                     <div class="footer-button">
                         <a href="">
                             <div class="icon-btn">
-                                <img src="/wp-content/uploads/2023/02/Vector.png" alt=""> facebook
+                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Vector.png" alt=""> facebook
                             </div>
                         </a>
                         <a href="">
                             <div class="icon-btn">
-                                <img src="/wp-content/uploads/2023/02/Icon-1.png" alt=""> LINE
+                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Icon-1.png" alt=""> LINE
                             </div>
                         </a>
                         <a href="">
                             <div class="icon-btn">
-                                <img src="/wp-content/uploads/2023/02/Location-1.png" alt=""> Sale Gallery
+                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Location-1.png" alt=""> Sale Gallery
                             </div>
                         </a>
                     </div>

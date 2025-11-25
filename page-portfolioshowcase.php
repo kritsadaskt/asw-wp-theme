@@ -137,7 +137,7 @@
 	}
 
 	/* #recent-projects {
-		background: url("/wp-content/uploads/2022/12/circle.png");
+		background: url("https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/circle.png");
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-position: left 8rem;
@@ -449,7 +449,7 @@ function pad($num){
 <div class="cont-pd pt-4">
 	<div class="flex flex-row items-center">
 		<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="/<?=pll_current_language()?>/about-us" class=""><?php pll_e('รู้จักแอสเซทไวส์')?></a>
 	</div>
 </div>
@@ -458,7 +458,7 @@ function pad($num){
 <!--=== The Section Boxes : about us ===-->
 <section id="recent-projects" class="">
 	<!-- <div id="bg-circle" class="absolute">
-		<img src="/wp-content/uploads/2022/12/circle.png">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/circle.png">
 	</div> -->
 	<div class="cont-pd  pt-2 xl:pt-10 -pb-10">
 		<div id="about-info-section"></div>
@@ -613,8 +613,8 @@ function pad($num){
 					<?php }
 					?>
 				</div>
-				<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)" style="z-index: 9;">
-				<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)" style="z-index: 9;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)" style="z-index: 9;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)" style="z-index: 9;">
 			</div>
 		</div>
 	</div>

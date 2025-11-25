@@ -13,7 +13,7 @@ if (pll_current_language()=='en') {
 ?>
 <div class="cont-pd py-4 flex flex-row items-center">
 	<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-	<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 	<a href="/<?=pll_current_language()?>/compare" class=""><?php pll_e('เปรียบเทียบโครงการ')?></a>
 </div>
 <?php 
@@ -169,9 +169,9 @@ if (!$found_all) {
 
 				<!-- Mobile -->
 				<section class="filter-mb-section" @click="mbExpandToggle()">
-					<img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
 					<span><?php pll_e('ค้นหาที่อยู่โครงการในแบบคุณ') ?></span>
-					<img src="/wp-content/uploads/2022/11/arrow.png" class="quick-filter-arrow" style="height: 15px">	
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/arrow.png" class="quick-filter-arrow" style="height: 15px">	
 				</section>
 
 				<div v-if="mbExpand" class="filter-mb-expand">
@@ -179,10 +179,10 @@ if (!$found_all) {
 					<div class="filter-mb-type">
 						<div class="filter-menu" @click="selectToggle('type')">
 							<div>
-								<img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
 								<span><?php pll_e('ประเภทโครงการ') ?></span>
 							</div>
-							<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'type' }" style="height:.5rem;margin: 0;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'type' }" style="height:.5rem;margin: 0;">
 						</div>
 						<div v-if="state == 'type'" class="filter-data">
 							<div v-for="type in type_list" :key="type.term_id">
@@ -209,10 +209,10 @@ if (!$found_all) {
 					<div class="filter-mb-type">
 						<div class="filter-menu" @click="selectToggle('location')">
 							<div>
-								<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;">
 								<span><?php pll_e('ทำเลที่คุณสนใจ') ?></span>
 							</div>
-							<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'location' }" style="height:.5rem;margin: 0;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'location' }" style="height:.5rem;margin: 0;">
 						</div>
 						<div v-if="state == 'location'" class="filter-data"><?php pll_e('ในกรุงเทพฯ') ?></span>
 							<sp style="height: 8px;" ></sp>
@@ -264,10 +264,10 @@ if (!$found_all) {
 					<div class="filter-mb-type">
 						<div class="filter-menu" @click="selectToggle('brand')">
 							<div>
-								<img src="/wp-content/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;">
 								<span><?php pll_e('เลือกแบรนด์') ?></span>
 							</div>
-							<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'brand' }" style="height:.5rem;margin: 0;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'brand' }" style="height:.5rem;margin: 0;">
 						</div>
 						<div v-if="state == 'brand'" class="filter-data">
 							<span class="cl-ci-blue-300" style="font-size: 26px;"><?php pll_e('คอนโดมิเนียม') ?></span>
@@ -321,10 +321,10 @@ if (!$found_all) {
 					<div class="filter-mb-type">
 						<div class="filter-menu" @click="selectToggle('price')">
 							<div>
-								<img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;">
 								<span><?php pll_e('>่ช่วงราคา') ?></span>
 							</div>
-							<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'price' }" style="height:.5rem;margin: 0;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'price' }" style="height:.5rem;margin: 0;">
 						</div>
 						<div v-if="state == 'price'" class="filter-data">
 							<div class="filter-price-lists">
@@ -347,28 +347,28 @@ if (!$found_all) {
 				<section class="filter-section">
 					<div class="filter-box">
 						<div @click="selectToggle('type')">
-							<img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
 							<span v-if="filter_type.length <= 0"><?php pll_e('ประเภทโครงการ') ?></span>
 								<span v-else><?php pll_e('เลือกแล้ว') ?> {{ filter_type.length }} <?php pll_e('โครงการ') ?></span>
-								<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'type' }" style="height:.5rem">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'type' }" style="height:.5rem">
 							</div>
 							<div @click="selectToggle('location')">
-								<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;">
 								<span v-if="filter_location.length <= 0"><?php pll_e('ทำเลที่คุณสนใจ') ?></span>
 									<span v-else><?php pll_e('เลือกแล้ว') ?> {{ filter_location.length }} <?php pll_e('ทำเล') ?> </span>
-									<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'location' }" style="height:.5rem">
+									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'location' }" style="height:.5rem">
 								</div>
 								<div @click="selectToggle('brand')">
-									<img src="/wp-content/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;">
+									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;">
 									<span v-if="filter_brand.length <= 0"><?php pll_e('เลือกแบรนด์') ?></span>
 										<span v-else><?php pll_e('เลือกแล้ว') ?> {{ filter_brand.length }} <?php pll_e('แบรนด์') ?> </span>
-										<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'brand' }" style="height:.5rem">
+										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'brand' }" style="height:.5rem">
 									</div>
 									<div @click="selectToggle('price')">
-										<img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;">
+										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;">
 										<span v-if="filter_price.label == 'none'"><?php pll_e('ช่วงราคา') ?></span>
 										<span v-else>{{ filter_price.label }}</span>
-										<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'price' }" style="height:.5rem">
+										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" :class="{ 'rotate180deg' : state == 'price' }" style="height:.5rem">
 									</div>
 								</div>
 								<div class="clear-filter" @click="clearFilter()"><?php pll_e('ล้างทั้งหมด') ?></div>

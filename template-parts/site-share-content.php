@@ -76,7 +76,7 @@
 		height: 42px;
 		border-radius: 100%;
 		background-color: rgba(29, 159, 155, 1);
-		background-image: url('/wp-content/uploads/2023/06/share.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/share.png');
 		background-size: 55%;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -92,7 +92,7 @@
 	}
 
 	.contact_fb {
-		background-image: url('/wp-content/uploads/2023/03/Logo.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Logo.png');
 		background-color: #fff;
 		border: 1px solid rgba(84, 94, 103, 1);
 		background-size: 10px;
@@ -103,7 +103,7 @@
 	}
 
 	.contact_twitter {
-		background-image: url('/wp-content/uploads/2023/06/twitter.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/twitter.png');
 		background-color: #fff;
 		border: 1px solid rgba(84, 94, 103, 1);
 		background-size: 17px;
@@ -114,7 +114,7 @@
 	}
 
 	.contact_ln {
-		background-image: url('/wp-content/uploads/2023/03/Subtract.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Subtract.png');
 		background-color: #fff;
 		border: 1px solid rgba(84, 94, 103, 1);
 		background-size: 22px;
@@ -125,15 +125,15 @@
 	}
 
 	.contact_fb:hover {
-		background-image: url('/wp-content/uploads/2023/03/Artboard-2.png')
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-2.png')
 	}
 
 	.contact_twitter:hover {
-		background-image: url('/wp-content/uploads/2023/06/twitter.png')
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/twitter.png')
 	}
 
 	.contact_ln:hover {
-		background-image: url('/wp-content/uploads/2023/03/Artboard-3.png')
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-3.png')
 	}
 
 	.contact_close {
@@ -143,7 +143,7 @@
 		height: 32px;
 		margin-top: 24px;
 		margin-bottom: 0;
-		background-image: url('/wp-content/uploads/2023/03/Group-889.png');
+		background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-889.png');
 		background-size: 10px;
 		background-position: center;
 		background-repeat: no-repeat;

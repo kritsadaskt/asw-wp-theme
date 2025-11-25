@@ -338,8 +338,8 @@
 			?> 
 		</div>
 		<div id="home-slider-arrow">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
 		</div>
 		<div id="home-slider-count">
 			<div >
@@ -506,7 +506,7 @@
 		}
 	</style>
 	<div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-		<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 	</div>
 	<div id="home-slider-count-mob">
 		<div >
@@ -519,7 +519,7 @@
 			<span class="-num-next-num">02</span><span style="margin-left: 3px;color: var(--ci-grey-400);font-weight: 300;font-size: 20px;">/<span class="-num-max"><?=pad($data_active+1)?></span></span></h5></div>
 		</div>
 		<div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 		</div>
 		<script type="text/javascript">
 			let mhbannerAutoPlay = 1;
@@ -559,14 +559,14 @@
 
 <div class="pl-10 pt-8 flex flex-row items-center">
 	<a href="/home" class="cl-ci-blue-400">หน้าแรก</a>
-	<img src="/wp-content/uploads/2023/01/Vector-84.png" style="margin:0px 12px;">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84.png" style="margin:0px 12px;">
 	<a href="/about-us" class="">รู้จักแอสเซทไวส์</a>
 </div>
 <sp class=""></sp>
 <!--=== The Section Boxes : about us ===-->
 <section id="about-us" class="">
 	<div id="bg-circle" class="absolute">
-		<img src="/wp-content/uploads/2022/12/circle.png">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/circle.png">
 	</div>
 	<div class="cont-pd  pt-11 lg:pt-16 -pb-10">
 		<div id="about-info-section"></div>
@@ -579,9 +579,9 @@
 				<div class="cont-pd">
 					<div class="flex flex-col justify-center">
 						<div class="flex flex-row justify-center items-center">
-							<img src="/wp-content/uploads/2022/11/unnamed-file.png" class="relative m-0 mr-4" style="top:-17px;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/unnamed-file.png" class="relative m-0 mr-4" style="top:-17px;">
 							<div class="f40-30"><?php echo $f['first_quote'] ?></div>  
-							<img src="/wp-content/uploads/2022/11/1.png" class="relative m-0 ml-4" style="bottom:-12.5px;">
+							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/1.png" class="relative m-0 ml-4" style="bottom:-12.5px;">
 						</div>
 						<sp class="vl"></sp>
 						<div class="">
@@ -591,7 +591,7 @@
 						<div class="px-0 sm:px-12 lg:px-20 cl-ci-grey-300">
 							<?php echo $f['description'] ?>
 						</div>
-						<img src="https://dev.assetwise.co.th/wp-content/uploads/2025/01/20th-logo.webp" class="mx-auto w-2/5">
+						<img src="https://dev.assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2025/01/20th-logo.webp" class="mx-auto w-2/5">
 
 						<sp style="height: 20px;" ></sp>
 
@@ -754,7 +754,7 @@
 													echo sprintf("%02d", $key+1);
 													?>
 												</div>
-												<!-- <img src="/wp-content/uploads/2022/12/Group-1088-1.png" class="about-line"> -->
+												<!-- <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-1088-1.png" class="about-line"> -->
 												<div class="wavebar wave-1">
 													<span></span>
 													<span></span>
@@ -811,7 +811,7 @@
 													echo sprintf("%02d", $key+1);
 													?>
 												</div>
-												<!-- <img src="/wp-content/uploads/2022/12/Group-1088-1.png" class="about-line"> -->
+												<!-- <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-1088-1.png" class="about-line"> -->
 												<div class="wavebar wave-2">
 													<span></span>
 													<span></span>
@@ -852,9 +852,9 @@
 						<sp style="height: 18px;" ></sp>
 						<div class="flex justify-center items-center relative px-9 md:px-48">
 							<h3 class="text-center relative">
-								<img src="/wp-content/uploads/2022/11/unnamed-file.png" class="absolute m-0 mr-4" style="top:-10px;left: -30px;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/unnamed-file.png" class="absolute m-0 mr-4" style="top:-10px;left: -30px;">
 								<?= $v['quote'] ?>
-								<img src="/wp-content/uploads/2022/11/1.png" class="absolute m-0 ml-4" style="bottom:-5px;right: -30px;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/1.png" class="absolute m-0 ml-4" style="bottom:-5px;right: -30px;">
 							</h3>
 						</div>
 						<sp class="rem-4"></sp>
@@ -1024,8 +1024,8 @@
 					<?php }
 					?>
 				</div>
-				<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)">
-				<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)">
 			</div>
 		</div>
 	</div>

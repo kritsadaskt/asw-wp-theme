@@ -369,8 +369,8 @@ function pad($num){
 			?> 
 		</div>
 		<div id="home-slider-arrow">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
 		</div>
 		<div id="home-slider-count">
 			<div >
@@ -558,7 +558,7 @@ function pad($num){
 		}
 	</style>
 	<div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-		<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 	</div>
 	<div id="home-slider-count-mob">
 		<div >
@@ -571,7 +571,7 @@ function pad($num){
 			<span class="-num-next-num">02</span><span style="margin-left: 3px;color: var(--ci-grey-400);font-weight: 300;font-size: 20px;">/<span class="-num-max"><?=pad($data_active+1)?></span></span></h5></div>
 		</div>
 		<div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 		</div>
 		<script type="text/javascript">
 			let mhbannerAutoPlay = 1;
@@ -614,7 +614,7 @@ function pad($num){
 	<div id="promo-info-section"></div>
 	<div class="cont-pd py-4 flex flex-row items-center">
 		<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="/<?=pll_current_language()?>/promotion" class=""><?php pll_e('โปรโมชั่น')?></a>
 	</div>
 	<!-- <sp class="l"></sp> -->
@@ -723,7 +723,7 @@ function pad($num){
 	
 </style>
 <section id="promotion-info" class="lg:pt-8 -pb-10 bg-ci-grey-900 relative">
-	<img src="/wp-content/uploads/2022/12/Group-793.png" class="absolute pointer-events-none">
+	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-793.png" class="absolute pointer-events-none">
 	<div class="cont-pd">
 		<div class="-body-w-side">
 			<div class="">

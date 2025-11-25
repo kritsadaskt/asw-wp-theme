@@ -23,13 +23,13 @@ act_template_project_css($opt,$template_name,$layout);
             <div class="grid grid-cols-12 text-white py-6">
                 <div class="col-span-6 flex flex-row justify-center items-center">
                     <span class="p-3">
-                        <img src="/wp-content/uploads/2023/02/phone-dynamic1.png" alt="">
+                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/phone-dynamic1.png" alt="">
                     </span>
                     <span>02-168-0000</span>
                 </div>
                 <div class="col-span-6 flex flex-row justify-center items-center">
                     <span class=" p-3">
-                        <img src="/wp-content/uploads/2023/02/line-dynamic1.png" alt="">
+                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/line-dynamic1.png" alt="">
                     </span>
                     <span class="underline"><?php pll_e('สอบถามเพิ่มเติม')?></span>
                 </div>

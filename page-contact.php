@@ -15,8 +15,8 @@ $v = get_fields();
     <section id="contact-us-page">
         <section id="banner-form">
             <div class="-shadow">
-                <img class="shadow-1" src="/wp-content/uploads/2023/04/เงากิ่งไม้-3.png" alt="">
-                <img class="shadow-2" src="/wp-content/uploads/2023/04/leaves-shadow-1.png" alt="">
+                <img class="shadow-1" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/เงากิ่งไม้-3.png" alt="">
+                <img class="shadow-2" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/leaves-shadow-1.png" alt="">
             </div>
             <div class="-background">
                 <div class="-l"></div>
@@ -29,7 +29,7 @@ $v = get_fields();
                     <div class="lg:container mx-auto py-6  px-4 ">
                         <div class="flex flex-row items-center">
                             <a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-                            <img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
                             <a href="/<?=pll_current_language()?>/!#"><?php pll_e('ติดต่อเรา')?></a>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ $v = get_fields();
                     <div class="-body">
                         <div class="-detail">
                             <div class="-wrap">
-                                <img src="/wp-content/uploads/2023/04/Group-1138.png" alt="">
+                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1138.png" alt="">
                                 <div class="-desc">
                                     <h6>
                                         <?= $v['company_name'] ?>
@@ -50,13 +50,13 @@ $v = get_fields();
                                         <?= $v['location_detail'] ?>
                                     </p>
                                     <a href="<?= $v['map_link'] ?>">
-                                        <img src="/wp-content/uploads/2023/04/Vector-1.png" alt="">
+                                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-1.png" alt="">
                                         <?php pll_e('ดูแผนที่')?>
                                     </a>
                                 </div>
                             </div>
                             <div class="-wrap">
-                                <img src="/wp-content/uploads/2023/04/Vector-21.png" alt="">
+                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-21.png" alt="">
                                 <div class="-desc">
                                     <h6>
                                         <?= $v['telephone'] ?>
@@ -67,7 +67,7 @@ $v = get_fields();
                                 </div>
                             </div>
                             <div class="-wrap">
-                                <img src="/wp-content/uploads/2023/04/Group-1140.png" alt="">
+                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1140.png" alt="">
                                 <div class="-desc">
                                     <h6>
                                         <?= $v['fax'] ?>
@@ -75,7 +75,7 @@ $v = get_fields();
                                 </div>
                             </div>
                             <div class="-wrap">
-                                <img src="/wp-content/uploads/2023/04/Group-1139.png" alt="">
+                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1139.png" alt="">
                                 <div class="-desc">
                                     <h6>
                                         <?= $v['email'] ?>
@@ -90,7 +90,7 @@ $v = get_fields();
         <div class="lg:container mx-auto py-6  px-4 hidden lg:block">
             <div class="flex flex-row items-center">
                 <a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-                <img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
                 <a href="/<?=pll_current_language()?>/!#"><?php pll_e('ติดต่อเรา')?></a>
             </div>
         </div>
@@ -210,20 +210,20 @@ $v = get_fields();
 </style>
     <!-- <section id="thank-you" class="mx-auto pt-10 pb-20 px-4 md:px-0">
         <div class="flex flex-col items-center text-center">
-            <img src="/wp-content/uploads/2023/05/thankyou-contact-us.png" alt="">
+            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/thankyou-contact-us.png" alt="">
             <h2>ขอขอบคุณ</h2>
             <div class="sub-menu">
                 แอสเซทไวส์ ได้รับข้อมูลคุณเรียบร้อยแล้ว จะรีบติดต่อกลับไปให้เร็วที่สุด ขอบคุณค่ะ
             </div>
             <div class="-info-wrap">
                 <a href="tel:<?= $v['telephone'] ?>" class="-info-tel">
-                    <img src="/wp-content/uploads/2023/05/phone-contact-us.png" alt="">
+                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/phone-contact-us.png" alt="">
                     <div class="hightlight">
                         <?= $v['telephone'] ?>
                     </div>
                 </a>
                 <a href="#!" class="-info-more">
-                    <img src="/wp-content/uploads/2023/05/line-contact-us.png" alt="">
+                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/line-contact-us.png" alt="">
                     <div class="hightlight">
                         สอบถามเพิ่มเติม
                     </div>

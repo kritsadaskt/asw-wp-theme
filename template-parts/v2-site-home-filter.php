@@ -117,7 +117,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 						<span class="wide">
 							<div class="grid grid-cols-5">
 								<div class="col-span-1 flex items-center">
-									<img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
+									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;">
 								</div>
 								<div class="col-span-4">
 									<h6 class="" id="type_pro">
@@ -126,7 +126,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 								</div>
 							</div>
 						</span>
-						<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 					</div>
 				</inner></box>
 				<box col="2.5"><inner id="filter_1" class="padding quick-filter v-middle-wrap cursor-pointer" onclick="filter_pop(1, this)">
@@ -134,7 +134,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 						<span class="wide">
 							<div class="grid grid-cols-5">
 								<div class="col-span-1 flex items-center">
-									<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem">
+									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem">
 								</div>
 								<div class="col-span-4">
 									<h6 class="dbfont" id="lo_pro">
@@ -143,7 +143,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 								</div>
 							</div>
 						</span>
-						<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 					</div>
 				</inner></box>
 				<box col="2.5"><inner id="filter_2" class="padding quick-filter v-middle-wrap cursor-pointer" onclick="filter_pop(2, this)">
@@ -151,7 +151,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 						<span class="wide">
 							<div class="grid grid-cols-5">
 								<div class="col-span-1 flex items-center">
-									<img src="/wp-content/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem">
+									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem">
 								</div>
 								<div class="col-span-4">
 									<h6 class="" id="brand_pro">
@@ -160,7 +160,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 								</div>
 							</div>
 						</span>
-						<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 					</div>
 				</inner></box>
 				<box col="2.5"><inner id="filter_3" class="padding quick-filter v-middle-wrap cursor-pointer" onclick="filter_pop_price()" data-open="-1" data-price-min="0" data-price-max="">
@@ -169,7 +169,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 						<span class="wide">
 							<div class="grid grid-cols-5">
 								<div class="col-span-1 flex items-center">
-									<img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem">
+									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem">
 								</div>
 								<div class="col-span-4">
 									<h6 class="" id="price_pro">
@@ -178,7 +178,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 								</div>
 							</div>
 						</span>
-						<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 					</div>
 				</inner></box>
 
@@ -460,7 +460,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 					<span class="wide">
 						<div class="grid grid-cols-5 gap-0 flex items-center">
 							<div class="col-span-1 flex items-center">
-								<img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2.5rem;margin:0;">
+								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2.5rem;margin:0;">
 							</div>
 							<div class="col-span-4">
 								<h6 class="filter-select" id="">
@@ -472,7 +472,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 							</div>
 						</div>
 					</span>
-					<img src="/wp-content/uploads/2022/11/arrow.png" style="height: 15px;">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/arrow.png" style="height: 15px;">
 				</div>	
 			</div>
 		</div>
@@ -549,7 +549,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 	<div class="popup-filter-inner" onclick="filter_pop_mini(4)">
 		<div class="grid grid-cols-12">
 			<div class="col-span-1 flex items-center">
-				<img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;margin:0;">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2rem;margin:0;">
 			</div>
 			<div class="col-span-10 pl-3">
 				<h6 class="" id="type_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -557,7 +557,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 				</h6>
 			</div>
 			<div class="col-span-1 flex items-center">
-				<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 			</div>
 		</div>
 	</div>
@@ -587,7 +587,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 <div class="popup-filter-inner" onclick="filter_pop_mini(0)">
 	<div class="grid grid-cols-12">
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;margin:0;">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;margin:0;">
 		</div>
 		<div class="col-span-10 pl-3">
 			<h6 class="" id="loca_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -595,7 +595,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 			</h6>
 		</div>
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 		</div>
 	</div>
 </div>
@@ -638,7 +638,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 <div class="popup-filter-inner" onclick="filter_pop_mini(1)">
 	<div class="grid grid-cols-12">
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;margin:0;">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;margin:0;">
 		</div>
 		<div class="col-span-10 pl-3">
 			<h6 class="" id="brand_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -646,7 +646,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 			</h6>
 		</div>
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 		</div>
 	</div>
 </div>
@@ -693,7 +693,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 <div class="popup-filter-inner" onclick="filter_pop_mini(2)">
 	<div class="grid grid-cols-12">
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;margin:0;">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;margin:0;">
 		</div>
 		<div class="col-span-10 pl-3">
 			<h6 class="" id="cost_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -701,7 +701,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 			</h6>
 		</div>
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 		</div>
 	</div>
 </div>
@@ -725,7 +725,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 <div class="popup-filter-inner" onclick="filter_pop_mini(3)" style="display: none;">
 	<div class="grid grid-cols-12">
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/11/Group-908.png" class="inline-block" style="height:2rem;margin:0;">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-908.png" class="inline-block" style="height:2rem;margin:0;">
 		</div>
 		<div class="col-span-10 pl-3">
 			<h6 class="" id="stat_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -733,7 +733,7 @@ $term_pj_location = asw_get_term_nest('project_location');
 			</h6>
 		</div>
 		<div class="col-span-1 flex items-center">
-			<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 		</div>
 	</div>
 </div>

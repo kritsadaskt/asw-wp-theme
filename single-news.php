@@ -65,9 +65,9 @@ $v = get_field('content');
 <div style="background: linear-gradient(360deg, #EDF2F7 0%, #FFFFFF 103.44%);">
 	<div class="container -bc mx-auto pt-3 xl:pt-4 truncate px-4 xl:px-0 flex flex-row items-center">
 		<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="/<?=pll_current_language()?>/news" class="cl-ci-blue-400"><?php pll_e('ข่าวสาร')?></a>
-		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="#!" class=""><?php the_title() ?></a>
 	</div>
 	<?php while (have_posts()) : the_post(); ?>
@@ -222,7 +222,7 @@ $v = get_field('content');
 								</div>
 								<div class="col-span-1 text-right pr-0">
 									<a href="/<?=pll_current_language()?>/news" class="see-more flex justify-end pointer cl-ci-blue-300">
-										<h5 class="cl-ci-blue-300 f30-28"><?php pll_e('ดูทั้งหมด')?></h5> <img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px;margin:0;margin-left: 10px;">
+										<h5 class="cl-ci-blue-300 f30-28"><?php pll_e('ดูทั้งหมด')?></h5> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px;margin:0;margin-left: 10px;">
 									</a>
 								</div>
 							</div>

@@ -73,13 +73,13 @@
 
 <div class="cont-pd py-6 flex flex-row items-center">
     <a href="/home" class="cl-ci-blue-400">หน้าแรก</a>
-    <img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
     <a href="/news-archive" class="">ข่าวสาร</a>
 </div>
 
 <section id="club-news" class="pt-6 md:pt-9 pb-12 md:pb-14">
-    <img src="/wp-content/uploads/2022/12/Group-793-1.png" class="absolute pointer-events-none leaf15">
-    <img src="/wp-content/uploads/2022/12/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf16">
+    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-793-1.png" class="absolute pointer-events-none leaf15">
+    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf16">
     <div class="cont-pd">
         <h1>ข่าวสาร</h1>
         <sp class="l"></sp>

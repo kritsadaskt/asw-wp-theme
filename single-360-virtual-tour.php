@@ -38,7 +38,7 @@ if ($link_type == 'link-out') {
 }
 die();
 // $zip_filepath = $file['url'];
-// $zip_filepath = explode(site_url() . '/wp-content/uploads', $zip_filepath)[1];
+// $zip_filepath = explode(site_url() . 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads', $zip_filepath)[1];
 // $zip_filepath_hash = md5($zip_filepath);
 // $zif_file_source = __DIR__ . '/../../uploads' . $zip_filepath;
 // $dir = __DIR__ . "/../../assetwise-360/" . $zip_filepath_hash . "/index.html";
@@ -200,7 +200,7 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 		}
 	}
 	i.-line{
-		background-image: url(/wp-content/uploads/2023/05/Line.png);
+		background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Line.png);
 		background-size: contain;
 		background-repeat: no-repeat;
 		width: 24px;
@@ -218,7 +218,7 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 					<h5 class="-about">
 						<span class="-status"><?=$status?></span>
 						<span class="mx-2 status-dot">•</span>
-						<span class="-location"><img src="/wp-content/uploads/2023/04/Icon.png"><?=$location?></span>
+						<span class="-location"><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Icon.png"><?=$location?></span>
 					</h5>
 					<h5 class="-price"><?php pll_e('เริ่มต้น')?> <?=$price?> <?php pll_e('ล้านบาท')?></h5>
 				</div>
@@ -228,7 +228,7 @@ if ($GLOBALS['s_blog_layout_single'] == 'full-width') {
 					<?php pll_e('ดูรายละเอียดโครงการ')?>
 				</a>
 				<a  target="_blank" href="<?=$line?>" class="-btn">
-					<img src="/wp-content/uploads/2023/05/Line.png" style="width: 30px;display: inline;padding-right: 3px;">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Line.png" style="width: 30px;display: inline;padding-right: 3px;">
 					<?php pll_e('สอบถามเพิ่มเติม')?>
 				</a>
 				<a  target="_blank" href="#!" class="-btn -d">
