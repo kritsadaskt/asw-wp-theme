@@ -1243,7 +1243,9 @@ if ($f['featured_1']['is_open'] == 'open') {
 				</div>
 				<div class="row-span-1 xl:col-span-1 flex items-center">
 					<div class="bg-ci-orange-500 line01"></div>
-					<img src="<?= $f['featured_2']['small_image']['sizes']['large'] ?>" class="im_360">
+					<?php if(isset($f['featured_2']['small_image']['sizes']['large'])): ?>
+						<img src="<?= $f['featured_2']['small_image']['sizes']['large'] ?>" class="im_360">
+					<?php endif; ?>
 					<div class="p-4 pb-8 pl-8 md:pb-4 md:pl-0">
 						<h1 class="b4 cl-ci-blue-300 "><?= $f['featured_2']['title'] ?></h1>
 						<div class="p-4 md:pl-8 md:pr-8 cl-ci-grey-300" style="font-size: 22px;line-height: 28px;">
@@ -1967,7 +1969,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 		<div class="lg:flex justify-center grid grid-cols-1 lg:grid-cols-4 lg:gap-2">
 			<div class="px-8 col-span-1 home-bottom-filter pointer" data-clickblank onclick="window.location.href='https://aswland.assetwise.co.th';">
 				<div class="home-bottom-filter-img">
-					<img src="/wp-content/uploads/2022/10/icon-menu-1.png">
+					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-1.png">
 				</div>
 				<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('เสนอขายที่ดิน') ?></h6>
 			</div>
@@ -1975,7 +1977,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 			<div class="px-8 col-span-1 home-bottom-filter pointer">
 				<a href="https://aswinno.assetwise.co.th/vendorportal/Vendor/Verify" title="" target="_blank" class="flex flex-col md:flex-row items-center">	
 					<div class="home-bottom-filter-img">
-						<img src="/wp-content/uploads/2022/10/icon-menu-2.png">
+						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-2.png">
 					</div>
 					<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('เสนอขายสินค้าและบริการ') ?></h6>
 				</a>
@@ -1984,7 +1986,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 			<div class="px-8 col-span-1 home-bottom-filter pointer">
         <a href="https://careers.assetwise.co.th" title="ร่วมงานกับ AssetWise" target="_blank" class="flex flex-col md:flex-row items-center">
           <div class="home-bottom-filter-img">
-            <img src="/wp-content/uploads/2022/10/icon-menu-3.png">
+            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-3.png">
           </div>
           <h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('ร่วมงานกับเรา'); ?></h6>
         </a>
@@ -1992,7 +1994,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 
 			<div class="px-8 col-span-1 home-bottom-filter pointer">
 				<div class="home-bottom-filter-img">
-					<a href="tel:021680000" class=""><img src="/wp-content/uploads/2022/10/icon-menu-4.png"></a>
+					<a href="tel:021680000" class=""><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-4.png"></a>
 				</div>
 				<a href="tel:021680000" class="">
 					<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('ติดต่อเรา') ?></h6>
@@ -2192,7 +2194,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 	}
 
 	if (document.querySelector('#home_promotion_slides_wrap') != null) {
-		document.querySelector('#home_promotion_slides_wrap').style.setProperty('--max', <?= $promo_chk * 3 ?>)
+		document.querySelector('#home_promotion_slides_wrap').style.setProperty('--max', <?= isset($promo_chk) ? $promo_chk * 3 : 0 ?>)
 	}
 	let waitingPromotionLoop = null
 
