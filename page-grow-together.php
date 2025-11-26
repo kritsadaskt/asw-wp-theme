@@ -44,18 +44,18 @@
       <h2 class="text-white text-center font-medium text-[48px]">ลงทะเบียนร้านค้า</h2>
     </div>
     <div class="col-12 lg:w-3/5 mx-auto">
-      <form action="" class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-0">
+      <form id="growTogetherForm" action="" class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-0">
         <div class="form-group col-span-2">
           <label for="shopName">ชื่อร้านค้า <span>*</span></label>
           <input type="text" class="form-control" id="shopName" name="shopName">
         </div>
         <div class="form-group col-span-2 md:col-span-1">
           <label for="contactNumber">เบอร์ติดต่อ <span class="text-red-500">*</span></label>
-          <input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="089-999-9999">
+          <input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="089-999-9999" pattern="\d{3}-\d{3}-\d{4}">
         </div>
         <div class="form-group col-span-2 md:col-span-1">
           <label for="email">อีเมล <span class="text-red-500">*</span></label>
-          <input type="text" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+          <input type="text" class="form-control" id="email" name="email" placeholder="example@gmail.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
         </div>
         <div class="form-group col-span-2">
           <label for="address">ที่อยู่ร้านค้า <span class="text-red-500">*</span></label>
