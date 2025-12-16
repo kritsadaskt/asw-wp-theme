@@ -99,6 +99,12 @@ function project_card($post) {
                   'field' => 'slug',
                   'terms' => ['new_project', 'ready_project'],
                 ),
+                array(
+                  'taxonomy' => 'private-project',
+                  'field' => 'slug',
+                  'terms' => ['private'],
+                  'operator' => 'NOT IN',
+                ),
               ),
               'posts_per_page' => -1,
             );
