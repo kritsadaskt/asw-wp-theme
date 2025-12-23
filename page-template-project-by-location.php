@@ -88,6 +88,8 @@ function project_card($post) {
             }
             $args = array(
               'post_type' => 'condominium',
+              'orderby' => 'date',
+              'order' => 'DESC',
               'tax_query' => array(
                 array(
                   'taxonomy' => 'project_location',
