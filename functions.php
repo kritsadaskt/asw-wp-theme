@@ -2739,3 +2739,32 @@ function asw_front_page_scripts() {
 }
 
 //add_action('wp_footer', 'asw_front_page_scripts');
+
+
+class Footer_P_Walker extends Walker_Nav_Menu {
+    
+    // Override start_el to define the opening tag and the link
+    function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        
+        // 1. Get the URL and Title
+        $url   = esc_url( $item->url );
+        $title = apply_filters( 'the_title', $item->title, $item->ID );
+
+        // 2. Build your custom HTML string
+        // We output the whole block here: <p><a href="...">Text</a></p>
+        $item_output = sprintf(
+            '<p class="w-400 py-1"><a href="%s" class="link-footer">%s</a></p>',
+            $url,
+            $title
+        );
+
+        // 3. Append to the output
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+    }
+
+    // Override end_el to do nothing (prevents default </li>)
+    function end_el( &$output, $item, $depth = 0, $args = null ) {
+        // We already closed the </p> in start_el, so we leave this empty
+        // to prevent WordPress from outputting a closing </li>
+    }
+}
