@@ -185,6 +185,7 @@ $f_footer = get_field('footer_code');
               <p class="w-400 py-1 hidden"><a href="/<?= pll_current_language() ?>/360-virtual-tour" class="link-footer">360 Virtual Gallery</a></p>
               <p class="w-400 py-1"><a target="_blank" href="https://aswinno.assetwise.co.th/bankmatching?utm_source=Website&utm_medium=HeroBanner&utm_campaign=Home_BankMatching" class="link-footer"><?php pll_e('Bank Matching') ?></a></p>
               <p class="w-400 py-1 hidden"><a href="#!" class="link-footer">AssetWise Application</a></p>
+              <p class="w-400 py-1"><a title="<?php pll_e('ลงทะเบียนคู่ค้า') ?>" href="https://assetwise.co.th/vendor-portal/" class="link-footer"><?php pll_e('ลงทะเบียนคู่ค้า') ?></a></p>
               <!-- <p class="w-400 py-1 "><a href="/<?= pll_current_language() ?>/customer-care" class="link-footer">AssetWise Customer Care</a></p> -->
             </div>
           </div>
