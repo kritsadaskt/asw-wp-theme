@@ -17,7 +17,7 @@ global $masthead;
 get_header();
 ?>
 <?php 
-if ($_GET['dev'] == 2) {
+if (isset($_GET['dev']) && $_GET['dev'] == 2) {
     get_template_part( 'template-parts/site','home-2');
 }else{
     get_template_part( 'template-parts/site','home');
