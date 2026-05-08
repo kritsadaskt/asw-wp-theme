@@ -142,7 +142,7 @@ $keyword = $wp_query->query['s'];
 		display: none;
 	}
 </style>
-<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/leaves-shadow-1.png" class="s-leaves">
+<img src="/wp-content/uploads/2023/05/leaves-shadow-1.png" class="s-leaves">
 <div class="cont-pd main-body">
 	<h5 class="kw-count"><?php pll_e('ผลการค้นหา')?> "<?=$keyword?>" - <span class="keyword-span"><span class="keyword-count"></span> <?php pll_e('รายการ')?></span></h5>
 	<div id="primary" class="content-area">
@@ -210,7 +210,7 @@ $keyword = $wp_query->query['s'];
 			<div class="search-main-not-found">
 				
 				<div class="text-center pb-16 mt-12">
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/projects-search.png" style="max-width:286px" class="mb-5">
+					<img src="/wp-content/uploads/2023/05/projects-search.png" style="max-width:286px" class="mb-5">
 					<h5 class="mb-2"><?php pll_e('ไม่พบเนื้อหาที่คุณต้องการ?')?></h5>
 					<div><?php pll_e('ลองปรับรายละเอียดการค้นหาดูอีกครั้ง')?></div>
 				</div>

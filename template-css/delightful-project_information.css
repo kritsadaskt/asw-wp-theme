@@ -147,9 +147,6 @@
       grid-column: span 2;
    }
 
-   #info-detail .detail-rail-wrap {
-      overflow: visible;
-   }
 
    #info-detail .detail-rail {
       --wd: 90%;
@@ -199,6 +196,9 @@
    #info>div{
       padding-left: 1rem;
       padding-right: 1rem;
+   }
+   #info-detail .detail-rail-wrap {
+      overflow: visible;
    }
 }
 /*-- Mobile Version --*/

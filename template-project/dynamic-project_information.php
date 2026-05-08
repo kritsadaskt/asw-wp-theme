@@ -7,7 +7,7 @@ $opt = $args[4];
 $layout = $args[5];
 $content = aswv2_gen_master($master,$content,$layout);
 act_template_project_css($opt,$template_name,$layout);
-isset($content['information_background']) ? $bg = $content['information_background']['sizes']['1536x1536'] : $bg = '';
+$bg = $content['information_background']['sizes']['1536x1536'];
 ?>
 <section id="info" class="is-on-nav is-on-nav-mob">
 	<div class="container mx-auto section-fade">
@@ -82,14 +82,12 @@ isset($content['information_background']) ? $bg = $content['information_backgrou
 										<?= $value['text'] ?>
 										<ul class="ml-6">
 											<?php
-											if (is_array($value['bullet'])) {
-												foreach ($value['bullet'] as $key => $v) {
-													?>
-													<li class="list-disc">
-														<?= $v['text'] ?>
-													</li>
-													<?php
-												}
+											foreach ($value['bullet'] as $key => $v) {
+												?>
+												<li class="list-disc">
+													<?= $v['text'] ?>
+												</li>
+												<?php
 											}
 											?>
 										</ul>
@@ -142,7 +140,7 @@ if (is_array($content['progress_list'])) {
 							<?php foreach ($content['image'] as $key => $value) { ?>
 								<div id="info-img" style="background-image:url(<?= $value['url'] ?>)"></div>
 							<?php } ?>
-							<!-- <div id="info-img" style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Rectangle-576.png')"></div> -->
+							<!-- <div id="info-img" style="background-image:url('/wp-content/uploads/2023/01/Rectangle-576.png')"></div> -->
 						</div>
 					</div>
 				</div>

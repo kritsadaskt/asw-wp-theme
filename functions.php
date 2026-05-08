@@ -8,15 +8,6 @@
  * @package seed
  */
 
-/**
- * Add S3 URL to upload directory
- */
-add_filter( 'upload_dir', function( $uploads ) {
-    $s3_url = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads';
-    $uploads['baseurl'] = $s3_url;
-    $uploads['url'] = $s3_url . $uploads['subdir'];
-    return $uploads;
-} );
 
 /* LAYOUT */
 if (!isset($GLOBALS['s_blog_layout'])) {
@@ -253,8 +244,8 @@ function seed_scripts()
     wp_enqueue_style('s-mobile', get_theme_file_uri('/css/mobile.css'), array(), filemtime(get_theme_file_path('/css/mobile.css')));
     wp_enqueue_style('s-desktop', get_theme_file_uri('/css/desktop.css'), array(), filemtime(get_theme_file_path('/css/desktop.css')), '(min-width: 992px)');
     wp_enqueue_style('s-ie', get_theme_file_uri('/css/ie.css'), array(), filemtime(get_theme_file_path('/css/ie.css')), '(-ms-high-contrast: none), (-ms-high-contrast: active)');
-    wp_enqueue_style('spring-jayss', get_theme_file_uri('/css/jayss2/jayss-wp.css'), array(), filemtime(get_theme_file_path('/css/jayss2/jayss-wp.css')));
-    wp_enqueue_style('s-style', get_theme_file_uri('/style.css'), array(), filemtime(get_theme_file_path('/style.css')));
+    wp_enqueue_style('spring-jayss', get_theme_file_uri('/css/jayss2/jayss-wp.css?t=') . time(), array(), get_theme_file_uri('/css/jayss2/jayss-wp.css?t=') . time());
+    wp_enqueue_style('s-style', get_theme_file_uri('/style.css?t=' . time()), array(), filemtime(get_theme_file_path('/style.css?t=' . time())));
 
     if ($GLOBALS['s_style_css'] == 'enable') {
         wp_enqueue_style('s-style', get_stylesheet_uri());
@@ -274,6 +265,8 @@ function seed_scripts()
 
     wp_enqueue_script('s-scripts', get_theme_file_uri('/js/scripts.js'), array(), filemtime(get_theme_file_path('/js/scripts.js')), true);
     wp_enqueue_script('s-vanilla', get_theme_file_uri('/js/main-vanilla.js'), array(), filemtime(get_theme_file_path('/js/main-vanilla.js')), true);
+    wp_localize_script( 's-scripts', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+    // wp_enqueue_script('sable-cdp', 'https://cdn.sable.asia/tracking-672b8dd9c38c6d2ad2a8bbdd.js', array(), '', true);
 
     if ($GLOBALS['s_jquery'] == 'enable') {
         wp_enqueue_script('s-jquery', get_theme_file_uri('/js/main-jquery.js'), array('jquery'), filemtime(get_theme_file_path('/js/main-jquery.js')), true);
@@ -413,13 +406,6 @@ function springtheme_ci()
         $theClBg .= ".hover-bg-ci" . ($i + 1) . ":hover{background-color:var(--ci" . ($i + 1) . ")}\n";
     }
     ?>
-
-    <?php if (!empty($theCi)) { ?>
-        <pre class="hidden">
-            <?php echo $theCi; ?>
-        </pre>
-    <?php } ?>
-
     <style type="text/css">
         :root {
             <?php 
@@ -526,9 +512,12 @@ function asw_tpj_header($f){
             --mc-nav-btn-bg-hover: var(--mc-main-2);
             --mc-nav-btn-txt-ready: var(--mc-main-3);
             --mc-nav-btn-txt-hover: var(--mc-main-3);
-            --mc-arrow-up: url('<?= acf_img($f['element']['pagination_arrow'], 'medium') ?>');
-            --mc-chevron-up: url('<?= acf_img($f['element']['pagination_chevron'], 'medium') ?>');
-            --mc-lightbox-arrow: url('<?= acf_img($f['element']['lightbox_arrow'], 'medium') ?>');
+            --mc-arrow-up: url('<?= acf_img($f['element']['pagination_arrow'], 'medium')
+                ?>');
+            --mc-chevron-up: url('<?= acf_img($f['element']['pagination_chevron'], 'medium')
+                ?>');
+            --mc-lightbox-arrow: url('<?= acf_img($f['element']['lightbox_arrow'], 'medium')
+                ?>');
             --mc-pagination-color: <?=$f['element']['pagination_color']?>;
             --mc-main-bg-cl: <?= $f['tab_block']['background_color'] ?>;
             --mc-main-bg-hover: <?= $f['tab_block']['background_hover_color'] ?>;
@@ -954,7 +943,7 @@ function asw_tpj_header($f){
             .nav-menu-item-mob::after {
                 content: " ";
                 position: absolute;
-                background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/arrow-menu.png');
+                background-image: url('/wp-content/uploads/2023/03/arrow-menu.png');
                 background-size: contain;
                 background-repeat: no-repeat;
                 width: 10px;
@@ -1302,7 +1291,7 @@ function asw_tpj_header($f){
             height: 40px;
             border-radius: 100%;
             background-color: rgba(29, 159, 155, 1);
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-1381.png');
+            background-image: url('/wp-content/uploads/2023/03/Group-1381.png');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -1318,7 +1307,7 @@ function asw_tpj_header($f){
         }
 
         .contact_fb {
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Logo.png');
+            background-image: url('/wp-content/uploads/2023/03/Logo.png');
             background-color: #fff;
             border: 1px solid rgba(84, 94, 103, 1);
             background-size: 10px;
@@ -1329,7 +1318,7 @@ function asw_tpj_header($f){
         }
 
         .contact_tel {
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Vector-4.png');
+            background-image: url('/wp-content/uploads/2023/03/Vector-4.png');
             background-color: #fff;
             border: 1px solid rgba(84, 94, 103, 1);
             background-size: 17px;
@@ -1340,7 +1329,7 @@ function asw_tpj_header($f){
         }
 
         .contact_ln {
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Subtract.png');
+            background-image: url('/wp-content/uploads/2023/03/Subtract.png');
             background-color: #fff;
             border: 1px solid rgba(84, 94, 103, 1);
             background-size: 22px;
@@ -1351,15 +1340,15 @@ function asw_tpj_header($f){
         }
 
         .contact_fb:hover {
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-2.png')
+            background-image: url('/wp-content/uploads/2023/03/Artboard-2.png')
         }
 
         .contact_tel:hover {
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-1.png')
+            background-image: url('/wp-content/uploads/2023/03/Artboard-1.png')
         }
 
         .contact_ln:hover {
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Artboard-3.png')
+            background-image: url('/wp-content/uploads/2023/03/Artboard-3.png')
         }
 
         .contact_close {
@@ -1369,7 +1358,7 @@ function asw_tpj_header($f){
             height: 32px;
             margin-top: 24px;
             margin-bottom: 0;
-            background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-889.png');
+            background-image: url('/wp-content/uploads/2023/03/Group-889.png');
             background-size: 10px;
             background-position: center;
             background-repeat: no-repeat;
@@ -1596,28 +1585,28 @@ function theme_overide_style($c)
         $section = "info";
         break;
     }
-    isset($c['bg_img']) ? $bg_img = acf_img($c['bg_img']) : $bg_img = '';
-    isset($c['bg_img_mobile']) ? $bg_img_mobile = acf_img($c['bg_img_mobile']) : $bg_img_mobile = '';
-    isset($c['bg_color']) ? $bg_color = $c['bg_color'] : $bg_color = '';
-    isset($c['text_color']) ? $text_color = $c['text_color'] : $text_color = '';
+    $bg_img = acf_img($c['bg_img']);
+    $bg_img_mobile = acf_img($c['bg_img_mobile']);
+    $bg_color = $c['bg_color'];
+    $text_color = $c['text_color'];
 
-    isset($c['color_swatch']) ? $swatch = $c['color_swatch'] : $swatch = '';
-    isset($c['element']) ? $element =  $c['element'] : $element = '';
+    $swatch = $c['color_swatch'];
+    $element =  $c['element'];
 
     $css = $c['css'];
-    isset($c['gradient']['start']) ? $gd_start = ($c['gradient']['start'] != '') ? $c['gradient']['start'] : $swatch['mc_1'] : $gd_start = '';
-    isset($c['gradient']['stop']) ? $gd_stop = ($c['gradient']['stop'] != '') ? $c['gradient']['stop'] : $swatch['mc_5'] : $gd_stop = '';
-    isset($c['gradient']['deg']) ? $gd_deg = ($c['gradient']['deg'] != '') ? $c['gradient']['deg'] : 90 : $gd_deg = 90;
+    $gd_start = ($c['gradient']['start'] != '') ? $c['gradient']['start'] : $swatch['mc_1'];
+    $gd_stop = ($c['gradient']['stop'] != '') ? $c['gradient']['stop'] : $swatch['mc_5'];
+    $gd_deg = ($c['gradient']['deg'] != '') ? $c['gradient']['deg'] : 90;
     
     
-    isset($c['tab_block']['background_color']) ? $main_bg_color = $c['tab_block']['background_color'] : $main_bg_color = '';
-    isset($c['tab_block']['background_hover_color']) ? $main_bg_hover = $c['tab_block']['background_hover_color'] : $main_bg_hover = '';
+    $main_bg_color = $c['tab_block']['background_color'];
+    $main_bg_hover = $c['tab_block']['background_hover_color'];
 
-    isset($c['tab_block']['text_color']) ? $tab_color = $c['tab_block']['text_color'] : $tab_color = '';
-    isset($c['tab_block']['text_hover_color']) ? $tab_color_hover = $c['tab_block']['text_hover_color'] : $tab_color_hover = '';
+    $tab_color = $c['tab_block']['text_color'];
+    $tab_color_hover = $c['tab_block']['text_hover_color'];
 
-    isset($c['tab_block']['border_color']) ? $border_color = $c['tab_block']['border_color'] : $border_color = '';
-    isset($c['tab_block']['parent_bg']) ? $parent_bg = $c['tab_block']['parent_bg'] : $parent_bg = '';
+    $border_color = $c['tab_block']['border_color'];
+    $parent_bg = $c['tab_block']['parent_bg'];
 
 
     ?>
@@ -1705,7 +1694,7 @@ function rgb_to_rgb($str)
 function theme_gen_visual_tour($zip_filepath)
 {
     // $zip_filepath = $content['virtual_file']['url'];
-    $zip_filepath = explode(site_url() . 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads', $zip_filepath)[1];
+    $zip_filepath = explode(site_url() . '/wp-content/uploads', $zip_filepath)[1];
     $zip_filepath_hash = md5($zip_filepath);
     $zif_file_source = __DIR__ . '/../../uploads' . $zip_filepath;
     $dir = __DIR__ . "/../../assetwise-360/" . $zip_filepath_hash . "/index.html";
@@ -1732,15 +1721,15 @@ function theme_gen_visual_tour($zip_filepath)
 add_filter('acfe/flexible/thumbnail/layout=banner', 'acf_pj_banner', 10, 3);
 function acf_pj_banner($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_banner_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_banner_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_banner_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_banner_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/08/Hero-Banner-Elegant.jpg';
+        $img = '/wp-content/uploads/2022/08/Hero-Banner-Elegant.jpg';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/banner-delightful.png';
+        $img = '/wp-content/uploads/2023/02/banner-delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/banner-kaveava.jpg';
+        $img = '/wp-content/uploads/2023/01/banner-kaveava.jpg';
     }
     return $img;
 }
@@ -1748,135 +1737,135 @@ function acf_pj_banner($thumbnail, $field, $layout)
 add_filter('acfe/flexible/thumbnail/layout=form', 'acf_pj_form', 10, 3);
 function acf_pj_form($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_form_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_form_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/CleanShot_2566-03-19_at_11.19.212x.png';
+        $img = '/wp-content/uploads/2023/03/CleanShot_2566-03-19_at_11.19.212x.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_form_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_form_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_form_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=project_idea', 'acf_pj_project_idea', 10, 3);
 function acf_pj_project_idea($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_concept_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_concept_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/project-idea.png';
+        $img = '/wp-content/uploads/2023/03/project-idea.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_concept_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_concept_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_concept_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=project_information', 'acf_pj_project_information', 10, 3);
 function acf_pj_project_information($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_project_information_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_project_information_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/project-infornation.png';
+        $img = '/wp-content/uploads/2023/03/project-infornation.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_project_information_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_project_information_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_project_information_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=facility', 'acf_pj_facility', 10, 3);
 function acf_pj_facility($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_facility_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_facility_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/facility.png';
+        $img = '/wp-content/uploads/2023/03/facility.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_facility_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_facility_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_facility_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=gallery', 'acf_pj_gallery', 10, 3);
 function acf_pj_gallery($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallery_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_gallery_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallery_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_gallery_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/gallery.png';
+        $img = '/wp-content/uploads/2023/03/gallery.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallerry_deligghtful.png';
+        $img = '/wp-content/uploads/2023/03/acf_gallerry_deligghtful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_gallerry_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_gallerry_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=video', 'acf_pj_video', 10, 3);
 function acf_pj_video($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_video_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_video_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Video.png';
+        $img = '/wp-content/uploads/2023/03/Video.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_video_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_video_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_video_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=plan', 'acf_pj_plan', 10, 3);
 function acf_pj_plan($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_plan_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_plan_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Section-Plan.png';
+        $img = '/wp-content/uploads/2023/03/Section-Plan.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_plan_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_plan_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_plan_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=location', 'acf_pj_location', 10, 3);
 function acf_pj_location($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_location_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_location_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Section-Location.png';
+        $img = '/wp-content/uploads/2023/03/Section-Location.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_location_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_location_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_location_dynamic.png';
     }
     return $img;
 }
 add_filter('acfe/flexible/thumbnail/layout=contact', 'acf_pj_contact', 10, 3);
 function acf_pj_contact($thumbnail, $field, $layout)
 {
-    $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_modern.png';
+    $img = '/wp-content/uploads/2023/03/acf_contact_modern.png';
     if (get_page_template_slug() == 'single-template-modern.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_modern.png';
+        $img = '/wp-content/uploads/2023/03/acf_contact_modern.png';
     } elseif (get_page_template_slug() == 'single-template-elegant.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Contact.png';
+        $img = '/wp-content/uploads/2023/05/Contact.png';
     } elseif (get_page_template_slug() == 'single-template-delightful.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_delightful.png';
+        $img = '/wp-content/uploads/2023/03/acf_contact_delightful.png';
     } elseif (get_page_template_slug() == 'single-template-dynamic.php') {
-        $img = 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/acf_contact_dynamic.png';
+        $img = '/wp-content/uploads/2023/03/acf_contact_dynamic.png';
     }
     return $img;
 }
@@ -1884,7 +1873,7 @@ function acf_pj_contact($thumbnail, $field, $layout)
 add_filter('acfe/flexible/thumbnail/layout=related_location', 'acf_pj_related_location', 10, 3);
 function acf_pj_related_location($thumbnail, $field, $layout)
 {
-    return 'https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Related-Project.png';
+    return '/wp-content/uploads/2023/03/Related-Project.png';
 }
 
 
@@ -1999,13 +1988,13 @@ function admin_cf7_footer() {
 
             } */
             body[data-use-template="single-template-dynamic.php"] a[data-layout="banner"] .acfe-flexible-layout-thumbnail.acfe-flexible-layout-thumbnail-no-modal {
-                background-image:url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/banner-kaveava.jpg) !important;
+                background-image:url(/wp-content/uploads/2023/01/banner-kaveava.jpg) !important;
             }
         </style>
         <?php
         if (isset($_REQUEST['page']) && $_REQUEST['page'] == 'wpcf7') {
-            $is_cf7 == true;
-            $cf7_id = $_REQUEST['post'];
+            $is_cf7 = true;
+            $cf7_id = isset($_REQUEST['post']) ? $_REQUEST['post'] : '';
             if ($cf7_id != '') {
                 $cf7_api_id = '';
                 $group_ID = 'group_64744d6b8165f';
@@ -2190,6 +2179,121 @@ function jpx_getPost(){
 }
 
 
+/**
+ * Google reCAPTCHA v3 configuration helpers
+ *
+ * Site owners can either:
+ * - Define ASW_RECAPTCHA_SITE_KEY and ASW_RECAPTCHA_SECRET_KEY in wp-config.php, or
+ * - Store keys in options: asw_recaptcha_site_key / asw_recaptcha_secret_key
+ */
+
+function asw_recaptcha_get_site_key() {
+    if (defined('ASW_RECAPTCHA_SITE_KEY') && ASW_RECAPTCHA_SITE_KEY) {
+        return ASW_RECAPTCHA_SITE_KEY;
+    }
+
+    $option = get_option('asw_recaptcha_site_key');
+    return !empty($option) ? $option : '';
+}
+
+function asw_recaptcha_get_secret_key() {
+    if (defined('ASW_RECAPTCHA_SECRET_KEY') && ASW_RECAPTCHA_SECRET_KEY) {
+        return ASW_RECAPTCHA_SECRET_KEY;
+    }
+
+    $option = get_option('asw_recaptcha_secret_key');
+    return !empty($option) ? $option : '';
+}
+
+/**
+ * Enqueue Google reCAPTCHA v3 script on the front-end when a site key is available.
+ */
+function asw_enqueue_recaptcha_v3() {
+    if (is_admin()) {
+        return;
+    }
+
+    $site_key = asw_recaptcha_get_site_key();
+    if (!$site_key) {
+        return;
+    }
+
+    // Load the official Google reCAPTCHA v3 script.
+    wp_enqueue_script(
+        'google-recaptcha-v3',
+        'https://www.google.com/recaptcha/api.js?render=' . urlencode($site_key),
+        array(),
+        null,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'asw_enqueue_recaptcha_v3');
+
+/**
+ * Verify a Google reCAPTCHA v3 token.
+ *
+ * @param string $token
+ * @param string $expected_action
+ * @param float  $threshold
+ *
+ * @return array {
+ *   @type bool   $success
+ *   @type float  $score
+ *   @type string $action
+ * }
+ */
+function asw_verify_recaptcha_v3($token, $expected_action = '', $threshold = 0.5) {
+    $secret = asw_recaptcha_get_secret_key();
+    $result = array(
+        'success' => false,
+        'score'   => 0,
+        'action'  => '',
+    );
+
+    if (!$secret || !$token) {
+        return $result;
+    }
+
+    $response = wp_remote_post(
+        'https://www.google.com/recaptcha/api/siteverify',
+        array(
+            'timeout' => 10,
+            'body'    => array(
+                'secret'   => $secret,
+                'response' => $token,
+                'remoteip' => isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '',
+            ),
+        )
+    );
+
+    if (is_wp_error($response)) {
+        return $result;
+    }
+
+    $body = wp_remote_retrieve_body($response);
+    $data = json_decode($body, true);
+
+    if (!is_array($data) || empty($data['success'])) {
+        return $result;
+    }
+
+    $result['success'] = true;
+    $result['score']   = isset($data['score']) ? (float) $data['score'] : 0;
+    $result['action']  = isset($data['action']) ? $data['action'] : '';
+
+    // Check action and threshold if provided.
+    if ($expected_action && $result['action'] && $result['action'] !== $expected_action) {
+        $result['success'] = false;
+        return $result;
+    }
+
+    if ($result['score'] < $threshold) {
+        $result['success'] = false;
+    }
+
+    return $result;
+}
+
 function cptui_register_my_cpts_promotion() {
 
     /**
@@ -2283,25 +2387,23 @@ function cptui_register_my_cpts_promotions() {
 add_action( 'init', 'cptui_register_my_cpts_promotions' );
 
 function wpa_promotion_post_link( $post_link, $id = 0 ){
-    $post = get_post($id);  
+    $post = get_post($id);
     if ( is_object( $post ) ){
         $terms = wp_get_object_terms( $post->ID, 'promotion_type' );
-        if( $terms ){
+        if( $terms && !is_wp_error($terms) && !empty($terms) ){
             return str_replace( '%promotion_type%' , $terms[0]->slug , $post_link );
         }else{
             $parent = get_post_parent($post);
             if ($parent) {
                 $parent_ID = $parent->ID;
                 $parent_terms = wp_get_object_terms( $parent_ID, 'promotion_type' );
-                if (count($parent_terms) > 0) {
+                if( $parent_terms && !is_wp_error($parent_terms) && !empty($parent_terms) ){
                     return str_replace( '%promotion_type%' , $parent_terms[0]->slug , $post_link );
-                } else {
-                    return $post_link;
                 }
             }
         }
     }
-    return $post_link;  
+    return $post_link;
 }
 add_filter( 'post_type_link', 'wpa_promotion_post_link', 1, 3 );
 
@@ -2399,14 +2501,10 @@ function aswv2_gen_master($master_style,$content,$layout){
                 foreach ($content_style as $csk => $csv) {
                     // pre($csk);
                     // pre('from');
-                    //pre($csv);
+                    // pre($csv);
                     if ($csv == '') {
                         // pre('--- '.$csv.' blank so use master');
-                        // pre('x----x----x' . $mix_content[$key][$csk]);
-                        // pre('x----x----x' . $master_style[$key][$csk]);
-                        if ($mix_content[$key][$csk] === '') {
-                            $mix_content[$key][$csk] = $master_style[$key][$csk];
-                        }
+                        $mix_content[$key][$csk] = $master_style[$key][$csk];
                     }
                     // pre('to');
                     // pre($mix_content[$key][$csk]);
@@ -2446,16 +2544,16 @@ function aswv2_gen_master($master_style,$content,$layout){
     }
     echo "--$layout--tab_line_color_gd: linear-gradient(calc(1deg*var(--$layout--tab_line_color--degree)), var(--$layout--tab_line_color--color_start), var(--$layout--tab_line_color--color_end));";
     echo "--$layout--color_gradient: linear-gradient(calc(1deg*var(--$layout--color_gradient--degree,var(--all--color_gradient--degree))), var(--$layout--color_gradient--color_start,var(--all--color_gradient--color_start)), var(--$layout--color_gradient--color_end,var(--all--color_gradient--color_end)));";
-    if ($mix_content['background_image']['sizes']['1536x1536'] != '') {
+    if (isset($mix_content['background_image']['sizes']['1536x1536']) && $mix_content['background_image']['sizes']['1536x1536'] != '') {
         echo '--'.$layout.'--background_image:url('.$mix_content['background_image']['sizes']['1536x1536'].');';// code...
     }
-    if ($mix_content['background_image_mobile']['sizes']['large'] != '') {
+    if (isset($mix_content['background_image_mobile']['sizes']['large']) && $mix_content['background_image_mobile']['sizes']['large'] != '') {
         echo '--'.$layout.'--background_image_mobile:url('.$mix_content['background_image_mobile']['sizes']['large'].');';
     }
-    if ($mix_content['background_color'] != '') {
+    if (isset($mix_content['background_color']) && $mix_content['background_color'] != '') {
         echo '--'.$layout.'--background_color:'.$mix_content['background_color'].';';
     }
-    if ($mix_content['background'] != '') {
+    if (isset($mix_content['background']) && $mix_content['background'] != '') {
         echo '--'.$layout.'--background_color:'.$mix_content['background'].';';
     }
 
@@ -2482,13 +2580,15 @@ function asw_project_render_theme($template_name,$common_layout){
     ?>
     <!-- ~~~~~~~~~~ Start Template V2 ~~~~~~~~~~ -->
     <!-- =====👇👇👇👇👇 Start Template V2 Header 👇👇👇👇👇===== -->
-    <script src="<?= get_template_directory_uri() ?>/js/circle-progress.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/all.css?t=<?=time()?>">
+    <script src="/wp-content/themes/seed-spring/js/circle-progress.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/all.css?t=<?=time()?>">
     
     <?php
     
     $v2_master = get_field('template_master');
     $v2_content = get_field('v2_content');
+    $projectCode = get_field('project_code', get_the_ID());
+    $projectCode = get_field('project_code', get_the_ID());
     $style_group = ['color_swatch','color_gradient','text_color','button_color','new_tab_block','tab_line_color','text_form_color','form_color','new_progress_color'];
 
     echo "<style>:root{";
@@ -2516,7 +2616,7 @@ function asw_project_render_theme($template_name,$common_layout){
     echo "--all--color_gradient: linear-gradient(calc(1deg*var(--all--color_gradient--degree)), var(--all--color_gradient--color_start), var(--all--color_gradient--color_end));";
     echo "}</style>";
     ?>
-    <link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/default-<?=$template_name?>-style.css?t=<?=time()?>">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/default-<?=$template_name?>-style.css?t=<?=time()?>">
     <!-- =====🔺🔺🔺🔺🔺 End Template V2 Header 🔺🔺🔺🔺🔺===== -->
     <!-- =====👇👇👇👇👇 Start Template V2 Nav 👇👇👇👇👇===== -->
     <?php
@@ -2560,12 +2660,16 @@ function asw_project_render_theme($template_name,$common_layout){
     <!-- =====🔺🔺🔺🔺🔺 End Template V2 Loop 🔺🔺🔺🔺🔺===== -->
     <!-- =====👇👇👇👇👇 Start Template V2 Scroll JS 👇👇👇👇👇===== -->
     <?php
-    asw_tpj_scroll_js();
+    v2_asw_tpj_scroll_js();
     ?>
     <!-- =====🔺🔺🔺🔺🔺 End Template V2 Scroll JS 🔺🔺🔺🔺🔺===== -->
     <!-- ~~~~~~~~~~ End Template V2 ~~~~~~~~~~ -->
+    <?php if ($projectCode != '') {
+        include(get_template_directory().'/template-parts/hotdeal-units.php');
+    }
+    ?>
     <?php
-    if (in_array(get_the_ID(), [119385, 51128])) {
+    if (in_array(get_the_ID(), [119385])) {
       include(get_template_directory().'/template-parts/loan-calculator.php');
     }
     get_footer();
@@ -2573,9 +2677,180 @@ function asw_project_render_theme($template_name,$common_layout){
 
 function act_template_project_css($opt,$template_name,$layout){
     if ($opt == 'all') {
-        ?><link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/all-<?=$layout?>.css?t=<?=time()?>"><?php
+        ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/all-<?=$layout?>.css?t=<?=time()?>"><?php
     }
-    ?><link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri() ?>/template-css/<?=$template_name?>-<?=$layout?>.css?t=<?=time()?>"><?php
+    ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/<?=$template_name?>-<?=$layout?>.css?t=<?=time()?>"><?php
+}
+
+function v2_asw_tpj_scroll_js()
+{
+    ?>
+    <script type="text/javascript">
+        let navItems = []
+        let navItemsMob = []
+        let infoTabBlockArr = $$('.info-tabs-block');
+
+        function setInfoTab() {
+            let j = 0
+            for (let i of infoTabBlockArr) {
+                if (i.querySelector('.info-tabs-blocks') != null) {
+                    let contWidth = i.clientWidth
+                    let blocksWidth = i.querySelector('.info-tabs-blocks').clientWidth
+                    if (blocksWidth > contWidth) {
+                        i.dataset.isOverflow = "1"
+                        i.style.setProperty('--left', 0)
+                        i.dataset.slot = 0
+                        i.dataset.end = 0
+                        i.querySelector('.info-tabs-block-arrow.-right').setAttribute('onclick', `tabInfoSlot(${j},1)`)
+                        i.querySelector('.info-tabs-block-arrow.-left').setAttribute('onclick', `tabInfoSlot(${j},-1)`)
+                    } else {
+                        i.parentElement.style.width = "max-content"
+                    }
+                }
+                j++;
+            }
+        }
+        setInfoTab()
+
+        function tabInfoSlot(j, direction) {
+            let parent = $$('.info-tabs-block')[j]
+            let items = parent.querySelectorAll('.info-tab')
+            let slot = [0]
+            let contWidth = parent.clientWidth - 80
+            let nowSlot = parseInt(parent.dataset.slot)
+            let temp = 0;
+            let left = 0;
+            let shift = 0;
+            for (let i of items) {
+                let width = i.clientWidth
+                if (temp + width < contWidth) {
+                    temp += width
+                } else {
+                    if (slot[slot.length - 1] != left) {
+                        slot.push(left)
+                    }
+                    temp = width
+                }
+                left += width
+            }
+
+
+            let max = slot.length
+
+            let newSlot = ((nowSlot + direction) % max + max) % max
+            shift = contWidth - temp + 18
+
+            parent.dataset.slot = newSlot
+
+            if (newSlot == max - 1) {
+                parent.dataset.end = 1
+                parent.style.setProperty('--left', slot[newSlot] - shift)
+            } else {
+                parent.dataset.end = 0
+                parent.style.setProperty('--left', slot[newSlot])
+            }
+        }
+
+        function navItemsClick(i) {
+            window.scrollTo(0, navItems[i].top)
+        }
+
+        function check_is_on_nav() {
+            let masthead = $('#masthead')
+            let templateNav = $('.template-nav')
+            let headerH = masthead.offsetHeight + templateNav.offsetHeight
+            let pageHeight = window.innerHeight;
+            navItems = []
+            let el = $$('.is-on-nav');
+            let c = 0;
+            let k = -1;
+            for (let i of el) {
+                navItems.push({
+                    i: c,
+                    y: i.getBoundingClientRect().y,
+                    top: i.offsetTop - headerH,
+                    el: i
+                })
+                if (i.getBoundingClientRect().y - headerH <= 1) {
+                    k++
+                }
+                c++
+            }
+            if ($('.theme-menu-item.-active') != null) {
+                $('.theme-menu-item.-active').classList.remove('-active')
+            }
+            if (k >= 0) {
+                $$('.theme-menu-item')[k].classList.add('-active')
+            }
+        }
+
+        function check_scroll() {
+            check_is_on_nav()
+            check_section_fade()
+        }
+
+
+        function check_section_fade() {
+            check_is_on_nav()
+            const s = $$('.section-fade')
+            let pageHeight = window.innerHeight;
+            let bottomGap = pageHeight / 20
+            for (let i of s) {
+                let r = i.getBoundingClientRect();
+                let fromTop = r.y
+                let sHeight = r.height
+                let fromBottom = fromTop - pageHeight
+                let lineOfView = fromBottom + bottomGap
+                if (lineOfView < 0) {
+                    i.dataset.show = 1
+                } else {
+                    i.dataset.show = 0
+                }
+            }
+
+        }
+        document.addEventListener("scroll", check_scroll);
+
+        function scrollToEl(selector) {
+            let masthead = $('#masthead')
+            let templateNav = $('.template-nav')
+            let headerH = masthead.offsetHeight + templateNav.offsetHeight
+            let t = $(selector).offsetTop - headerH
+            window.scrollTo(0, t)
+        }
+
+        function navMobClick() {
+            parent = $('.nav-menu-item-mob')
+            parent.dataset.expand *= -1
+            $('.theme-menu-items-float').dataset.expand = parent.dataset.expand
+        }
+
+
+        check_section_fade()
+        if ($('.theme-menu-item-mob') != null) {
+            $('.nav-menu-item-mob span').innerHTML = $('.theme-menu-item-mob').innerText
+        }
+
+        $('.theme-menu-items-float').style.top = $('#masthead').offsetHeight + $('.template-nav').offsetHeight + 'px'
+        $('.header_blank').style.height = $('.template-nav').offsetHeight + 'px'
+
+
+        function toggleNavMob(i) {
+            navItemsMob = []
+            let el = $$('.is-on-nav-mob')
+            for (let i of el) {
+                navItemsMob.push({
+                    el: i,
+                    top: i.offsetTop - $('#masthead').offsetHeight - $('.template-nav').offsetHeight
+                })
+            }
+            window.scrollTo(0, navItemsMob[i].top)
+            $('.theme-menu-items-float').dataset.expand = -1
+            $('.nav-menu-item-mob').dataset.expand = -1
+            $('.nav-menu-items-mob span').innerHTML = $$('.theme-menu-item-mob')[i].innerText
+        }
+    </script>
+    <?php
 }
 add_filter( 'pll_get_post_types', 'add_cpt_to_pll', 10, 2 );
 
@@ -2682,7 +2957,7 @@ if(isset($_GET['temp_send_mail_promotion'])){
 function custom_login_logo() {
     echo '<style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url("https://assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2024/11/asw_logo1x1-e1731487149678.png");
+            background-image: url("https://assetwise.co.th/wp-content/uploads/2024/11/asw_logo1x1-e1731487149678.png");
             background-size: contain;
             height: 95px;
             width: 140px;
@@ -2692,54 +2967,81 @@ function custom_login_logo() {
 
 add_action('login_enqueue_scripts', 'custom_login_logo');
 
-function asw_front_page_scripts() {
-    if (is_front_page()) {
-        ?>
-        <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function() {
-                console.log('Fetching jobs data...');
-                // Add your front page specific JavaScript code here
-                const myHeaders = new Headers();
-                myHeaders.append("Content-Type", "application/json");
-                myHeaders.append("Authorization", "Bearer TcSUiv0UDb31Oyiy/9w+tyDcyYCwbIjhFCSufmpjFZAR9qLGXxADP3dK17ult9Ur56mHHsnooRRERRYX40bR+RUCpTPRUyhVTj0XYHVz0ZNR6KK/wI8uQQKx+hvDdf4cm9wLoglDQ92itnpc9wHiNFxGrbsssfHJPrzxxNDe5y8IOwIzOOqifFTGoESCQSTRXkdO7Tj+woTkLQYkMW2bdxK0McokHO6ZcVZAPPsDqLiriCkWS+ps4nGc0xJpjE9SVAxUkV+pNmAcUgmPXMTXtQ==");
+include_once(get_template_directory() . '/inc/api.php');
 
-                const raw = JSON.stringify({
-                "companyID": "00000000-0000-0000-0000-000000000000",
-                "bConnectionID": "7B93F134-D373-4227-B5A6-6B619FF0E355",
-                "departmentName": "",
-                "jobPosition": "",
-                "perPage": 10,
-                "page": 1,
-                "total": 10,
-                "searchStr": "",
-                "urgently": true,
-                "announce": true,
-                "published": true
-                });
-
-                const requestOptions = {
-                method: "POST",
-                headers: myHeaders,
-                body: raw,
-                redirect: "follow"
-                };
-
-                fetch("https://aswservice.com/wrsapi/JobAnnouncement/JobAnnouncementsByPage", requestOptions)
-                .then((response) => response.json())
-                .then((result) => {
-                    //console.log(result.jobs);
-                    const jobsListElement = document.getElementById('wrs_jobs_list');
-                    jobsListElement.innerHTML = result.jobs.map(job => `<li><a href="https://careers.assetwise.co.th/jobs/?id=${job.jobID}" class="text-neutral-500 hover:text-neutral-900 cursor-pointer">${job.jobPosition}</a></li>`).join('');
-                })
-                .catch((error) => console.error(error));
-            });
-        </script>
-        <?php
+// Block specific email addresses in CF7 forms
+add_filter('wpcf7_validate', 'block_specific_emails', 10, 2);
+function block_specific_emails($result, $tags) {
+    // Get email field from submitted form
+    $blocked_list = array(
+        [
+            'Email' => 'pakornnakorn9@gmail.com',
+            'Fname' => 'pakorn',
+            'Lname' => 'nakorn',
+            'Tel' => '0953616765',
+        ]
+    );
+    $submission = WPCF7_Submission::get_instance();
+    if ($submission) {
+        $posted_data = $submission->get_posted_data();
+        
+        // Loop through form fields to find email field
+        foreach ($blocked_list as $blocked_user) {
+            $is_blocked = true;
+            foreach ($posted_data as $key => $value) {
+                if (strpos(strtolower($key), 'email') !== false && strtolower($value) === strtolower($blocked_user['Email'])) {
+                    $result->invalidate($key, 'This email address is not allowed.');
+                    break 2;
+                }
+                if (strpos(strtolower($key), 'fname') !== false && strtolower($value) === strtolower($blocked_user['Fname'])) {
+                    $result->invalidate($key, 'This first name is not allowed.');
+                    break 2;
+                }
+                if (strpos(strtolower($key), 'lname') !== false && strtolower($value) === strtolower($blocked_user['Lname'])) {
+                    $result->invalidate($key, 'This last name is not allowed.');
+                    break 2;
+                }
+                if (strpos(strtolower($key), 'tel') !== false && strtolower($value) === strtolower($blocked_user['Tel'])) {
+                    $result->invalidate($key, 'This phone number is not allowed.');
+                    break 2;
+                }
+            }
+        }
     }
+    return $result;
 }
 
-//add_action('wp_footer', 'asw_front_page_scripts');
+function custom_archive_order( $query ) {
+    if ( $query->is_archive() && $query->is_main_query() ) {
+        // Example: Order by title in ascending order
+        $query->set( 'orderby', 'date' );
+        $query->set( 'order', 'DESC' );
+    }
+}
+add_action( 'pre_get_posts', 'custom_archive_order' );
 
+/**
+ * Filter the excerpt "read more" string.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function asw_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'asw_excerpt_more' );
+
+add_action('wp_enqueue_scripts', function() {
+    if (is_singular()) {
+        wp_enqueue_script(
+            'include-form-module-js',
+            get_template_directory_uri() . '/js/form-module.js?v=' . time(),
+            array(),
+            time(),
+            true
+        );
+    }
+});
 
 class Footer_P_Walker extends Walker_Nav_Menu {
     
@@ -2768,3 +3070,9 @@ class Footer_P_Walker extends Walker_Nav_Menu {
         // to prevent WordPress from outputting a closing </li>
     }
 }
+
+// Exclude CF7 REST API from caching so nonces stay fresh
+add_filter('rocket_cache_reject_uri', function($urls) {
+    $urls[] = '/wp-json/contact-form-7/(.*)';
+    return $urls;
+});

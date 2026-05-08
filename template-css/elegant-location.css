@@ -103,7 +103,7 @@ opacity: 0;
 }
 
 #location .location-tabs-icon {
-    --icon: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/08/6Other.png);
+    --icon: url(/wp-content/uploads/2022/08/6Other.png);
     --location--new_tab_block--item_text
     width: 1.5rem;
     height: 1.5rem;

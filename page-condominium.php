@@ -19,7 +19,7 @@ $endtime = microtime(true); // Bottom of page
 
 <div class="cont-pd py-6 flex flex-row items-center">
 	<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+	<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 	<a href="/<?=pll_current_language()?>/<?=$s_type_url?>" class=""><?=$s_type_title?></a>
 </div>
 <sp class=""></sp>
@@ -77,8 +77,8 @@ $endtime = microtime(true); // Bottom of page
 </style>
 <!--=== The Section Boxes : condo-type ===-->
 <section id="condo-type" class="padding-l-vtc relative">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow-1-2.png" class="absolute pointer-events-none leaf11">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf12">
+	<img src="/wp-content/uploads/2022/11/leaves-shadow-1-2.png" class="absolute pointer-events-none leaf11">
+	<img src="/wp-content/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf12">
 	<div class="cont-pd t-center">
 		<h1 class="f56-42 cl-ci-grey-200"><?=$s_type_title?></h1>
 		<sp class="m"></sp>
@@ -126,7 +126,7 @@ $endtime = microtime(true); // Bottom of page
 								<span class="wide">
 									<div class="grid grid-cols-5">
 										<div class="col-span-1 flex items-center">
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem">
+											<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem">
 										</div>
 										<div class="col-span-4">
 											<span class="" style="font-size:26px;line-height:32px;" id="lo_pro">
@@ -135,7 +135,7 @@ $endtime = microtime(true); // Bottom of page
 										</div>
 									</div>
 								</span>
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+								<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 							</div>
 						</inner></box>
 						<box col="2.5"><inner id="filter_1" class="padding quick-filter v-middle-wrap pointer" onclick="filter_pop(2, this)">
@@ -143,7 +143,7 @@ $endtime = microtime(true); // Bottom of page
 								<span class="wide">
 									<div class="grid grid-cols-5">
 										<div class="col-span-1 flex items-center">
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem">
+											<img src="/wp-content/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem">
 										</div>
 										<div class="col-span-4">
 											<span class="" style="font-size:26px;line-height:32px;" id="brand_pro">
@@ -152,7 +152,7 @@ $endtime = microtime(true); // Bottom of page
 										</div>
 									</div>
 								</span>
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+								<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 							</div>
 						</inner></box>
 						<box col="2.5"><inner id="filter_2" class="padding quick-filter v-middle-wrap pointer" onclick="filter_pop(3, this);filter_pop_price(this)">
@@ -160,7 +160,7 @@ $endtime = microtime(true); // Bottom of page
 								<span class="wide">
 									<div class="grid grid-cols-5">
 										<div class="col-span-1 flex items-center">
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem">
+											<img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem">
 										</div>
 										<div class="col-span-4">
 											<span class="" style="font-size:26px;line-height:32px;" id="price_pro">
@@ -169,7 +169,7 @@ $endtime = microtime(true); // Bottom of page
 										</div>
 									</div>
 								</span>
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+								<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 							</div>
 						</inner></box>
 						<box col="2.5"><inner id="filter_3" class="padding quick-filter v-middle-wrap pointer" onclick="filter_pop(0, this)">
@@ -177,7 +177,7 @@ $endtime = microtime(true); // Bottom of page
 								<span class="wide">
 									<div class="grid grid-cols-5">
 										<div class="col-span-1 flex items-center">
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-908.png" style="height:2rem">
+											<img src="/wp-content/uploads/2022/11/Group-908.png" style="height:2rem">
 										</div>
 										<div class="col-span-4">
 											<span class="" style="font-size:26px;line-height:32px;" id="type_pro">
@@ -186,7 +186,7 @@ $endtime = microtime(true); // Bottom of page
 										</div>
 									</div>
 								</span>
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+								<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
 							</div>
 						</inner></box>
 					</theboxes>
@@ -577,7 +577,7 @@ $endtime = microtime(true); // Bottom of page
 						<span class="wide">
 							<div class="grid grid-cols-5 gap-0 flex items-center">
 								<div class="col-span-1 flex items-center">
-									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2.5rem;margin:0;">
+									<img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2.5rem;margin:0;">
 								</div>
 								<div class="col-span-4">
 									<h6 class="filter-select" id="">
@@ -589,7 +589,7 @@ $endtime = microtime(true); // Bottom of page
 								</div>
 							</div>
 						</span>
-						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/arrow.png" style="height: 15px;">
+						<img src="/wp-content/uploads/2022/11/arrow.png" style="height: 15px;">
 					</div>	
 				</div>
 			</div>
@@ -604,7 +604,7 @@ $endtime = microtime(true); // Bottom of page
 				</div>
 				<div class="col-span-1 flex justify-end mx-4 md:mx-0 items-start">
 					<div class="clear-all inline-flex items-center pointer" onclick="remove_price();filter_pop(999, this);check_chk('clear', 999)" style="white-space: nowrap;">
-						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-10.png" style="width: 21px;height: 21px;">&ensp;<?php pll_e('ล้างทั้งหมด')?>
+						<img src="/wp-content/uploads/2022/11/Vector-10.png" style="width: 21px;height: 21px;">&ensp;<?php pll_e('ล้างทั้งหมด')?>
 					</div>
 				</div>
 			</div>
@@ -683,7 +683,7 @@ $endtime = microtime(true); // Bottom of page
 	<div class="popup-filter-inner" onclick="filter_pop_mini(0)">
 		<div class="grid grid-cols-12">
 			<div class="col-span-1 flex items-center">
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;margin:0;">
+				<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;margin:0;">
 			</div>
 			<div class="col-span-10 pl-3">
 				<h6 class="" id="loca_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -691,7 +691,7 @@ $endtime = microtime(true); // Bottom of page
 				</h6>
 			</div>
 			<div class="col-span-1 flex items-center">
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+				<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 			</div>
 		</div>
 	</div>
@@ -734,7 +734,7 @@ $endtime = microtime(true); // Bottom of page
 <div class="popup-filter-inner" onclick="filter_pop_mini(1)">
 	<div class="grid grid-cols-12">
 		<div class="col-span-1 flex items-center">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;margin:0;">
+			<img src="/wp-content/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem;margin:0;">
 		</div>
 		<div class="col-span-10 pl-3">
 			<h6 class="" id="brand_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -742,7 +742,7 @@ $endtime = microtime(true); // Bottom of page
 			</h6>
 		</div>
 		<div class="col-span-1 flex items-center">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+			<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 		</div>
 	</div>
 </div>
@@ -775,7 +775,7 @@ $endtime = microtime(true); // Bottom of page
 <div class="popup-filter-inner" onclick="filter_pop_mini(2)">
 	<div class="grid grid-cols-12">
 		<div class="col-span-1 flex items-center">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;margin:0;">
+			<img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;margin:0;">
 		</div>
 		<div class="col-span-10 pl-3">
 			<h6 class="" id="cost_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -783,7 +783,7 @@ $endtime = microtime(true); // Bottom of page
 			</h6>
 		</div>
 		<div class="col-span-1 flex items-center">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+			<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 		</div>
 	</div>
 </div>
@@ -810,7 +810,7 @@ $endtime = microtime(true); // Bottom of page
 <div class="popup-filter-inner" onclick="filter_pop_mini(3)">
 	<div class="grid grid-cols-12">
 		<div class="col-span-1 flex items-center">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-908.png" class="inline-block" style="height:2rem;margin:0;">
+			<img src="/wp-content/uploads/2022/11/Group-908.png" class="inline-block" style="height:2rem;margin:0;">
 		</div>
 		<div class="col-span-10 pl-3">
 			<h6 class="" id="stat_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -818,7 +818,7 @@ $endtime = microtime(true); // Bottom of page
 			</h6>
 		</div>
 		<div class="col-span-1 flex items-center">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+			<img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
 		</div>
 	</div>
 </div>
@@ -915,12 +915,15 @@ $endtime = microtime(true); // Bottom of page
 </script>
 
 <?php 
-isset($_GET['type']) ? $pro_type = explode(",", $_GET['type']) : $pro_type = array();
-isset($_GET['location']) ? $pro_loca = explode(",", $_GET['location']) : $pro_loca = array();
-isset($_GET['brand']) ? $pro_brand = explode(",", $_GET['brand']) : $pro_brand = array();
-isset($_GET['price']) ? $pro_price = ($_GET['price']) : $pro_price = '';
-isset($_GET['price_max']) ? $pro_price_max = ($_GET['price_max']) : $pro_price_max = '';
-isset($_GET['price_min']) ? $pro_price_min = ($_GET['price_min']) : $pro_price_min = '';
+$pro_type = explode(",", $_GET['type']);
+$pro_loca = explode(",", $_GET['location']);
+$pro_brand = explode(",", $_GET['brand']);
+$pro_price = ($_GET['price']);
+
+// new price
+$pro_price_max = ($_GET['price_max']);
+$pro_price_min = ($_GET['price_min']);
+// end new price
 
 $lis_type = array();
 $lis_loca = array();
@@ -1414,7 +1417,7 @@ foreach ($pro_brand as $key => $value) {
 				<div class="flex inline-flex items-center popup-select" onclick="close_pop_select(this)">
 				<label class="">`+txtt_loca[i]+`
 				</label>
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+				<img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
 				</div>
 				`
 			}
@@ -1429,7 +1432,7 @@ foreach ($pro_brand as $key => $value) {
 				<div class="flex inline-flex items-center popup-select" onclick="close_pop_select(this)">
 				<label class="">`+txtt_brand[i]+`
 				</label>
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+				<img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
 				</div>
 				`
 			}
@@ -1443,7 +1446,7 @@ foreach ($pro_brand as $key => $value) {
 			<div class="flex inline-flex items-center popup-select"  onclick="remove_price()">
 			<label class="">`+txt_price+`
 			</label>
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+			<img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
 			</div>
 			`
 
@@ -1457,7 +1460,7 @@ foreach ($pro_brand as $key => $value) {
 				<div class="flex inline-flex items-center popup-select" onclick="close_pop_select(this)">
 				<label class="">`+txtt_type[i]+`
 				</label>
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+				<img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
 				</div>
 				`
 			}
@@ -1783,7 +1786,7 @@ foreach ($pro_brand as $key => $value) {
 </script>
 
 <section id="condo-show" class="pt-8 pb-20 md:pb-16 relative" style="background: linear-gradient(180deg, #EDF2F7 -4.71%, #FFFFFF 164.99%); z-index: 10;">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf14">
+	<img src="/wp-content/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf14">
 	<div class="cont-pd">
 		<?php
 
@@ -1799,8 +1802,12 @@ foreach ($pro_brand as $key => $value) {
 					'taxonomy'  => 'private-project',
 					'field'     => 'slug',
 					'terms'     => 'private',
-					'operator'  => 'NOT IN')
-
+					'operator'  => 'NOT IN'),
+				// array(
+				// 	'taxonomy'  => 'project_status',
+				// 	'field'     => 'slug',
+				// 	'terms'     => 'sold-out',
+				// 	'operator'  => 'NOT IN')
 			),
 		);
 		$loop = new WP_Query( $args );
@@ -1824,30 +1831,30 @@ foreach ($pro_brand as $key => $value) {
 						<?php pll_e('เรียงลำดับโครงการ')?>&nbsp;&nbsp;&nbsp;&nbsp;
 					</span>
 					<span class="sortby-box" data-sortby="1" data-sorttype="date">
-						<?php pll_e('เรียงตามโครงการเก่า')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ใหม่')?>
+						<?php pll_e('เรียงตามโครงการเก่า')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ใหม่')?>
 					</span>
 					<span class="sortby-box" data-sortby="1" data-sorttype="price">
-						<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
+						<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
 					</span>
 					<span class="sortby-box" data-sortby="-1" data-sorttype="price">
-						<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
+						<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
 					</span>
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow">
+					<img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow">
 					<div class="-choise">
 						<!-- <div class="-choise-1" onclick="sorting_project(-1)">
-							เรียงตามโครงการใหม่ <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> เก่า
+							เรียงตามโครงการใหม่ <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> เก่า
 						</div>
 
 						<div class="-choise-2" onclick="sorting_project(1)">
-							เรียงตามโครงการเก่า <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> ใหม่
+							เรียงตามโครงการเก่า <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> ใหม่
 						</div> -->
 
 						<div class="-choise-3" onclick="sorting_price(1)">
-							<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
+							<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
 						</div>
 
 						<div class="-choise-4" onclick="sorting_price(-1)">
-							<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
+							<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
 						</div>
 					</div>
 				</div>
@@ -1861,46 +1868,36 @@ foreach ($pro_brand as $key => $value) {
 			while ( $loop->have_posts() ) : $loop->the_post(); {
 				$featured_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 				$cate_name = wp_get_object_terms( $post->ID, 'project-type');
-
-				if (count($cate_name) > 0) {
-					foreach ($cate_name as $pjt_k => $pjt_v) {
-						if ($pjt_v->parent == 0) {
-							$cate_parent = $pjt_v;
-						}else{
-							$cate_brand = $pjt_v;
-						}
+				foreach ($cate_name as $pjt_k => $pjt_v) {
+					if ($pjt_v->parent == 0) {
+						$cate_parent = $pjt_v;
+					}else{
+						$cate_brand = $pjt_v;
 					}
 				}
-
 				$loca_name = wp_get_object_terms( $post->ID, 'project_location');
-				if (count($loca_name) > 0) {
-					foreach ($loca_name as $pjt_k => $pjt_v) {
-						if ($pjt_v->parent == 0) {
-							$loca_parent = $pjt_v;
-						}else{
-							$loca_child = $pjt_v;
-						}
+				foreach ($loca_name as $pjt_k => $pjt_v) {
+					if ($pjt_v->parent == 0) {
+						$loca_parent = $pjt_v;
+					}else{
+						$loca_child = $pjt_v;
 					}
 				}
 				
 				$stat_name = wp_get_object_terms( $post->ID, 'project_status');
-				if (count($stat_name) > 0) {
-					$cate_icon = get_field('icon','project-type' . '_' . $cate_parent->term_id);
-					$stat_color = get_field('color','project_status' . '_' . $stat_name[0]->term_id);
-					$stat_label = get_field('label','project_status' . '_' . $stat_name[0]->term_id);
-					$price = get_field('price');
-					$order++;
-					$pj_price = 0;
-					$float_value = (float) $price;
-					if (strval($float_value) == $price) {
-						$pj_price = floatval($price)*100;
-					}
+				$cate_icon = get_field('icon','project-type' . '_' . $cate_parent->term_id);
+				$stat_color = get_field('color','project_status' . '_' . $stat_name[0]->term_id);
+				$stat_label = get_field('label','project_status' . '_' . $stat_name[0]->term_id);
+				$price = get_field('price');
+				$order++;
+				$pj_price = 0;
+				$float_value = (float) $price;
+				if (strval($float_value) == $price) {
+					$pj_price = floatval($price)*100;
 				}
-				if (get_field('logo')) {
-					$logo = get_field('logo')['sizes']['large'];
-				}
+				$logo = get_field('logo')['sizes']['large'];
 				?>
-				<div data-compare-id="<?=$post->ID?>" data-compare-selected="0" the="<?= isset($cate_parent->name) ? $cate_parent->name : ''?>" cate="<?= isset($cate_brand->name) ? $cate_brand->name : ''?>" data-price="<?=$pj_price?>" data-date="<?=$order?>" loca="<?= isset($loca_child->name) ? $loca_child->name : ''?>" type="<?=$stat_label?>" class="home-project-card col-span-1 project-card card-img" style="--i:<?=$order?>;order:calc( var(--i) * var(--sortby) * -1);display: grid;">
+				<div data-compare-id="<?=$post->ID?>" data-compare-selected="0" the="<?=$cate_parent->name?>" cate="<?=$cate_brand->name?>" data-price="<?=$pj_price?>" data-date="<?=$order?>" loca="<?=$loca_child->name?>" type="<?=$stat_label?>" class="home-project-card col-span-1 project-card card-img" style="--i:<?=$order?>;order:calc( var(--i) * var(--sortby) * -1);display: grid;">
 					<a href="<?=get_the_permalink()?>" class="" target="_blank">
 						<div data-compare-id="<?=$post->ID?>" class="card-project relative pointer grid grid-cols-2 md:block" data-show="0" data-x="null">
 							<div class="py-4 col-start-2 col-span-1" style="padding-right: 12px;background-color: white;">
@@ -1922,7 +1919,7 @@ foreach ($pro_brand as $key => $value) {
 									<img src="<?=$cate_icon['url']?>" class="project-card-icon -condo"><?=$cate_parent->name?>
 								</div>
 								<div class="flex flex-row items-center" class="f22-20" style="margin-top: 6px;">
-									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="project-card-icon -loca"><?=$loca_child->name?>
+									<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="project-card-icon -loca"><?=$loca_child->name?>
 								</div>
 							</div>
 							<div class="bottom-right project-card-info-2">
@@ -1964,7 +1961,7 @@ foreach ($pro_brand as $key => $value) {
 		</div>
 		<div id="notfound" class="flex flex-col justify-center items-center hidden">
 			<sp class="rem-5"></sp>
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-937.png" style="margin-bottom: 30px;">
+			<img src="/wp-content/uploads/2022/12/Group-937.png" style="margin-bottom: 30px;">
 			<h5 class="f30-28" style="font-weight: 500;margin-bottom: 12px;text-align: center;"><?php pll_e('ไม่พบโครงการที่คุณต้องการ')?>?</h5>
 			<p style="margin-bottom: 26px;text-align: center;"><?php pll_e('ลองปรับรายละเอียดการค้นหา หรือลบตัวกรองและลองใหม่อีกครั้ง')?></p>
 			<button style="border-radius: 8px;color: white;background-color: var(--ci-blue-300);padding:8px 24px;" onclick="remove_price();filter_pop(999, this);check_chk('clear', 999)">
@@ -2043,12 +2040,13 @@ foreach ($pro_brand as $key => $value) {
 </script>
 
 <script type="text/javascript">
-	isset_url_min = "<?=isset($_GET['price_min']) ? $_GET['price_min'] : ''?>"
-	isset_url_max = "<?=isset($_GET['price_max']) ? $_GET['price_max'] : ''?>"
-	if (isset_url_min != '' && isset_url_max != '') {
-		if ($(`[data-price-max="${isset_url_max}"][data-price-min="${isset_url_min}"]`)) {
-			$(`[data-price-max="${isset_url_max}"][data-price-min="${isset_url_min}"]`).click()
-		}
+	url_min = "<?=$_GET['price_min']?>"
+	url_max = "<?=$_GET['price_max']?>"
+	if ($(`[data-price-max="${url_max}"][data-price-min="${url_min}"]`)) {
+		xconsolex.log('not have')
+		$(`[data-price-max="${url_max}"][data-price-min="${url_min}"]`).click()
+	}else{
+		xconsolex.log('have')
 	}
 	document.querySelector('#filter_2').dataset.open = -1
 	document.querySelector('#filter_cost').dataset.open = -1

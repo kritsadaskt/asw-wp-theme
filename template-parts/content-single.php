@@ -92,7 +92,7 @@
                 $cate_name=get_the_category($post->ID);
                 ?>
                 <p class="cl-ci-grey-400 cont-pd" style="font-size: 22px;">
-                  <a  class='cl-ci-orange-500' style='color: var(--ci-orange-500) !important;' href='/<?= $cate_name[0]->slug?>'> <?= $cate_name[0]->name?></a>
+                  <a  class='cl-ci-orange-500' style='color: var(--ci-orange-500) !important;' href='/category/<?= $cate_name[0]->slug?>'> <?= $cate_name[0]->name?></a>
                   <span class="px-2">|</span> <?=asw_date_format($post->post_date)?> <span class="px-2">|</span> โดย 
                   <span class="cl-ci-blue-300"><?php the_author() ?></span>
               </p>
@@ -120,8 +120,7 @@
 </div> -->
 
 <div class="entry-content cl-ci-grey-200 md:grid grid-cols-8" style="color: var(--ci-grey-200) !important">
-    <div class="col-span-1 "></div>
-    <div class="col-span-6 px-4 md:px-0">
+    <div class="col-span-8 px-4 md:px-0">
         <?php the_content(); ?>
         <?php wp_link_pages( array('before' => '<div class="page-links">' . esc_html__( 'Pages:', 'seed' ),'after'  => '</div>') ); ?>
     </div>

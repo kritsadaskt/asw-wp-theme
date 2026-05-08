@@ -406,7 +406,7 @@ get_template_part( 'template-parts/hot-deal',$level);
 	<div class="cont">
 		<div class="text-center">
 			<a href="/home" class="">
-				<img src="<?= get_template_directory_uri() ?>/img/<?=pll_current_language()?>/logo-asw.png" class="inline-block -logo">
+				<img src="/wp-content/themes/seed-spring/img/<?=pll_current_language()?>/logo-asw.png" class="inline-block -logo">
 			</a>
 			<div class="-line"></div>
 		</div>

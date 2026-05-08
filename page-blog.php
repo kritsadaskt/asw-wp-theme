@@ -8,7 +8,7 @@
 
 <div class="cont-pd py-4 flex flex-row items-center">
 	<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+	<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 	<a href="/<?=pll_current_language()?>/blog" class=""><?php pll_e('บล็อก')?></a>
 </div>
 <style type="text/css">
@@ -117,6 +117,15 @@
 						</li>
 						<?php
 						$allcate = get_categories();
+						
+						// Exclude categories with term_id 1689 or 1692 from $allcate
+						$allcate = array_filter($allcate, function($cat) {
+							return $cat->term_id != 1689 && $cat->term_id != 1692;
+						});
+
+						echo '<pre class="hidden">';
+						print_r($allcate);
+						echo '</pre>';
 
 						foreach ($allcate as $key => $value) {
 							if ($value->slug != 'blog') { ?>
@@ -273,6 +282,9 @@
 			<div id="show-all" class="blog-all-cate">
 				<?php
 				$allcate = get_categories();
+				$allcate = array_filter($allcate, function($cat) {
+					return $cat->term_id != 1689 && $cat->term_id != 1692;
+				});
 				$chk_cate = 0;
 				foreach ($allcate as $key => $value) {
 					if ($value->slug != 'post') {
@@ -284,9 +296,9 @@
 									</div>
 									<div class="col-start-2 col-span-1 flex items-center justify-end">
 										<a  onclick="select_all(1)" class="see-more selected-all f30-28 cl-ci-blue-300"
-											href="/<?= $value->slug ?>"
+											href="/category/<?= $value->slug ?>"
 											style="overflow: visible !important; color: var(--ci-blue-300);"><?php pll_e('ดูทั้งหมด')?>
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+											<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 												style="width:35px">
 										</a>
 									</div>
@@ -395,7 +407,7 @@
 											<a  onclick="select_all(1)" class="see-more selected-all f30-28 cl-ci-blue-300"
 												href="/<?= $value->slug ?>"
 												style="overflow: visible !important; color: var(--ci-blue-300);"><?php pll_e('ดูทั้งหมด')?>
-												<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+												<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 													style="width:35px">
 											</a>
 										</div>
@@ -492,7 +504,7 @@
 											<a  onclick="select_all(1)" class="see-more selected-all f30-28 cl-ci-blue-300"
 												href="/<?= $value->slug ?>"
 												style="overflow: visible !important; color: var(--ci-blue-300);"><?php pll_e('ดูทั้งหมด')?>
-												<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+												<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 													style="width:35px">
 											</a>
 										</div>
@@ -590,7 +602,7 @@
 										<a  onclick="select_all(1)" class="see-more selected-all f30-28 cl-ci-blue-300"
 											href="/<?= $value->slug ?>"
 											style="overflow: visible !important; color: var(--ci-blue-300);"><?php pll_e('ดูทั้งหมด')?>
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+											<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 												style="width:35px">
 										</a>
 									</div>

@@ -79,7 +79,7 @@ if ($pagewidth === null) {
 			<main id="main" class="site-main -hide-title">
 				<div class="main-unsub">
 					<?php if ($_GET['confirm_action'] != 'true'): ?>
-						<img src="https://dev.assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/CleanShot-2566-06-06-at-20.04.55@2x.png" class="unsub-img">
+						<img src="https://dev.assetwise.co.th/wp-content/uploads/2023/06/CleanShot-2566-06-06-at-20.04.55@2x.png" class="unsub-img">
 						<h2 class="text-center"><?=get_the_title()?></h2>
 						<p class="mb-8 text-center font-light"><?php pll_e('ระบบจะทำการยกเลิกข่าวสารที่ท่านสมัครไว้กับทาง แอดแอสเซทไวส์ ต้องขออภัยมา ณ โอกาสนี้ ที่ข่าวสารทางบริษัทไปรบกวนท่านในระยะเวลาที่ผ่านมา')?></p>
 						<div class="text-center mb-6 max-w-xl mx-auto">
@@ -111,7 +111,7 @@ if ($pagewidth === null) {
 						}
 						if ($found>0) {
 							?>
-							<img src="https://dev.assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/CleanShot-2566-06-06-at-20.21.37@2x.png" class="unsub-img">
+							<img src="https://dev.assetwise.co.th/wp-content/uploads/2023/06/CleanShot-2566-06-06-at-20.21.37@2x.png" class="unsub-img">
 							<h2 class="text-center"><?php pll_e('ขอบคุณค่ะ')?></h2>
 							<div class="text-center mb-10">
 								<p class="my-2  font-light"><?php pll_e('แอสเซทไวส์ ได้ยกเลิกรับข้อมูลข่าวสารของคุณเรียบร้อยแล้ว')?></p>
@@ -122,7 +122,7 @@ if ($pagewidth === null) {
 							<?php
 						}else{
 							?>
-							<img src="https://dev.assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/CleanShot-2566-06-06-at-20.04.55@2x.png" class="unsub-img">
+							<img src="https://dev.assetwise.co.th/wp-content/uploads/2023/06/CleanShot-2566-06-06-at-20.04.55@2x.png" class="unsub-img">
 							<h2 class="text-center"><?=get_the_title()?></h2>
 							<p class="mb-8 text-center font-light"><?php pll_e('ระบบจะทำการยกเลิกข่าวสารที่ท่านสมัครไว้กับทาง แอดแอสเซทไวส์ ต้องขออภัยมา ณ โอกาสนี้ ที่ข่าวสารทางบริษัทไปรบกวนท่านในระยะเวลาที่ผ่านมา')?></p>
 							<div class="text-center mb-6 max-w-xl mx-auto">
@@ -130,7 +130,7 @@ if ($pagewidth === null) {
 									<input type="email" name="email" class="unsub-input" placeholder="อีเมลของคุณ" value="<?=$_GET['email']?>">
 									<input type="hidden" name="confirm_action" value="true">
 									<div class="not-found">
-										<img src="https://dev.assetwise.co.thhttps://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/Vector.png" class="w-4 inline-block">
+										<img src="https://dev.assetwise.co.th/wp-content/uploads/2023/06/Vector.png" class="w-4 inline-block">
 										<span><?php pll_e('ขออภัย! ไม่พบอีเมลนี้ในระบบ กรุณาลองใหม่อีกครั้ง')?></span>
 									</div>
 									<button class="unsub-btn mt-6 mb-10"><?php pll_e('ยกเลิกการสมัครรับข้อมูล')?></button>

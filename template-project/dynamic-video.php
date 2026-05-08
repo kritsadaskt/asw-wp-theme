@@ -8,7 +8,7 @@ $layout = $args[5];
 $content = aswv2_gen_master($master,$content,$layout);
 act_template_project_css($opt,$template_name,$layout);
 
-isset($content['bg_img']) ? $bg = acf_img($content['bg_img']) : $bg = '';
+$bg = acf_img($content['bg_img']);
 ?>
 <script type="text/javascript">
     function navVideo(k, tnum) {

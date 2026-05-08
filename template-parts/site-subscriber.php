@@ -18,7 +18,7 @@
   opacity: 0;
 }
 .sub-close{
-  background: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/menu-1.png');
+  background: url('/wp-content/uploads/2023/05/menu-1.png');
   width: 1.5rem;
   height: 1.5rem;
   position: absolute;
@@ -96,7 +96,7 @@
 }
 #sent-sub span::before{
   content: " ";
-  background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Vector.png);
+  background-image: url(/wp-content/uploads/2023/05/Vector.png);
   width: 1em;
   height: 1em;
   position: relative;
@@ -145,7 +145,7 @@
     <sp class=""></sp>
     <div>
       <div class="-form">
-        <?=do_shortcode('[contact-form-7 id="11105" title="Subscriber"]')?>
+        <?=do_shortcode('[contact-form-7 id="146860" title="Subscriber"]')?>
       </div>
       <label class="-consent">
         <input type="checkbox" class="sub-check">

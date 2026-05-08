@@ -4,7 +4,7 @@ $cp_field = get_field('hot_deal_l1');
 $cp_pj_arg = array('post_type' => 'hot-deal', 'posts_per_page' => -1, 'post_parent' => $id);
 $cp_pj = new WP_Query($cp_pj_arg);
 $cp_pj_size = $cp_pj->found_posts;
-$theme_img = get_site_url() . '<?= get_template_directory_uri() ?>img';
+$theme_img = get_site_url() . '/wp-content/themes/seed-spring/img';
 if ($cp_pj_size==1) {
 	$cp_url = get_permalink($cp_pj->posts[0]->ID);
 	?>

@@ -106,12 +106,12 @@
 }
 </style>
 <section id="hmpro">
-	<!-- <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/เงากิ่งไม้-1-1.png" class="absolute pointer-events-none leaf01"> -->
+	<!-- <img src="/wp-content/uploads/2022/11/เงากิ่งไม้-1-1.png" class="absolute pointer-events-none leaf01"> -->
 	<div class="mob-container">
 		<div class="-header">
 			<h1 class="text-white"><?php pll_e('โปรโมชั่น')?></h1>
 			<h5 class="see-more cl-white"><a href="/<?=pll_current_language()?>/promotion" class="">
-				<span class="cl-white"><?php pll_e('ดูทั้งหมด')?></span> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png" class="inline-block" style="width:35px">
+				<span class="cl-white"><?php pll_e('ดูทั้งหมด')?></span> <img src="/wp-content/uploads/2022/09/arrow-r.png" class="inline-block" style="width:35px">
 			</a></h5>
 		</div>
 		<div style="display: none;" id="jbtest">

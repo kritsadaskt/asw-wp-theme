@@ -23,7 +23,7 @@
 		height: 28px;
 		position: absolute;
 		left: -1.5px;
-		top: 50px;
+		top: 3px;
 		background-color: #F1683B;
 		transition: all .2s;
 	}
@@ -565,8 +565,8 @@ function pad($num){
 			?> 
 		</div>
 		<!-- <div id="home-slider-arrow">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
+			<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
+			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
 		</div>
 		<div id="home-slider-count">
 			<div >
@@ -760,7 +760,7 @@ function pad($num){
 		}
 	</style>
 	<div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+		<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 	</div>
 	<div id="home-slider-count-mob">
 		<div >
@@ -773,7 +773,7 @@ function pad($num){
 			<span class="-num-next-num">02</span><span style="margin-left: 3px;color: var(--ci-grey-400);font-weight: 300;font-size: 20px;">/<span class="-num-max"><?=pad($data_active+1)?></span></span></h5></div>
 		</div>
 		<div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 		</div>
 		<script type="text/javascript">
 			let mhbannerAutoPlay = 1;
@@ -812,7 +812,7 @@ function pad($num){
 </div>
 <style type="text/css">
 	#about-us{
-		background: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/circle.png);
+		background: url(/wp-content/uploads/2022/12/circle.png);
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-position: left 8rem;
@@ -827,7 +827,7 @@ function pad($num){
 <div class="cont-pd pt-4">
 	<div class="flex flex-row items-center">
 		<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 7px;">
 		<a href="/<?=pll_current_language()?>/about-us" class=""><?php pll_e( 'รู้จักแอสเซทไวส์'); ?></a>
 	</div>
 </div>
@@ -835,7 +835,7 @@ function pad($num){
 <!--=== The Section Boxes : about us ===-->
 <section id="about-us" class="">
 <!-- 	<div id="bg-circle" class="absolute">
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/circle.png">
+		<img src="/wp-content/uploads/2022/12/circle.png">
 	</div> -->
 	<div class="cont-pd  pt-2 xl:pt-10 -pb-10">
 		<div id="about-info-section"></div>
@@ -845,18 +845,22 @@ function pad($num){
 				<section id="about-menu" class="lg:pl-6 lg:pb-10 pt-4">
 					<h1><?php pll_e( 'รู้จักแอสเซทไวส์'); ?></h1>
 					<div id="menu-about" class="flex flex-row lg:flex-col side-nav-menu-about relative pt-9 pb-2.5 lg:py-0 scroll-hid lg:mt-8" style="">
-            <div class="about-menu px-0 lg:px-4">
-              <a href="/<?=pll_current_language()?>/20th-anniversary"><?php pll_e( '20th Anniversary'); ?></a>
-            </div>
-            <sp class="hidden lg:block" style="height: 1rem;"></sp>
 						<div onclick="show_info(0)" class="about-menu px-0 lg:px-4 cl-ci-orange-500 font-medium">
 							<?php pll_e( 'เกี่ยวกับแอสเซทไวส์'); ?>
 						</div>
-						<sp class="hidden lg:block" style="height: 1rem;"></sp>
+            <sp class="hidden lg:block" style="height: 1rem;"></sp>
+						<div class="about-menu px-0 lg:px-4">
+							<a href="/<?=pll_current_language()?>/in-focus"><?php pll_e( 'AssetWise in Focus'); ?></a>
+						</div>
+            <sp class="hidden lg:block" style="height: 1rem;"></sp>
 						<!-- onclick="show_info(1)" -->
 						<div  class="about-menu px-0 lg:px-4">
 							<a href="/<?=pll_current_language()?>/award" class=""><?php pll_e( 'รางวัลและความสำเร็จ'); ?></a>
 						</div>
+						<sp class="hidden lg:block" style="height: 1rem;"></sp>
+						<div class="about-menu px-0 lg:px-4">
+              <a href="/<?=pll_current_language()?>/20th-anniversary"><?php pll_e( '20th Anniversary'); ?></a>
+            </div>
 						<sp class="hidden lg:block" style="height: 1rem;"></sp>
 
 						<div class="hidden lg:block absolute bg-ci-grey-900" style="width: 1px;height: 100%;left: 0px;z-index: 1;">
@@ -881,11 +885,42 @@ function pad($num){
 			</style>
 			<div id="about-asw" class="lg:col-span-9 pt-8 md:pt-0 xl:pt-4">
 				<div class="cont-pd">
+					<div class="flex flex-col gap-4">
+						<div class="flex flex-col justify-center items-center">
+							<div class="flex flex-row justify-center items-center">
+								<img src="/wp-content/uploads/2022/11/unnamed-file.png" class="relative m-0 mr-4" style="top:-17px;">
+									<h2 class="font-medium">
+										<span class="cl-ci-blue-300">WE BUILD HAPPINESS</span>
+									</h2>
+								<img src="/wp-content/uploads/2022/11/1.png" class="relative m-0 ml-4" style="bottom:-12.5px;">
+							</div>
+							<div>
+								<p class="text-center font-bold text-2xl lg:text-3xl">
+									<?php pll_e('ในทุกจังหวะของชีวิต<br/>
+									ความสุข…เริ่มต้นจาก “พื้นที่ที่ใช่”<br/>
+									ตลอด 21 ปีที่ผ่านมา<br/>
+									<strong>AssetWise</strong> สร้างสรรค์มากกว่า 80 โครงการที่อยู่อาศัยคุณภาพ<br/>
+									บนทำเลศักยภาพที่ตอบโจทย์ทุกไลฟ์สไตล์<br/>
+									ทุกพื้นที่…ถูกออกแบบด้วยความตั้งใจ<br/>
+									เพื่อสร้างสมดุลของการใช้ชีวิต<br/>
+									และเติมเต็มความสุขในแบบที่เป็นคุณ<br/>
+									เพราะสำหรับเรา<br/>
+									<strong>“We Build Happiness”</strong> ไม่ใช่เพียงแค่คำพูด<br/>
+									แต่คือความสุขที่ถูกออกแบบอย่างพิถีพิถัน…ในทุกตารางนิ้ว'); ?>
+								</p>
+							</div>
+						</div>
+						<sp class="vl"></sp>
+						<div class="">
+							<iframe width="800" height="430" src="https://www.youtube.com/embed/lfHkxApDvbI?si=1lSoedx-ZYlFktim" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<sp style="height: 90px;"></sp>
+					</div>
 					<div class="flex flex-col justify-center">
 						<div class="flex flex-row justify-center items-center">
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/unnamed-file.png" class="relative m-0 mr-4" style="top:-17px;">
+							<img src="/wp-content/uploads/2022/11/unnamed-file.png" class="relative m-0 mr-4" style="top:-17px;">
 							<div class="f40-30"><?php echo $f['first_quote'] ?></div>  
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/1.png" class="relative m-0 ml-4" style="bottom:-12.5px;">
+							<img src="/wp-content/uploads/2022/11/1.png" class="relative m-0 ml-4" style="bottom:-12.5px;">
 						</div>
 						<sp class="l"></sp>
 						<div class="px-0 sm:px-12 lg:px-24 cl-ci-grey-300">
@@ -897,11 +932,11 @@ function pad($num){
 						</div>
 						<sp style="height: 90px;"></sp>
 						<div class="flex flex-row justify-center items-center">
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/unnamed-file.png" class="relative m-0 mr-4" style="top:-40px;">
+							<img src="/wp-content/uploads/2022/11/unnamed-file.png" class="relative m-0 mr-4" style="top:-40px;">
 							<div class="text-center f40-30">
 								<?php echo $f['second_quote'] ?>
 							</div>
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/1.png" class="relative m-0 ml-4" style="bottom:-40px;">
+							<img src="/wp-content/uploads/2022/11/1.png" class="relative m-0 ml-4" style="bottom:-40px;">
 						</div>
 						<sp style="height: 87px;" ></sp>
 
@@ -924,7 +959,7 @@ function pad($num){
 													echo sprintf("%02d", $key+1);
 													?>
 												</div>
-												<!-- <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-1088-1.png" class="about-line"> -->
+												<!-- <img src="/wp-content/uploads/2022/12/Group-1088-1.png" class="about-line"> -->
 												<div class="wavebar wave-1">
 													<span></span>
 													<span></span>
@@ -977,7 +1012,7 @@ function pad($num){
 													echo sprintf("%02d", $key+1);
 													?>
 												</div>
-												<!-- <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-1088-2.png" class="about-line"> -->
+												<!-- <img src="/wp-content/uploads/2022/12/Group-1088-2.png" class="about-line"> -->
 												<div class="wavebar wave-2">
 													<span></span>
 													<span></span>
@@ -1011,9 +1046,9 @@ function pad($num){
 						<sp style="height: 18px;" ></sp>
 						<div class="flex justify-center items-center relative px-9 md:px-48">
 							<h3 class="text-center relative">
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/unnamed-file.png" class="absolute m-0 mr-4" style="top:-10px;left: -30px;">
+								<img src="/wp-content/uploads/2022/11/unnamed-file.png" class="absolute m-0 mr-4" style="top:-10px;left: -30px;">
 								<?= $v['quote'] ?>
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/1.png" class="absolute m-0 ml-4" style="bottom:-5px;right: -30px;">
+								<img src="/wp-content/uploads/2022/11/1.png" class="absolute m-0 ml-4" style="bottom:-5px;right: -30px;">
 							</h3>
 						</div>
 						<sp class="rem-6"></sp>
@@ -1168,8 +1203,8 @@ function pad($num){
 					<?php }
 					?>
 				</div>
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)">
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)">
+				<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="absolute pointer hidden md:block arrow-l" onclick="plusSlides(-1)">
+				<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="absolute pointer hidden md:block arrow-r" onclick="plusSlides(1)">
 			</div>
 		</div>
 	</div>
@@ -1223,7 +1258,7 @@ function pad($num){
 				// menu.style.justifyContent = 'space-between';
 				gapWidth = (menu.offsetWidth - width_hline) / (elAll.length - 1) 
 				left_hline = left_hline + (gapWidth * current)
-				hbar.style.left = left_hline + 'px';
+				//hbar.style.left = left_hline + 'px';
 				hline.style.width =  100 + '%';
 			} else{
 				// menu.style.width = 'calc(100vw - 32px)';
@@ -1232,8 +1267,8 @@ function pad($num){
 				menu.style.columnGap = 16 + "px";
 				left_hline = left_hline + (current*16);
 
-				hbar.style.left = '150px';
-				hline.style.width = '150px';
+				hbar.style.left = '2px';
+				hline.style.width = '100%';
 			}
 			
 		}else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1024){

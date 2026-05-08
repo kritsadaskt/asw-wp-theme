@@ -1,37 +1,14 @@
 <?php
-// Lock file mechanism to prevent multiple instances from running simultaneously
-$lock_file = dirname(__FILE__) . '/form-cron-create-api-log.lock';
-$lock_file_handle = null;
+// $startTime = microtime(true);
 
-// Check if lock file exists and is not stale (older than 5 minutes)
-if (file_exists($lock_file)) {
-    $lock_time = filectime($lock_file);
-    $current_time = time();
-    $time_diff = $current_time - $lock_time;
-    
-    // If lock file is less than 5 minutes old, exit
-    if ($time_diff < 300) { // 5 minutes = 300 seconds
-        error_log('Cron job already running or recently run. Exiting to prevent duplicate execution.');
-        exit;
-    } else {
-        // Lock file is stale (older than 5 minutes), remove it
-        unlink($lock_file);
-    }
-}
+// $theme_root = get_template_directory();
+// $log_file = $theme_root . '/__cron-log.txt';
+// $timestamp = date('Y-m-d H:i:s');
 
-// Create lock file
-$lock_file_handle = fopen($lock_file, 'w');
-if (!$lock_file_handle) {
-    error_log('Failed to create lock file. Exiting to prevent duplicate execution.');
-    exit;
-}
+// $epoch = time();
+// file_put_contents($log_file, 'Start Epoch: '.$epoch.PHP_EOL, FILE_APPEND);
 
-// Register shutdown function to remove lock file when script ends
-register_shutdown_function(function() use ($lock_file) {
-    if (file_exists($lock_file)) {
-        unlink($lock_file);
-    }
-});
+// ================================
 
 $args = array(
 	'post_type'   => 'form_api_log',
@@ -181,4 +158,9 @@ function createFormLog($db_v,$i,$option){
 		wp_set_post_terms($new_post,$_try_status,'form_api_category');
 	}
 }
+
+// $endTime = microtime(true);
+// $executionTime = $endTime - $startTime;
+// $log_message = 'cron [create-api-log] runs at: ' . $timestamp . ' - Execution time: ' . $executionTime . " seconds\n";
+// file_put_contents($log_file, $log_message, FILE_APPEND);
 ?>

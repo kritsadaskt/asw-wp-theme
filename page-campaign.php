@@ -288,6 +288,12 @@ function clean_string($string) {
         <input type="hidden" id="utm_term" name="utm_term" value="<?= isset($_GET['utm_term']) ? $_GET['utm_term'] : ''; ?>">
         <input type="hidden" id="utm_id" name="utm_id" value="<?= isset($_GET['utm_id']) ? $_GET['utm_id'] : ''; ?>">
         <input type="hidden" id="utm_content" name="utm_content" value="<?= isset($_GET['utm_content']) ? $_GET['utm_content'] : ''; ?>">
+        <input type="hidden" id="refid" name="refid" value="<?= get_the_ID(); ?>">
+
+        <?php if  ($cmp_detail['campaign_key']) : ?>
+          <input type="hidden" id="campaign_key" name="campaign_key" value="<?= $cmp_detail['campaign_key']; ?>">
+        <?php endif; ?>
+
         <input type="hidden" id="thankyou_image" name="thankyou_image" value="<?= get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" readonly>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
@@ -301,12 +307,12 @@ function clean_string($string) {
         
           <div>
             <label for="tel" class="block font-medium text-gray-700 mb-2">เบอร์โทรศัพท์ *</label>
-            <input type="tel" id="tel" name="tel" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="tel" id="tel" name="tel" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" pattern="[0-9]*">
           </div>
         
           <div>
             <label for="email" class="block font-medium text-gray-700 mb-2">อีเมล *</label>
-            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
           </div>
         </div>
         <div>
@@ -361,14 +367,22 @@ function clean_string($string) {
       
       // Check tel
       const tel = document.getElementById('tel')?.value.trim();
+      const telRegex = /^[0-9]*$/;
+      if (!telRegex.test(tel)) {
+        errors.tel = 'กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง';
+      }
       if (!tel) {
         errors.tel = 'กรุณากรอกเบอร์โทรศัพท์';
       }
       
       // Check email
       const email = document.getElementById('email')?.value.trim();
+      const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
       if (!email) {
         errors.email = 'กรุณากรอกอีเมล';
+      }
+      if (!emailRegex.test(email)) {
+        errors.email = 'กรุณากรอกอีเมลให้ถูกต้อง';
       }
       
       // Check consent checkbox
@@ -476,7 +490,7 @@ function clean_string($string) {
         ContactChannelID: 21,
         ContactTypeID: 35,
         FollowUpID: 42,
-        RefID: 20250919,
+        RefID: Number(document.getElementById('refid')?.value || 0),
         Ref: document.getElementById('project_name')?.textContent || '',
         RefDate: new Date().toISOString(),
         Fname: document.getElementById('fname')?.value || '',
@@ -489,11 +503,12 @@ function clean_string($string) {
         FlagContactAccept: true,
         utm_source: document.getElementById('utm_source')?.value || '',
         utm_medium: document.getElementById('utm_medium')?.value || '',
-        utm_campaign: document.getElementById('utm_campaign')?.value || '',
+        utm_campaign: document.getElementById('utm_campaign')?.value+'_'+document.getElementById('campaign_key')?.value || '',
         utm_term: document.getElementById('utm_term')?.value || '',
         utm_id: document.getElementById('utm_id')?.value || '',
         utm_content: document.getElementById('utm_content')?.value || '',
-        thankyou_image: document.getElementById('thankyou_image')?.value || ''
+        thankyou_image: document.getElementById('thankyou_image')?.value || '',
+        campaign_key: document.getElementById('campaign_key')?.value || ''
       };
 
       // Send data to API

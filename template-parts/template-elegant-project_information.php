@@ -69,7 +69,7 @@ $f = $args[1];
 
   .list-disc li::before {
     content: "";
-    background-image: url("https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/list_checked.png");
+    background-image: url("/wp-content/uploads/2023/03/list_checked.png");
     width: 15px;
     height: 15px;
     display: inline-flex;
@@ -187,7 +187,7 @@ $f = $args[1];
                                 class="inline-block xl:mr-1" target="_blank">
                                 <div
                                 class="long-hover px-5 text-white text-center py-1 pointer flex flex-row items-center justify-center file-button">
-                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Download.png"
+                                <img src="/wp-content/uploads/2023/02/Download.png"
                                 style="width: 24px;height: 24px;margin:0;margin-right: 8px;">ดาวน์โหลดเพิ่มเติม
                             </div>
                         </a>
@@ -197,7 +197,7 @@ $f = $args[1];
                             target="_blank">
                             <div
                             class="long-hover px-5 text-white text-center py-1 pointer flex flex-row items-center justify-center file-button">
-                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Information.png"
+                            <img src="/wp-content/uploads/2023/02/Information.png"
                             style="width: 24px;height: 24px;margin:0;margin-right: 8px;">
                             <?php pll_e('ข้อมูลเงื่อนไขเพิ่มเติม')?>
                         </div>

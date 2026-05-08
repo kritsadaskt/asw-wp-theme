@@ -96,6 +96,7 @@ if ($masthead == 0) {
 
 @media (min-width: 992px) {
     .site-branding img {
+        width: 186px;
         max-height: 20px;
         margin-top:
         <?= $site_logo_margin ?>
@@ -130,9 +131,9 @@ if ($masthead == 0) {
         padding-left: 0;
     }
 
-    .change-lang {
+    /*.change-lang {
         display: none;
-    }
+    }*/
 
     .logo_lang {
         margin-right: 0px;
@@ -161,6 +162,12 @@ if ($masthead == 0) {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .change-lang {
+        display: none;
+    }
+}
+
 @media (max-width: 368px) {
     .site-header {
         padding-left: 0px;
@@ -177,6 +184,10 @@ if ($masthead == 0) {
 .site-branding {
     position: static;
     transform: unset;
+}
+
+.site-branding img {
+    width: 160px;
 }
 
 
@@ -205,6 +216,7 @@ if ($masthead == 0) {
     min-width: calc(100% + 2rem);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .04), 0 2px 4px 0 rgba(0, 0, 0, .08);
     text-align: left;
+    z-index: 999;
 }
 .change-lang:hover .-more-lang{
     display: grid;
@@ -291,13 +303,16 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
 
 
 <header id="masthead" class="site-header _heading fixed whitespace-nowrap" style="z-index: 9999;">
+    <?php if(is_front_page()): ?>
+        <h1 style="display: none;">โครงการบ้านและคอนโดมิเนียมคุณภาพจากแอสเซทไวส์</h1>
+    <?php endif; ?>
     <div class="container mx-auto" style="padding-left: 0;padding-right: 0;">
         <div class="grid grid-cols-12 md:gap-4 w-full header-layout">
             <div class="left-header-buffer"></div>
             <div class="col-span-6 xl:col-span-9 flex items-center relative site-left-bar">
                 <div class="site-branding">
                     <a href="<?php echo home_url(); ?>" class="logo_lang- logo-hide-cont-left-">
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/CleanShot-2566-05-08-at-04.57.00@2x.png">
+                        <img alt="AssetWise" src="<?= get_template_directory_uri() ?>/img/asw-logo_horizontal.svg">
                     </a>
                     <div class="grid grid-flow-col gap-4" id="header-nav-items">
                         <nav id="site-navigation" class="site-nav-d _desktop txt-menu dbfon" style="font-weight: 400;">
@@ -310,8 +325,8 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                 <div class="site-tools flex flex-row items-center gap-4 xl:gap-5">
                     <div class="flex flex-row items-center change-lang pointer" data-lang-count="1" style="-margin-right: 10px;">
                         <div class="-h-lang-this-lang">
-                            <img src="<?= get_template_directory_uri() ?>/img/th.png" alt="ไทย" />
-                            <h6 class="inline-block site-lang-txt">ไทย</h6>
+                            <img src="/wp-content/themes/seed-spring/img/th.png" alt="ไทย" />
+                            <span class="inline-block site-lang-txt">ไทย</span>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="--more ml-3">
                             <path d="M4 6L8 10L12 6" stroke="#545E67" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -340,13 +355,13 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                                 xconsolex.log(thislang);
                                 if (thislang.current_lang) {
                                     document.querySelector('.-h-lang-this-lang .site-lang-txt').innerText = thislang.name;
-                                    document.querySelector('.-h-lang-this-lang img').src = `<?= get_template_directory_uri() ?>/img/${thislang.slug}.png`;
+                                    document.querySelector('.-h-lang-this-lang img').src = `/wp-content/themes/seed-spring/img/${thislang.slug}.png`;
                                 }else{
                                     //ถ้าจะเปิดจีนเหมือนเดิม เอา if ด้านล่างออก
-                                    if(lll != 'cn'){
+                                    if(lll != 'cn' && lll != 'ru'){
                                         lang_html += `<a href="${thislang.url}" class="-this-lang-${lll}">
-                                        <img src="<?= get_template_directory_uri() ?>/img/${lll}.png" class="inline" style="width: 24px;margin-right: 5px;">
-                                        <h6 class="inline-block site-lang-txt">${thislang.name}</h6>
+                                        <img src="/wp-content/themes/seed-spring/img/${lll}.png" class="inline" style="width: 24px;margin-right: 5px;">
+                                        <span class="inline-block site-lang-txt">${thislang.name}</span>
                                         </a>`;
                                     }
                                 }
@@ -355,7 +370,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                             let mob_html = ``
                             for(let i in page_lang){
                                 //ถ้าจะเปิดจีนเหมือนเดิม เอา if ด้านล่างออก
-                                if(i != 'cn'){
+                                if(i != 'cn' && i != 'ru'){
                                     mob_html += `<a style="" href="${page_lang[i].url}">${page_lang[i].name}</a>`
                                 }
                             }
@@ -371,7 +386,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                             //     mob_html += `<a style="" href="${page_lang['cn'].url}">${page_lang['cn'].name}</a>`
                             // }
 
-                            document.querySelector('.ham-lang-mob').innerHTML = mob_html
+                            //document.querySelector('.ham-lang-mob').innerHTML = mob_html
                         }
                         window.addEventListener("load", (event) => {
                             setLangSite()
@@ -391,9 +406,9 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                             <path d="M20.9975 15.9201V18.9201C20.9986 19.1986 20.9416 19.4743 20.83 19.7294C20.7184 19.9846 20.5548 20.2137 20.3496 20.402C20.1443 20.5902 19.9021 20.7336 19.6382 20.8228C19.3744 20.912 19.0949 20.9452 18.8175 20.9201C15.7403 20.5857 12.7845 19.5342 10.1875 17.8501C7.77132 16.3148 5.72283 14.2663 4.18749 11.8501C2.49747 9.2413 1.44573 6.27109 1.11749 3.1801C1.0925 2.90356 1.12537 2.62486 1.21399 2.36172C1.30262 2.09859 1.44506 1.85679 1.63226 1.65172C1.81945 1.44665 2.0473 1.28281 2.30128 1.17062C2.55527 1.05843 2.82983 1.00036 3.10749 1.0001H6.10749C6.5928 0.995321 7.06328 1.16718 7.43125 1.48363C7.79922 1.80008 8.03957 2.23954 8.10749 2.7201C8.23411 3.68016 8.46894 4.62282 8.80749 5.5301C8.94203 5.88802 8.97115 6.27701 8.8914 6.65098C8.81164 7.02494 8.62635 7.36821 8.35749 7.6401L7.08749 8.9101C8.51105 11.4136 10.5839 13.4865 13.0875 14.9101L14.3575 13.6401C14.6294 13.3712 14.9726 13.1859 15.3466 13.1062C15.7206 13.0264 16.1096 13.0556 16.4675 13.1901C17.3748 13.5286 18.3174 13.7635 19.2775 13.8901C19.7633 13.9586 20.2069 14.2033 20.524 14.5776C20.8412 14.9519 21.0097 15.4297 20.9975 15.9201Z" stroke="#202831" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <a href="tel:02-168-0000" class="pt-1">
-                            <h6 class="whitespace-nowrap tel-number pointer-events-none">
+                            <span class="whitespace-nowrap tel-number pointer-events-none text-2xl font-normal">
                                 02-168-0000
-                            </h6>
+                            </span>
                         </a>
                     </div>
                     <div class="pointer nav-icon" onclick="document.querySelector('#search-popup-wrap').dataset.toggle=1">
@@ -629,21 +644,22 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
     </style>
     <div id="menu-burger" class="fixed">
         <span class="close-menu cursor hidden" onclick="closeMenubur()" style="z-index: 10001;top: 25px;">&times;</span>
-        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Group-517.png"
+        <img src="/wp-content/uploads/2022/10/Group-517.png"
         style="width: 22px;z-index: 10001;top: 30px;" class="search-fix hidden"
-        onclick="document.querySelector('#search-popup-wrap').dataset.toggle=1">
-        <a href="tel:02-168-0000"><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-9.png"
-            style="width: 20px; z-index: 10001;top: 30px;" class="tel-fix hidden"></a>
+        onclick="document.querySelector('#search-popup-wrap').dataset.toggle=1" alt="Search">
+        <a href="tel:02-168-0000"><img src="/wp-content/uploads/2022/10/Vector-9.png"
+            style="width: 20px; z-index: 10001;top: 30px;" class="tel-fix hidden" alt="Phone"></a>
             <div class="burger-main-wrap inline-flex w-full h-full">
                 <div id="burger-1" class="bg-ci-blue-300 container relative">
-                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1-1.png"
-                    class="absolute pointer-events-none leaf-burger">
-                    <img src="<?= get_template_directory_uri() ?>/img/<?=$xlang?>/logo-asw.png"
-                    class="flex items-start mt-6 ml-10"  style="max-width: 188px;">
+                    <img src="/wp-content/uploads/2022/11/shutterstock_1574382076-1-1.png"
+                    class="absolute pointer-events-none leaf-burger" alt="Leaf">
+                    <img src="/wp-content/themes/seed-spring/img/<?=$xlang?>/logo-asw.png"
+                    class="flex items-start mt-6 ml-10"  style="max-width: 188px;" alt="ASW Logo">
                     <div class="ham-lang-mob">
-
+                        <a href="<?=$translations['th']['url']?>" class="<?=$translations['th']['current_lang'] ? 'underline' : ''?>" title="TH">TH</a>
+                        <a href="<?=$translations['en']['url']?>" class="<?=$translations['en']['current_lang'] ? 'underline' : ''?>" title="EN">EN</a>
                     </div>
-                    <!-- <div class="bg-cover" style="width: 270px; height: 40px;background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Screen-Shot-2565-07-14-at-17.49-1.png');"></div> -->
+                    <!-- <div class="bg-cover" style="width: 270px; height: 40px;background-image: url('/wp-content/uploads/2022/10/Screen-Shot-2565-07-14-at-17.49-1.png');"></div> -->
                     <sp class=""></sp>
                     <div id="burger-txt" class="relative grid grid-rows-2 gap-6 place-content-center pt-4"
                     style="left: 120%;transition: 1s;">
@@ -661,7 +677,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
                                <div data-pll data-pll-th="show" data-pll-en="show" data-pll-cn="show" class="menu-txt"><a href="/<?=$xlang?>/promotion" class="menu-txt"><?php pll_e('โปรโมชั่น')?></a></div>     
                            <?php endif ?>
 
-                           <div data-pll data-pll-th="show" data-pll-en="show" data-pll-cn="show" class="menu-txt"><a href="/<?=$xlang?>/about-us" class="menu-txt"><?php pll_e('รู้จักแอสเซทไวส์')?></a></div>
+                           <div data-pll data-pll-th="show" data-pll-en="show" data-pll-cn="show" class="menu-txt"><a href="/<?=$xlang?>/about-us/" class="menu-txt"><?php pll_e('รู้จักแอสเซทไวส์')?></a></div>
                            <div data-pll data-pll-th="show" data-pll-en="show" data-pll-cn="show" class="menu-txt"><a target="_blank" href="https://investor.assetwise.co.th/<?=$xlang?>/home" class="menu-txt"><?php pll_e('นักลงทุนสัมพันธ์')?></a></div>
                            <sp class=""></sp>
                            <div class="bg-ci-blue-400" style="width: 75px;height: 1px;"></div>
@@ -711,8 +727,8 @@ if (str_contains($_SERVER['REQUEST_URI'], 'condominium')) {
 </div>
 </div>
 <div id="burger-2" class="bg-white relative">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/image-74.png"
-    class="absolute pointer-events-none w-bottom">
+    <img src="/wp-content/uploads/2022/11/image-74.png"
+    class="absolute pointer-events-none w-bottom" alt="W Bottom">
     <div id="default" class="flex items-center h-full pl-16 pr-16" style="width: 95%;padding-bottom: 140px;">
         <?php
         $ttt = get_fields(2);
@@ -815,15 +831,15 @@ style="width: 95%;">
 <div class="w-full">
     <div>
         <div id="condo-upper-img" class="bg-cover blank bg-grey" ratio="facebook"
-        style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Rectangle-235-1.jpg');transition: .3s linear !important;">
+        style="background-image:url('/wp-content/uploads/2022/11/Rectangle-235-1.jpg');transition: .3s linear !important;">
     </div>
 </div>
 <div class="">
     <div class="burger-arrow flex flex-row">
-        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png"
-        class="relative w-10 h-10" onclick="burgerProjectArrow(-1)" style="margin-left: -30px;">
-        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png"
-        class="relative w-10 h-10" onclick="burgerProjectArrow(1)" style="margin-right: -30px;">
+        <img src="/wp-content/uploads/2022/09/slide-arrow-l.png"
+        class="relative w-10 h-10" onclick="burgerProjectArrow(-1)" style="margin-left: -30px;" alt="Slide Arrow Left">
+        <img src="/wp-content/uploads/2022/09/slide-arrow-r.png"
+        class="relative w-10 h-10" onclick="burgerProjectArrow(1)" style="margin-right: -30px;" alt="Slide Arrow Right">
     </div>
     <div style="overflow: hidden;height: 68px;padding-top: 1px;">
         <div class="burger-cards-wrap">
@@ -930,11 +946,11 @@ style="width: 95%;">
 </script>
 </div>
 <div id="condo-burger-mini" class="pt-20 px-8 hidden">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/arrow.png"
+    <img src="/wp-content/uploads/2022/11/arrow.png"
     class="back-burger" onclick="back_burger()">
     <div id="show-condo-mini">
         <span class="flex flex-row items-center justify-center">
-            <h6 class=""><?php pll_e('คอนโดมิเนียม') ?> </h6>
+            <span class=""><?php pll_e('คอนโดมิเนียม') ?> </span>
         </span>
         <sp class="l"></sp>
         <div class="grid grid-cols-2 grid-flow-row gap-6 px-1 md:px-40">
@@ -961,13 +977,13 @@ style="width: 95%;">
 style="width: 95%;">
 <div class="w-full">
     <div id="town-upper-img" class="bg-cover blank bg-grey" ratio="facebook"
-    style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Rectangle-235-2.jpg');transition: .3s linear !important;">
+    style="background-image:url('/wp-content/uploads/2022/11/Rectangle-235-2.jpg');transition: .3s linear !important;">
 </div>
 <div class="burger-arrow flex flex-row">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png"
-    class="relative w-10 h-10" onclick="burgerTownArrow(-1)" style="margin-left: -30px;">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png"
-    class="relative w-10 h-10" onclick="burgerTownArrow(1)" style="margin-right: -30px;">
+    <img src="/wp-content/uploads/2022/09/slide-arrow-l.png"
+    class="relative w-10 h-10" onclick="burgerTownArrow(-1)" style="margin-left: -30px;" alt="Slide Arrow Left">
+    <img src="/wp-content/uploads/2022/09/slide-arrow-r.png"
+    class="relative w-10 h-10" onclick="burgerTownArrow(1)" style="margin-right: -30px;" alt="Slide Arrow Right">
 </div>
 <div style="overflow: hidden;height: 68px;padding-top: 1px;">
     <div class="burger-town-cards-wrap">
@@ -1000,7 +1016,7 @@ style="width: 95%;">
                 <div onmouseover="showUpperimg2('<?= $pimg['url'] ?>')"
                     class="burger-town-cards rounded-lg py-2 flex items-center pointer graylogo"
                     onclick="location.href='<?=$h_house_link?>'">
-                    <img src="<?= $iconic['url'] ?>" style="height: 50px;">
+                    <img src="<?= $iconic['url'] ?>" style="height: 50px;" alt="Project Logo">
                 </div>
                 <?php
                 $chk_town++;
@@ -1071,11 +1087,11 @@ style="width: 95%;">
 
 </script>
 <div id="town-burger-mini" class="pt-20 px-8 hidden">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/arrow.png"
+    <img src="/wp-content/uploads/2022/11/arrow.png" alt="Arrow"
     class="back-burger" onclick="back_burger()">
     <div id="show-townhome-mini">
         <span class="flex flex-row items-center justify-center">
-            <h6 class=""><?php pll_e('บ้านและทาวน์โฮม')?></h6>
+            <span class=""><?php pll_e('บ้านและทาวน์โฮม')?></span>
         </span>
         <sp class="l"></sp>
         <div class="grid grid-cols-2 grid-flow-row gap-6 px-1 md:px-40">
@@ -1093,7 +1109,7 @@ style="width: 95%;">
             ?>
             <div class="graylogo col-span-1 rounded-lg px-2 py-2 flex items-center pointer"
             onclick="location.href='<?=$h_house_link?>';">
-            <img src="<?= $iconic['url'] ?>">
+            <img src="<?= $iconic['url'] ?>" alt="Project Logo">
         </div>
         <?php 
     }

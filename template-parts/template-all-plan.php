@@ -585,7 +585,7 @@ switch ($template) {
         }
 
         #plan {
-            --mc-chevron-up: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/chevron-up-dark-e1678091797243.png');
+            --mc-chevron-up: url('/wp-content/uploads/2023/03/chevron-up-dark-e1678091797243.png');
         }
 
         #plan .tag {

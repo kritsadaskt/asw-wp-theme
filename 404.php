@@ -33,7 +33,7 @@ get_header();?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main text-center pb-16">
 
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/404-e1684465320138.jpg" >
+            <img src="/wp-content/uploads/2023/05/404-e1684465320138.jpg" >
             <h5 class="mb-2"><?php pll_e('ขออภัย ไม่พบหน้าที่คุณค้นหา?') ?> </h5>
             <div><?php pll_e('กรุณาตรวจสอบความถูกต้องที่อยู่บนเว็บไซต์ หรือลองค้นหาในรูปแบบอื่นๆ เพื่อค้นหาโครงการหรือทำเลที่คุณสนใจ') ?> </div>
             <div class="mt-8">

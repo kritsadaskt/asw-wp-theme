@@ -1,0 +1,68 @@
+/* Shared: Privacy Notice / Privacy Policy / About tabbed layout */
+.about-menu {
+	transition: all 0.2s;
+}
+.side-nav-menu,
+.side-nav-menu-about {
+	border-left: 0;
+}
+.about_vbar {
+	width: 4px;
+	height: 28px;
+	position: absolute;
+	left: -1.5px;
+	top: 0;
+	background-color: #F1683B;
+	transition: all 0.2s;
+}
+.about_hbar {
+	width: 28px;
+	height: 4px;
+	position: absolute;
+	left: 0;
+	top: -0.7px;
+	background-color: #F1683B;
+	transition: all 0.2s;
+}
+#menu-about {
+	transition: all 0.15s;
+}
+#about-menu {
+	position: sticky;
+	top: calc(0.5em + 70px);
+}
+div#about-info-section {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: -70px;
+}
+@media (max-width: 1023px) {
+	.side-nav-menu-about {
+		overflow: auto;
+		white-space: nowrap;
+		scroll-behavior: smooth;
+		overflow-y: hidden;
+	}
+}
+@media (max-width: 767px) {
+	.side-nav-menu,
+	.side-nav-menu-about {
+		border-left: 0;
+		border-bottom: 0;
+	}
+}
+.privacy-policy-tab[data-active="0"] {
+	display: none;
+}
+.about-mini-section {
+	transition: all 2s cubic-bezier(0, 0, 0, 1.5);
+}
+.about-mini-section[data-show="0"] {
+	opacity: 0;
+	transform: translateY(100px);
+}
+.about-mini-section[data-show="1"] {
+	opacity: 1;
+	transform: translateY(0);
+}

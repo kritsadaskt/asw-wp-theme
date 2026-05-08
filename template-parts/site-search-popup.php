@@ -161,15 +161,15 @@ $search_popular = get_field('search_popular', 'option');
 	<header>
 		<div class="-inner">
 			<div></div>
-			<div><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/search.png" class="w-full"></div>
+			<div><img src="/wp-content/uploads/2023/05/search.png" class="w-full"></div>
 			<div class="full-h">
-				<input type="text" id="search-input" placeholder="<?php pll_e('ค้นหาเนื้อหาภายในเว็บไซต์')?>" onkeyup="search_event_key(event);findInDataListSearch()" value="<?=$_GET['s']?>">
+				<input type="text" id="search-input" placeholder="<?php pll_e('ค้นหาเนื้อหาภายในเว็บไซต์')?>" onkeyup="search_event_key(event);findInDataListSearch()" value="<?php echo htmlspecialchars($_GET['s'] ?? '') ?>">
 				<div class="search-datalist" data-count="0">
 					<div class="cont-pd search-datalist-list"></div>
 				</div>
 				<div id="search_btn" onclick="searchEnter()">ค้นหา</div>
 			</div>
-			<div class="-close" onclick="document.querySelector('#search-popup-wrap').dataset.toggle=0"><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/menu.png" class="w-full"></div>
+			<div class="-close" onclick="document.querySelector('#search-popup-wrap').dataset.toggle=0"><img src="/wp-content/uploads/2023/05/menu.png" class="w-full"></div>
 		</div>
 	</header>
 	<div class="cont-pd search-body-popup">

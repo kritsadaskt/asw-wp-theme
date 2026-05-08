@@ -146,14 +146,14 @@
 <!--=== The Section Boxes : project ===-->
 <?php $p = get_field('project_recommended'); ?>
 <section id="project" class="padding-vl-vtc sec-project" data-item="<?=ofsize($p)?>">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/เงากิ่งไม้-3.png" class="absolute pointer-events-none leaf02">
+	<img src="/wp-content/uploads/2022/10/เงากิ่งไม้-3.png" class="absolute pointer-events-none leaf02">
 	<div class="">
 		<div class="absolute w-full top-1/2">
 			<div class=" cont-pd">
-				<img id="home-pro-arrow-1" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="absolute pointer  <?php if ($count_pro <= 4) {
+				<img id="home-pro-arrow-1" src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="absolute pointer  <?php if ($count_pro <= 4) {
 					echo '';
 				} ?>" onclick="homeProjectArrow(-1)">
-				<img id="home-pro-arrow-2" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="absolute pointer  <?php if ($count_pro <= 4) {
+				<img id="home-pro-arrow-2" src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="absolute pointer  <?php if ($count_pro <= 4) {
 					echo '';
 				} ?>" onclick="homeProjectArrow(1)" style="z-index: 1;">
 			</div>
@@ -162,14 +162,14 @@
 			<sp class="xl"></sp>
 			<div class="grid grid-cols-12">
 				<div class="col-span-8 text-left">
-					<h1 class=""><?php pll_e('โครงการแนะนำ')?></h1>
+					<h2 class=""><?php pll_e('โครงการแนะนำ')?></h2>
 				</div>
 				<div class="col-span-4 flex items-center justify-end">
 					<a href="/<?=pll_current_language()?>/project-search" class="">
-						<h5 class="see-more cl-ci-blue-300">
+						<div class="see-more flex items-center gap-2 cl-ci-blue-300">
 							<span class="f30-24"><?php pll_e('ดูทั้งหมด')?></span>
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:30px">
-						</h5>
+							<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:30px">
+						</div>
 					</a>
 				</div>
 			</div>
@@ -222,13 +222,13 @@
 									<div class="bottom-left">
 										<div class="flex flex-row items-center" style="line-height: 28px;">
 											<?php if ($cate_parent->slug == 'condominium') { ?>
-												<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Vector.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('คอนโดมิเนียม')?>
+												<img src="/wp-content/uploads/2022/09/Vector.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('คอนโดมิเนียม')?>
 											<?php } else if ($cate_parent->slug == 'house') { ?>
-												<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('บ้านและทาวน์โฮม')?>
+												<img src="/wp-content/uploads/2022/10/Icon-in-input.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?php pll_e('บ้านและทาวน์โฮม')?>
 											<?php } ?>
 										</div>
 										<div class="flex flex-row items-center" style="line-height: 28px;margin-top: 6px;">
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?= $loca_child->name ?>
+											<img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?= $loca_child->name ?>
 										</div>
 									</div>
 									<div class="bottom-right cl-white" style="text-align: right;font-weight: 400;font-size: 17px;line-height: 20px;">

@@ -6,7 +6,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('content-item -card'); ?>>
     <div class="pic">
         <a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title_attribute(); ?>" rel="bookmark">
-            <?php if(has_post_thumbnail()) { the_post_thumbnail();} else { echo '<img src="' . esc_url( get_template_directory_uri()) .'/img/thumb.jpg" alt="'. get_the_title() .'" />'; }?>
+            <?php if(has_post_thumbnail()) : ?>
+                <div class="thumbnail w-full h-[350px] aspect-square bg-cover bg-center" style="background-image: url('<?=get_the_post_thumbnail_url(get_the_ID(),'full')?>');">
+                </div>
+            <?php else : ?>
+                <div class="thumbnail w-full h-[350px] aspect-square bg-cover bg-center" style="background-image: url('<?=esc_url( get_template_directory_uri()) ?>/img/thumb.jpg')">
+                </div>
+            <?php endif; ?>
         </a>
     </div>
     <div class="info">
@@ -24,8 +30,8 @@
         </header>
 
         <div class="entry-summary">
-            <?php the_excerpt();?>
+            <?php the_excerpt(); ?>
         </div>
     </div>
-    <?php seed_author(get_the_author_meta('ID'));?>
+    <?php seed_author(get_the_author_meta('ID')); ?>
 </article>

@@ -443,8 +443,8 @@ function pad($num)
 				?>
 			</div>
 			<div id="home-slider-arrow">
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
+				<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
+				<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
 			</div>
 			<div id="home-slider-count">
 				<div>
@@ -640,7 +640,7 @@ function pad($num)
 			}
 		</style>
 		<div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+			<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 		</div>
 		<div id="home-slider-count-mob">
 			<div>
@@ -656,7 +656,7 @@ function pad($num)
 			</div>
 		</div>
 		<div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 		</div>
 		<script type="text/javascript">
 			let mhbannerAutoPlay = 1;

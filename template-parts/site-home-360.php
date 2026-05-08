@@ -92,19 +92,19 @@
 	}
 </style>
 <section id="feature" class="padding-l-vtc" style="background-color: #EDF2F6;z-index: 2;">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-1.png" class="absolute pointer-events-none leaf04">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-12.png" class="absolute pointer-events-none leaf04-1">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-5.png" class="absolute pointer-events-none leaf05">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-11.png" class="absolute pointer-events-none leaf05-1">
+	<img src="/wp-content/uploads/2022/10/Vector-1.png" class="absolute pointer-events-none leaf04">
+	<img src="/wp-content/uploads/2022/11/Vector-12.png" class="absolute pointer-events-none leaf04-1">
+	<img src="/wp-content/uploads/2022/10/Vector-5.png" class="absolute pointer-events-none leaf05">
+	<img src="/wp-content/uploads/2022/11/Vector-11.png" class="absolute pointer-events-none leaf05-1">
 	<div class="-px-4 -md:px-20 cont-pd">
 		<sp class="xl"></sp>
 		<div id="virtual-360" class="grid grid-flow-row lg:ml-36 lg:mr-16 lg:grid-rows-1 lg:grid-cols-2 relative gap-3" style="background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.509729) 64.11%, rgba(255, 255, 255, 0) 100%);transition: .5s;bottom: -300px;opacity: 0;">
 			<div class="row-span-1 lg:col-span-1 flex items-center relative bg-360">
-				<div class="bg-cover blank" ratio="16:10" style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Rectangle-522.png');width: calc(100% + 30px);z-index: 2;"></div>
+				<div class="bg-cover blank" ratio="16:10" style="background-image:url('/wp-content/uploads/2022/09/Rectangle-522.png');width: calc(100% + 30px);z-index: 2;"></div>
 			</div>
 			<div class="row-span-1 lg:col-span-5 lg:col-span-1">
 				<div class="bg-ci-orange-500 line01"></div>
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/image-73-1.png" class="im_360">
+				<img src="/wp-content/uploads/2022/11/image-73-1.png" class="im_360">
 				<div class="p-4 pl-8 lg:pl-4">
 					<h1 class="b4 cl-ci-blue-300 f56-42">360 VIRTUAL<br>GALLERY</h1>
 					<div class="p-4 lg:pl-8 lg:pr-36 cl-ci-grey-300" style="font-size: 22px;line-height: 28px;">
@@ -114,7 +114,7 @@
 						<a href="#!" class="">
 							<h5 class="see-more cl-ci-blue-300">
 								<span class="f30-28" style="font-weight: 500;">ดูทั้งหมด</span>
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px">
+								<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px">
 							</h5> 
 						</a>
 					</div>
@@ -130,7 +130,7 @@
 						<div class="grid grid-rows-1 lg:grid-cols-12 gap-4">
 							<div class="row-span-1 lg:col-start-8 lg:col-span-5">
 								<div class="relative bg-finn">
-									<div class="bg-cover blank" ratio="4:3" style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Rectangle-570.png');top: 2vw;z-index: 2;"></div>
+									<div class="bg-cover blank" ratio="4:3" style="background-image:url('/wp-content/uploads/2022/09/Rectangle-570.png');top: 2vw;z-index: 2;"></div>
 								</div>
 							</div>
 							<div class="row-span-1 lg:row-start-1 lg:col-span-10 lg:col-span-7 cl-ci-grey-300 lg:px-10 mt-5 lg:mt-0 lg:pb-10">
@@ -144,7 +144,7 @@
 								<a href="#!">
 									<h5 class="see-more cl-ci-blue-300 ml-4 lg:ml-8">
 										<span style="font-weight: 500;" class="f30-28">ยื่นสินเชื่อออนไลน์</span>
-										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px">
+										<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px">
 									</h5> 
 								</a>
 								<sp class="xl mobile-only"></sp>
@@ -158,7 +158,7 @@
 				<div class="pb-4 pt-10" style="padding-right:0 !important">
 					<div class="grid lg:grid-cols-12 gap-4">
 						<div class="row-span-1 lg:col-start-8 lg:col-span-5 aapp">
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Group-840-e1664441008972.png"  class="relative lg:top-6 aapp-img">
+							<img src="/wp-content/uploads/2022/09/Group-840-e1664441008972.png"  class="relative lg:top-6 aapp-img">
 						</div>
 						<div class="row-span-1 relative bottom-16 lg:static lg:bottom-0 lg:row-start-1 lg:col-span-7 cl-ci-grey-300 px-10 aapp">
 							<h1 class="cl-ci-blue-300 f56-42" style="">AssetWise<br>Application</h1>
@@ -170,10 +170,10 @@
 							<sp class="l hidden lg:block"></sp>
 							<div class="app-btn-wrap">
 								<a href="#!" class="">
-									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play-1.png" class="app-btn">
+									<img src="/wp-content/uploads/2022/09/google-play-1.png" class="app-btn">
 								</a>
 								<a href="#!" class="">
-									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play.png" class="app-btn">
+									<img src="/wp-content/uploads/2022/09/google-play.png" class="app-btn">
 								</a>
 							</div>
 						</div>

@@ -11,7 +11,6 @@
     addEventListener("submit", (elm) => {
       let btn = elm.target.querySelector('.wpcf7-submit')
       btn.setAttribute('disabled','true')
-      console.log('x')
       console.log(btn)
     });
   })
@@ -28,9 +27,8 @@
         aswFormOptionsData[e.value] = {id:e.value,option:{},isRedirect:false,redirect:''}
       }
     }
-    console.log(aswFormOptions.length)
     for(let form_id of aswFormOptions){
-      console.log('form id:',form_id)
+      console.log(form_id)
       fetch('/api/api-internal-form-get-options/?form='+form_id)
       .then(response => response.json())
       .then(json => {
@@ -47,7 +45,6 @@
 <script>
   document.addEventListener( 'wpcf7submit', function( event ) {
     let is_send = 0;
-    console.log(event)
     if (event.target.classList.contains("sent")) {
       console.log('sent')
       let form_id = event.detail.contactFormId;
@@ -58,15 +55,15 @@
       for(let i of payload.form_data.inputs){
         payload.form_value[i.name] = i.value
       }
-      console.log(payload)
       if (aswFormOptionsData[form_id].isRedirect) {
         console.log('redirect')
         loadscreen.dataset.loaded = 0
-        //location.href = aswFormOptionsData[form_id].redirect
+        location.href = aswFormOptionsData[form_id].redirect
         setInterval(()=>{//ทำให้ยังเก็บข้อมูลที่ีกรอกไว้อยู่จนกว่าจะ Redirect
           wpcf7_input_this_form_project = $$('#form [data-status="sent"] input.wpcf7-text,#form [data-status="resetting"] input.wpcf7-text')
           for(let kk of wpcf7_input_this_form_project){
             let nn = kk.name
+            console.log(nn)
             if (payload.form_value[nn] != undefined) {
               kk.value = payload.form_value[nn]
             }

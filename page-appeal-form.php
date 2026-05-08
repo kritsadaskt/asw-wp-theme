@@ -14,8 +14,8 @@ $v = get_fields();
 </style>
 <section id="banner-form">
     <div class="-shadow">
-        <img class="shadow-1" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/เงากิ่งไม้-3.png" alt="">
-        <img class="shadow-2" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/leaves-shadow-1.png" alt="">
+        <img class="shadow-1" src="/wp-content/uploads/2023/04/เงากิ่งไม้-3.png" alt="">
+        <img class="shadow-2" src="/wp-content/uploads/2023/04/leaves-shadow-1.png" alt="">
     </div>
     <div class="-background">
         <div class="-l"></div>
@@ -31,31 +31,31 @@ $v = get_fields();
             <div class="-body">
                 <div class="-detail">
                     <div class="-wrap">
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1138.png" alt="">
+                        <img src="/wp-content/uploads/2023/04/Group-1138.png" alt="">
                         <div class="-desc">
                             <h6><?= $v['company_name'] ?></h6>
                             <p><?= $v['location_detail'] ?></p>
                             <a href="<?= $v['map_link'] ?>">
-                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-1.png" alt="">
+                                <img src="/wp-content/uploads/2023/04/Vector-1.png" alt="">
                                 <?php pll_e('ดูแผนที่')?>
                             </a>
                         </div>
                     </div>
                     <div class="-wrap">
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-21.png" alt="">
+                        <img src="/wp-content/uploads/2023/04/Vector-21.png" alt="">
                         <div class="-desc">
                             <h6><?= $v['telephone'] ?></h6>
                             <p><?= $v['time_available'] ?></p>
                         </div>
                     </div>
                     <div class="-wrap">
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1140.png" alt="">
+                        <img src="/wp-content/uploads/2023/04/Group-1140.png" alt="">
                         <div class="-desc">
                             <h6><?= $v['fax'] ?></h6>
                         </div>
                     </div>
                     <div class="-wrap">
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1139.png" alt="">
+                        <img src="/wp-content/uploads/2023/04/Group-1139.png" alt="">
                         <div class="-desc">
                             <h6><?= $v['email'] ?></h6>
                         </div>
@@ -170,22 +170,22 @@ $v = get_fields();
                     </style>
                     <div id="menu-contact" class="flex flex-row lg:flex-col side-nav-menu-contact relative pt-9 pb-2.5 lg:py-0 scroll-hid lg:mt-8" style="">
                         <!-- <div class="contact-menu px-0 lg:px-4">
-                            <a href="/<?=pll_current_language()?>/customer-care" class=""><span class="inline-block -icon" style="--icon: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-17.png)"></span> AssetWise Customer Care</a>
+                            <a href="/<?=pll_current_language()?>/customer-care" class=""><span class="inline-block -icon" style="--icon: url(/wp-content/uploads/2023/04/Vector-17.png)"></span> AssetWise Customer Care</a>
                         </div>
                         <sp class="hidden lg:block" style="height: 1rem;"></sp> -->
 
                         <div class="contact-menu px-0 lg:px-4 cl-ci-orange-500 font-medium">
-                            <a href="/<?=pll_current_language()?>/appeal-form" class=""><span class="inline-block -icon" style="--icon: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-18.png)"> </span><?php pll_e('ร้องเรียนธรรมาภิบาล')?></a>
+                            <a href="/<?=pll_current_language()?>/appeal-form" class=""><span class="inline-block -icon" style="--icon: url(/wp-content/uploads/2023/04/Vector-18.png)"> </span><?php pll_e('ร้องเรียนธรรมาภิบาล')?></a>
                         </div>
                         <sp class="hidden lg:block" style="height: 1rem;"></sp>
 
                         <div class="contact-menu px-0 lg:px-4">
-                            <a href="/<?=pll_current_language()?>/contact-pdpa-officer" class=""><span class="inline-block -icon" style="--icon: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-19.png)"></span> <?php pll_e('ติดต่อผู้คุ้มครองข้อมูลส่วนบุคคล')?></a>
+                            <a href="/<?=pll_current_language()?>/contact-pdpa-officer" class=""><span class="inline-block -icon" style="--icon: url(/wp-content/uploads/2023/04/Vector-19.png)"></span> <?php pll_e('ติดต่อผู้คุ้มครองข้อมูลส่วนบุคคล')?></a>
                         </div>
                         <sp class="hidden lg:block" style="height: 1rem;"></sp>
 
                         <div class="contact-menu px-0 lg:px-4">
-                           <a target="_blank" href="https://services.assetwise.co.th/DSRM/DSRForm" class=""><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Vector-20.png" alt=""> <?php pll_e('พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล')?></a>
+                           <a target="_blank" href="https://services.assetwise.co.th/DSRM/DSRForm" class=""><img src="/wp-content/uploads/2023/04/Vector-20.png" alt=""> <?php pll_e('พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล')?></a>
                        </div>
                        <sp class="hidden lg:block" style="height: 1rem;"></sp>
 
@@ -206,7 +206,7 @@ $v = get_fields();
                     <h6 class="-desc"><?php pll_e('แจ้งเรื่องร้องเรียน เบาะแสการกระทําผิดและการทุจริตถึงประธานกรรมการตรวจสอบ
                     ประธานเจ้าหน้าที่บริหาร ฝ่ายตรวจสอบภายใน')?> </h6>
                     <div class="-annouce">
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/material-symbols_lock.png" alt="">
+                        <img src="/wp-content/uploads/2023/03/material-symbols_lock.png" alt="">
                         <?php pll_e('บริษัทจะปกปิดสถานะของผู้แจ้งเบาะแสเป็นความลับและมีมาตรฐานการคุ้มครองความปลอดภัย')?>
                     </div>
                 </div>

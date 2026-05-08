@@ -54,7 +54,7 @@ $f = get_fields();
             if ($f['telephone']) {
                 ?>
                 <a href="tel:<?= $f['telephone'] ?>" class="-info-tel" target="_blank">
-                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/phone-contact-us.png" alt="">
+                    <img src="/wp-content/uploads/2023/06/phone-contact-us.png" alt="">
                     <div class="hightlight">
                         <?= $f['telephone'] ?>
                     </div>
@@ -66,7 +66,7 @@ $f = get_fields();
             if ($f['line']) {
                 ?>
                 <a href="<?= $f['line'] ?>" class="-info-more" target="_blank">
-                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/06/line-contact-us.png" alt="">
+                    <img src="/wp-content/uploads/2023/06/line-contact-us.png" alt="">
                     <div class="hightlight">
                         <?php pll_e('สอบถามเพิ่มเติม')?>
                     </div>

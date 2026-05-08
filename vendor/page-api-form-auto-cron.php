@@ -1,4 +1,5 @@
 <?php 
+
 cron_new_log();
 function cron_new_log(){ // สั่งให้เฉพาะตัวที่มาใหม่ ทำการส่งทั้ง 3 อย่าง ตามที่ตั้งค่าไว้
 	$submit_new_all = afac_get_new();

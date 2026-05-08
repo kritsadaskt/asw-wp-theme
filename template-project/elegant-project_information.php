@@ -81,7 +81,7 @@ act_template_project_css($opt,$template_name,$layout);
                                 class="inline-block xl:mr-1" target="_blank">
                                 <div
                                 class="long-hover px-5 text-center py-1 pointer flex flex-row items-center justify-center file-button">
-                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Download.png"
+                                <img src="/wp-content/uploads/2023/02/Download.png"
                                 style="width: 24px;height: 24px;margin:0;margin-right: 8px;"><?php pll_e('ดาวน์โหลดเพิ่มเติม')?>
                             </div>
                         </a>
@@ -91,7 +91,7 @@ act_template_project_css($opt,$template_name,$layout);
                             target="_blank">
                             <div
                             class="long-hover px-5 text-center py-1 pointer flex flex-row items-center justify-center file-button">
-                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/02/Information.png"
+                            <img src="/wp-content/uploads/2023/02/Information.png"
                             style="width: 24px;height: 24px;margin:0;margin-right: 8px;">
                             <?php pll_e('ข้อมูลเงื่อนไขเพิ่มเติม')?>
                         </div>

@@ -482,7 +482,7 @@ $bg = $content['information_background']['sizes']['1536x1536'];
 								<?php foreach ($content['image'] as $key => $value) { ?>
 									<div id="info-img" style="background-image:url(<?= $value['url'] ?>)"></div>
 								<?php } ?>
-								<!-- <div id="info-img" style="background-image:url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Rectangle-576.png')"></div> -->
+								<!-- <div id="info-img" style="background-image:url('/wp-content/uploads/2023/01/Rectangle-576.png')"></div> -->
 							</div>
 						</div>
 					</div>

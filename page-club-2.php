@@ -11,7 +11,7 @@ $slider = $f['home_banner'];
 	<div class="">
 		<!-- <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" style="" > -->
 		<div class="banner blank" style="background-image:url('<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>');"></div>
-		<!-- <div class="banner-mobile blank" style="background-image:url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Club-Feature-Mobile.png);"></div> -->
+		<!-- <div class="banner-mobile blank" style="background-image:url(/wp-content/uploads/2022/11/Club-Feature-Mobile.png);"></div> -->
 	</div>
 </section>
 
@@ -158,7 +158,7 @@ $slider = $f['home_banner'];
 	</style>
 	<section id="asw-club" class="padding-l-vtc bg-ci-grey-900">
 		<div>
-			<img class="club-leaf01" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow-1.png" class="" style="">
+			<img class="club-leaf01" src="/wp-content/uploads/2022/11/leaves-shadow-1.png" class="" style="">
 
 		</div>
 		<div class="relative">
@@ -166,7 +166,7 @@ $slider = $f['home_banner'];
 		</div>
 		<div class="cont-pd flex flex-row items-center">
 			<a href="/home" class="cl-ci-blue-400">หน้าแรก</a>
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+			<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 			<a href="/club" class="">แอสเซทไวส์คลับ</a>
 		</div>
 		<sp class="hidden lg:block"></sp>
@@ -201,7 +201,7 @@ $slider = $f['home_banner'];
 			$chk = 0;
 			?>
 			<div class="lg:col-span-9 overflow-hidden">
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="hidden lg:block club-slide--r --l" onclick="show_promo_arrow(-1)">
+				<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="hidden lg:block club-slide--r --l" onclick="show_promo_arrow(-1)">
 				<div id="club_slides_wrap">
 					<div id="club_slides_num">
 						<span id="club_slides_num_now">01</span>
@@ -371,7 +371,7 @@ $slider = $f['home_banner'];
 														ดูทั้งหมด
 													</h5>
 
-													<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-1 lg:pl-2" style="width: auto; height: 35px;">
+													<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-1 lg:pl-2" style="width: auto; height: 35px;">
 												</div>
 											</div>
 										</div>
@@ -431,7 +431,7 @@ $slider = $f['home_banner'];
 													<h5 class="" style="font-weight: 500;">
 														อ่านเพิ่มเติม
 													</h5>
-													<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-1 lg:pl-2" style="width: auto; height: 35px;">
+													<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-1 lg:pl-2" style="width: auto; height: 35px;">
 												</div>
 											</div>
 										</div>
@@ -491,7 +491,7 @@ $slider = $f['home_banner'];
 													<h5 class="" style="font-weight: 500;">
 														อ่านเพิ่มเติม
 													</h5>
-													<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-1 lg:pl-2" style="width: auto; height: 35px;">
+													<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-1 lg:pl-2" style="width: auto; height: 35px;">
 												</div>
 											</div>
 										</div>
@@ -524,7 +524,7 @@ $slider = $f['home_banner'];
 
 			</div>
 			<sp class="l"></sp>
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="hidden lg:block club-slide--r" onclick="show_promo_arrow(1)">
+			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="hidden lg:block club-slide--r" onclick="show_promo_arrow(1)">
 		</div>
 	</div>
 </section>
@@ -731,8 +731,8 @@ $slider = $f['home_banner'];
 	<section id="club-info" class="padding-l-vtc">
 		<div id="club-info-section"></div>
 		<div>
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1.png" class=" club-leaf02" style="">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-793.png" class=" club-leaf03" style="">
+			<img src="/wp-content/uploads/2022/11/shutterstock_1574382076-1.png" class=" club-leaf02" style="">
+			<img src="/wp-content/uploads/2022/11/Group-793.png" class=" club-leaf03" style="">
 
 		</div>
 		<sp class="m"></sp>

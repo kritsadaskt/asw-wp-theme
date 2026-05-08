@@ -56,9 +56,9 @@ if ($pagewidth === null) {
 <div style="background: linear-gradient(360deg, #EDF2F7 0%, #FFFFFF 103.44%);">
 	<div class="container -bc mx-auto pt-3 xl:pt-4 truncate px-4 xl:px-0 flex flex-row items-center">
 		<a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="/<?=pll_current_language()?>/club" class="cl-ci-blue-400"><?php pll_e('แอสเซทไวส์คลับ')?></a>
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+		<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 		<a href="#!" class=""><?php the_title() ?></a>
 	</div>
 
@@ -226,8 +226,8 @@ if ($pagewidth === null) {
 						<div class="col-span-9 lg:col-span-11"></div>
 						<div class="col-span-3 lg:col-span-1">
 							<div class="modal-nav-img">
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/download_icon.png" class="pointer">
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/exit_icon.png" onclick="closeModal()" class="pointer">
+								<img src="/wp-content/uploads/2022/11/download_icon.png" class="pointer">
+								<img src="/wp-content/uploads/2022/11/exit_icon.png" onclick="closeModal()" class="pointer">
 							</div>
 						</div>
 					</div>
@@ -246,8 +246,8 @@ if ($pagewidth === null) {
 
 					?>
 
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="prev hidden md:block" onclick="plusSlides(-1)">
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="next hidden md:block" onclick="plusSlides(1)">
+					<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="prev hidden md:block" onclick="plusSlides(-1)">
+					<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="next hidden md:block" onclick="plusSlides(1)">
 
 					<?php if ($chk < 5) {
 						?>
@@ -303,7 +303,7 @@ if ($pagewidth === null) {
 					</div>
 					<div class="col-span-1 flex items-center justify-end">
 						<a  class="see-more selected-all f30-28 cl-ci-blue-300" href="/club" style="overflow: visible !important; color: var(--ci-blue-300); font-weight: 500;"><?php pll_e('ดูทั้งหมด')?>
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px">
+							<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block" style="width:35px">
 						</a>
 					</div>
 				</div>

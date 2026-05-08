@@ -21,8 +21,8 @@ if (is_array($content['related_location_project'])) {
     <div>
         <div class="absolute w-full top-1/2 related-project-arrow">
             <div class=" cont-pd">
-                <img id="home-pro-arrow-1" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="absolute pointer  " onclick="singleProjectArrow(-1)" style="opacity: 0; z-index: -1;">
-                <img id="home-pro-arrow-2" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="absolute pointer  " onclick="singleProjectArrow(1)" style="z-index: 9; top: 51%; opacity: 1;">
+                <img id="home-pro-arrow-1" src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="absolute pointer  " onclick="singleProjectArrow(-1)" style="opacity: 0; z-index: -1;">
+                <img id="home-pro-arrow-2" src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="absolute pointer  " onclick="singleProjectArrow(1)" style="z-index: 9; top: 51%; opacity: 1;">
             </div>
         </div>
         <div class="container mx-auto">
@@ -33,7 +33,7 @@ if (is_array($content['related_location_project'])) {
                         <!-- <h1 class="block lg:hidden">โครงการที่แนะนำ</h1> -->
                     </div>
                     <h5 class="col-span-3 text-right">
-                        <a href="/project-search/"target="_blank" class="see-more"><?php pll_e('ดูทั้งหมด')?><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;" >
+                        <a href="/project-search/"target="_blank" class="see-more"><?php pll_e('ดูทั้งหมด')?><img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="m-0 pl-2 inline-block" style="width: auto; height: 35px;" >
                         </a>
                     </h5>
 
@@ -85,15 +85,15 @@ if (is_array($content['related_location_project'])) {
                                             <div class="flex flex-row items-center" style="line-height: 28px;">
                                                 <?php
                                                 if ($cate_parent->slug == 'condominium') { ?>
-                                                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Vector.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;">
+                                                    <img src="/wp-content/uploads/2022/09/Vector.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;">
                                                     <?=$cate_parent->name?>
                                                 <?php } else if ($cate_parent->slug == 'house') { ?>
-                                                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;">
+                                                    <img src="/wp-content/uploads/2022/10/Icon-in-input.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;">
                                                     <?=$cate_parent->name?>
                                                 <?php } ?>
                                             </div>
                                             <div class="flex flex-row items-center" style="line-height: 28px;margin-top: 6px;">
-                                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?= $loca_child->name ?>
+                                                <img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" style="filter: brightness(0) invert(1);height:1rem;margin:0;margin-right: 5px;"><?= $loca_child->name ?>
                                             </div>
                                         </div>
                                         <div class="bottom-right cl-white" style="text-align: right;font-weight: 400;font-size: 17px;line-height: 20px;">

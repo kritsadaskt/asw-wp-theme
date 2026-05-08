@@ -594,7 +594,7 @@ switch ($template) {
                         <a href="<?= $f['sales_gallery'] ?>">
                             <div class="icon-btn">
                                 <img src="<?= acf_img($content['sales_icon'], 'medium') ?>" alt="">
-                                Sale Gallery
+                                Sales Gallery
                             </div>
                         </a>
                     <?php endif ?>

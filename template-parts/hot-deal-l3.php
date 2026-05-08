@@ -4,7 +4,7 @@ $fim = get_the_post_thumbnail_url($id, '1536x1536');
 $cpj = get_post_parent();
 $pj = get_field('hot_deal_l2', $cpj->ID)['project'][0];
 $unit_f = get_field('hot_deal_l3');
-$hd = '<?= get_template_directory_uri() ?>hot-deal/';
+$hd = '/wp-content/themes/seed-spring/hot-deal/';
 $round = ofsize($unit_f['down']['table']);
 $unit_status = $unit_f['status'];
 $logo = get_field('logo', $pj->ID)['sizes']['large'];

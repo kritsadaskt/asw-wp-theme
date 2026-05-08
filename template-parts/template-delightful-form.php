@@ -222,13 +222,13 @@ $f = $args[1];
                             <div class="grid grid-cols-12 text-black pt-6" style="padding-bottom:70px;">
                                 <div class="col-span-6 flex flex-row justify-end items-center pr-25px">
                                     <span class=" p-3">
-                                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Vector-1.png" alt="">
+                                        <img src="/wp-content/uploads/2023/03/Vector-1.png" alt="">
                                     </span>
                                     <span>02-168-0000</span>
                                 </div>
                                 <div class="col-span-6 flex flex-row items-center pl-25px">
                                     <span class=" p-3">
-                                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Vector-2.png" alt="">
+                                        <img src="/wp-content/uploads/2023/03/Vector-2.png" alt="">
                                     </span>
                                     <span class="underline pointer"><?php pll_e('สอบถามเพิ่มเติม')?></span>
                                 </div>

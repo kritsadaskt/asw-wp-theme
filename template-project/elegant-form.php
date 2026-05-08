@@ -55,13 +55,13 @@ foreach ($content as $key => $value) {
 							<div class="grid grid-cols-12 text-white pt-6">
 								<div class="col-span-6 flex flex-row justify-end items-center pr-25px">
 									<span class=" p-3">
-										<img class="width-20px" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Icon.png" alt="">
+										<img class="width-20px" src="/wp-content/uploads/2023/03/Icon.png" alt="">
 									</span>
 									<span class="hover-white cl-contact">02-168-0000</span>
 								</div>
 								<div class="col-span-6 flex flex-row items-center pl-25px">
 									<span class=" p-3">
-										<img class="width-20px" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Icon-1.png" alt="">
+										<img class="width-20px" src="/wp-content/uploads/2023/03/Icon-1.png" alt="">
 									</span>
 									<span class="underline cl-contact hover-white"><?php pll_e('สอบถามเพิ่มเติม')?></span>
 								</div>

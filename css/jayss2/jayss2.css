@@ -1913,10 +1913,6 @@ img.full-height{
 	}
 }
 
-figure{
-	font-size: 0;
-}
-
 figure.cover img{
 	object-fit: cover;
 	height: 0;

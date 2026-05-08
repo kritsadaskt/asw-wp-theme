@@ -29,7 +29,7 @@ $allsearch = new WP_Query($arg);
 		color: #545E67;
 	}
 	.-leaf1 {
-		background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/image-443.png);
+		background-image: url(/wp-content/uploads/2023/04/image-443.png);
 		width: 220px;
 		height: 100%;
 		position: absolute;
@@ -38,7 +38,7 @@ $allsearch = new WP_Query($arg);
 		background-repeat: no-repeat;
 	}
 	.-leaf2{
-		background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/image-447.png);
+		background-image: url(/wp-content/uploads/2023/04/image-447.png);
 		width: 200px;
 		height: 300%;
 		position: absolute;
@@ -156,7 +156,7 @@ $allsearch = new WP_Query($arg);
 		<div class="-leaf2"></div>
 		<div class="cont-pd pt-6 flex flex-row items-center">
 			<a href="/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+			<img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
 			<a href="/condominium" class="">360 Visual Gallery</a>
 		</div>
 		<div class="mx-auto max-w-4xl grid grid-cols-12 gap-8 pb-9 items-center">
@@ -197,33 +197,33 @@ $allsearch = new WP_Query($arg);
 								<div class="row-span-1 md:col-span-1 flex justify-end">
 									<div id="sortby-box-wrap" class="box-fil-date pointer relative" data-sortby="-1" data-sorttype="date" onclick="turnon_sorting()" data-toggle="-1">
 										<span class="sortby-box" data-sortby="-1" data-sorttype="date">
-											<?php pll_e('เรียงตามโครงการใหม่')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('เก่า')?>
+											<?php pll_e('เรียงตามโครงการใหม่')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('เก่า')?>
 										</span>
 										<span class="sortby-box" data-sortby="1" data-sorttype="date">
-											<?php pll_e('เรียงตามโครงการเก่า')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ใหม่')?>
+											<?php pll_e('เรียงตามโครงการเก่า')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ใหม่')?>
 										</span>
 										<span class="sortby-box" data-sortby="-1" data-sorttype="price">
-											<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ต่ำ')?>
+											<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ต่ำ')?>
 										</span>
 										<span class="sortby-box" data-sortby="1" data-sorttype="price">
-											<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('สูง')?>
+											<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('สูง')?>
 										</span>
-										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow">
+										<img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow">
 										<div class="-choise">
 											<div class="-choise-1" onclick="sorting_pp('date',-1)">
-												<?php pll_e('เรียงตามโครงการใหม่')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('เก่า')?>
+												<?php pll_e('เรียงตามโครงการใหม่')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('เก่า')?>
 											</div>
 
 											<div class="-choise-2" onclick="sorting_pp('date',1)">
-												<?php pll_e('เรียงตามโครงการเก่า')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ใหม่')?>
+												<?php pll_e('เรียงตามโครงการเก่า')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ใหม่')?>
 											</div>
 
 											<div class="-choise-3" onclick="sorting_pp('price',-1)">
-												<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ต่ำ')?>
+												<?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('ต่ำ')?>
 											</div>
 
 											<div class="-choise-4" onclick="sorting_pp('price',1)">
-												<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('สูง')?>
+												<?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow-c"> <?php pll_e('สูง')?>
 											</div>
 										</div>
 									</div>
@@ -276,7 +276,7 @@ $allsearch = new WP_Query($arg);
 													<div class="-inner-img">
 														<div class="-fim"></div>
 														<div class="card-360-hover">
-															<img id="360-img-hover" class="card-360-img-hover" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/icon-360.png">
+															<img id="360-img-hover" class="card-360-img-hover" src="/wp-content/uploads/2023/05/icon-360.png">
 														</div>
 														<div class="-content">
 															<div class="-cont-footer">
@@ -316,7 +316,7 @@ $allsearch = new WP_Query($arg);
 													</a>
 													<div class="-booking-box">
 														<a href="<?=$linkto?>" class="-booking">
-															<img class="img-text" src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/360-vector.png" style="text-align: center">
+															<img class="img-text" src="/wp-content/uploads/2023/05/360-vector.png" style="text-align: center">
 														</a>
 													</div>
 												</div>

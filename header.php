@@ -6,7 +6,7 @@ $f_body = get_field('body_code');
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
@@ -66,7 +66,7 @@ $f_body = get_field('body_code');
 <?php 
 if (!is_user_logged_in() AND 0) {
     ?>
-    <img src="<?=get_site_url()?><?= get_template_directory_uri() ?>/img/under-construction.jpg" class=""> 
+    <img src="<?=get_site_url()?>/wp-content/themes/seed-spring/img/under-construction.jpg" class=""> 
     <?php
     die();
 }
@@ -118,8 +118,7 @@ if (!is_user_logged_in() AND 0) {
         </style>
         <div id="loadscreen" data-loaded="0">
          <div class="-inner">
-            <lottie-player class="load-img" src="/wp-content/themes/assetwise/css/load.json" background="transparent"  speed="1"  loop autoplay></lottie-player>
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/CleanShot-2566-05-08-at-04.57.00@2x.png">
+            <lottie-player class="load-img" src="/wp-content/themes/seed-spring/css/load.json" background="transparent"  speed="1"  loop autoplay></lottie-player>
         </div>
     </div>
     <div class="scroll-to-top"></div>

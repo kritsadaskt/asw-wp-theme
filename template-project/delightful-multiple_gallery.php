@@ -90,7 +90,7 @@ $mtp_gll = $content['multiple_gallery'];
 			<h1 class="text-center"><?php pll_e('แกลเลอรี')?></h1>
 
 			<!-- <div class="gallery-ast">
-				<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/la-galleria.png" alt="">
+				<img src="/wp-content/uploads/2023/03/la-galleria.png" alt="">
 			</div> -->
 		</div>
 		<div class="gallery-wrap">

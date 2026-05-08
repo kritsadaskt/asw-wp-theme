@@ -274,7 +274,7 @@ $gll = $content['gallery'];
                             <div class="-item-5 -hover jb-lightbox" data-jb-lightbox="d" style="--img: url(<?= acf_img($content['gallery'][4]) ?>)"></div>
                             <?php if ($chk > 5) : ?>
                                 <div class="-more">
-                                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-1250.png" alt="">
+                                    <img src="/wp-content/uploads/2023/03/Group-1250.png" alt="">
                                     <h6>ดูเพิ่มเติม</h6>
                                 </div>
                             <?php endif; ?>
@@ -452,7 +452,7 @@ $gll = $content['gallery'];
                         <div class="-item-3 -hover jb-lightbox" data-jb-lightbox="mob" style="--img: url(<?= acf_img($content['gallery'][2]) ?>)">
                             <?php if ($chk > 3) : ?>
                                 <div class="-more">
-                                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Group-1250.png" alt="">
+                                    <img src="/wp-content/uploads/2023/03/Group-1250.png" alt="">
                                     <h6>ดูเพิ่มเติม</h6>
                                 </div>
                             <?php endif; ?>

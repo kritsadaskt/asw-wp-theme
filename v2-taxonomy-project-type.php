@@ -334,8 +334,8 @@ $term_pj_location = asw_get_term_nest('project_location');
 ?> 
 </div>
 <div id="home-slider-arrow">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
+    <img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="changeSlider(-1);stopAutoplay()">
+    <img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="changeSlider(1);stopAutoplay()">
 </div>
 <div id="home-slider-count">
     <div >
@@ -502,7 +502,7 @@ setTimeout(()=>{
 }
 </style>
 <div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-   <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+   <img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 </div>
 <div id="home-slider-count-mob">
    <div >
@@ -515,7 +515,7 @@ setTimeout(()=>{
     <span class="-num-next-num">02</span><span style="margin-left: 3px;color: var(--ci-grey-400);font-weight: 300;font-size: 20px;">/<span class="-num-max"><?=pad($data_active+1)?></span></span></h5></div>
 </div>
 <div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+    <img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 </div>
 <script type="text/javascript">
     let mhbannerAutoPlay = 1;
@@ -584,9 +584,9 @@ if ($type_name->slug == 'condominium'){
 ?>
 <div class="cont-pd py-6 flex flex-row items-center">
   <a href="/<?=pll_current_language()?>/home" class="cl-ci-blue-400"><?php pll_e('หน้าแรก')?></a>
-  <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+  <img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
   <a href="/<?=pll_current_language()?>/<?=$name1?>" class="cl-ci-blue-400"><?=$name2?></a>
-  <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
+  <img src="/wp-content/uploads/2023/01/Vector-84-1.png" style="margin:0px 12px;width: 5px;">
   <?=$term_name?>
 </div>
 <sp class=""></sp>
@@ -645,8 +645,8 @@ $terms = get_terms( array(
 <section id="title" class="pt-4 pb-10 md:pb-14 relative">
   <div class="line-right"></div>
   <div class="line-left"></div>
-  <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow-1-2.png" class="absolute pointer-events-none leaf13">
-  <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute hidden md:block pointer-events-none leaf12">
+  <img src="/wp-content/uploads/2022/11/leaves-shadow-1-2.png" class="absolute pointer-events-none leaf13">
+  <img src="/wp-content/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute hidden md:block pointer-events-none leaf12">
   <div class="cont-pd">
    <div class="flex justify-center md:px-40 lg:px-72">
     <div class="grid grid-flow-row md:grid-rows-1 md:grid-cols-3 gap-4">
@@ -683,7 +683,7 @@ $terms = get_terms( array(
                                 <span class="wide">
                                     <div class="grid grid-cols-5">
                                         <div class="col-span-1 flex items-center">
-                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem">
+                                            <img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem">
                                         </div>
                                         <div class="col-span-4">
                                             <span class="" style="font-size:26px;line-height:32px;" id="lo_pro">
@@ -692,7 +692,7 @@ $terms = get_terms( array(
                                         </div>
                                     </div>
                                 </span>
-                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+                                <img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
                             </div>
                         </inner></box>
                         <box col="2.5" style="display: none;"><inner id="filter_1" class="padding quick-filter v-middle-wrap pointer" onclick="filter_pop(2, this)" >
@@ -700,7 +700,7 @@ $terms = get_terms( array(
                                 <span class="wide">
                                     <div class="grid grid-cols-5">
                                         <div class="col-span-1 flex items-center">
-                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem">
+                                            <img src="/wp-content/uploads/2022/10/Icon-in-input-2.png" class="inline-block" style="height:2rem">
                                         </div>
                                         <div class="col-span-4">
                                             <span class="" style="font-size:26px;line-height:32px;" id="brand_pro">
@@ -709,7 +709,7 @@ $terms = get_terms( array(
                                         </div>
                                     </div>
                                 </span>
-                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+                                <img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
                             </div>
                         </inner></box>
                         <box col="2.5"><inner id="filter_2" class="padding quick-filter v-middle-wrap pointer" onclick="filter_pop(3, this);filter_pop_price(this)" data-price-min="<?=$pro_price_min?>" data-price-max="<?=$pro_price_max?>">
@@ -717,7 +717,7 @@ $terms = get_terms( array(
                                 <span class="wide">
                                     <div class="grid grid-cols-5">
                                         <div class="col-span-1 flex items-center">
-                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem">
+                                            <img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem">
                                         </div>
                                         <div class="col-span-4">
                                             <span class="" style="font-size:26px;line-height:32px;" id="price_pro">
@@ -726,7 +726,7 @@ $terms = get_terms( array(
                                         </div>
                                     </div>
                                 </span>
-                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+                                <img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
                             </div>
                         </inner></box>
                         <box col="2.5"><inner id="filter_3" class="padding quick-filter v-middle-wrap pointer" onclick="filter_pop(0, this)">
@@ -734,7 +734,7 @@ $terms = get_terms( array(
                                 <span class="wide">
                                     <div class="grid grid-cols-5">
                                         <div class="col-span-1 flex items-center">
-                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-908.png" style="height:2rem">
+                                            <img src="/wp-content/uploads/2022/11/Group-908.png" style="height:2rem">
                                         </div>
                                         <div class="col-span-4">
                                             <span class="" style="font-size:26px;line-height:32px;" id="type_pro">
@@ -743,7 +743,7 @@ $terms = get_terms( array(
                                         </div>
                                     </div>
                                 </span>
-                                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
+                                <img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow" style="height:.5rem">
                             </div>
                         </inner></box>
                     </theboxes>
@@ -1150,7 +1150,7 @@ $terms = get_terms( array(
                         <span class="wide">
                             <div class="grid grid-cols-5 gap-0 flex items-center">
                                 <div class="col-span-1 flex items-center">
-                                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2.5rem;margin:0;">
+                                    <img src="/wp-content/uploads/2022/10/Icon-in-input.png" class="inline-block" style="height:2.5rem;margin:0;">
                                 </div>
                                 <div class="col-span-4">
                                     <h6 class="filter-select" id="">
@@ -1162,7 +1162,7 @@ $terms = get_terms( array(
                                 </div>
                             </div>
                         </span>
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/arrow.png" style="height: 15px;">
+                        <img src="/wp-content/uploads/2022/11/arrow.png" style="height: 15px;">
                     </div>  
                 </div>
             </div>
@@ -1177,7 +1177,7 @@ $terms = get_terms( array(
                 </div>
                 <div class="col-span-1 flex justify-end mx-4 md:mx-0 items-start">
                     <div class="clear-all inline-flex items-center pointer" onclick="remove_price();filter_pop(999, this);check_chk('clear', 999)" style="white-space: nowrap;">
-                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-10.png" style="width: 21px;height: 21px;">&ensp;<?php pll_e('ล้างทั้งหมด')?>
+                        <img src="/wp-content/uploads/2022/11/Vector-10.png" style="width: 21px;height: 21px;">&ensp;<?php pll_e('ล้างทั้งหมด')?>
                     </div>
                 </div>
             </div>
@@ -1256,7 +1256,7 @@ $terms = get_terms( array(
     <div class="popup-filter-inner" onclick="filter_pop_mini(0)">
         <div class="grid grid-cols-12">
             <div class="col-span-1 flex items-center">
-                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;margin:0;">
+                <img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="inline-block" style="height:2rem;margin:0;">
             </div>
             <div class="col-span-10 pl-3">
                 <h6 class="" id="loca_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -1265,7 +1265,7 @@ $terms = get_terms( array(
                 <h6 class="" id="brand_pro_mini" style="display: none;"></h6>
             </div>
             <div class="col-span-1 flex items-center">
-                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+                <img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
             </div>
         </div>
     </div>
@@ -1316,7 +1316,7 @@ $terms = get_terms( array(
 <div class="popup-filter-inner" onclick="filter_pop_mini(2)">
     <div class="grid grid-cols-12">
         <div class="col-span-1 flex items-center">
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;margin:0;">
+            <img src="/wp-content/uploads/2022/10/Icon-in-input-3.png" class="inline-block" style="height:2rem;margin:0;">
         </div>
         <div class="col-span-10 pl-3">
             <h6 class="" id="cost_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -1324,7 +1324,7 @@ $terms = get_terms( array(
             </h6>
         </div>
         <div class="col-span-1 flex items-center">
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+            <img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
         </div>
     </div>
 </div>
@@ -1351,7 +1351,7 @@ $terms = get_terms( array(
 <div class="popup-filter-inner" onclick="filter_pop_mini(3)">
     <div class="grid grid-cols-12">
         <div class="col-span-1 flex items-center">
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-908.png" class="inline-block" style="height:2rem;margin:0;">
+            <img src="/wp-content/uploads/2022/11/Group-908.png" class="inline-block" style="height:2rem;margin:0;">
         </div>
         <div class="col-span-10 pl-3">
             <h6 class="" id="stat_pro_mini" style="font-size: 24px;line-height: 32px;font-weight: 400;">
@@ -1359,7 +1359,7 @@ $terms = get_terms( array(
             </h6>
         </div>
         <div class="col-span-1 flex items-center">
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
+            <img src="/wp-content/uploads/2022/10/Vector.png" class="quick-filter-arrow-mini">
         </div>
     </div>
 </div>
@@ -1962,7 +1962,7 @@ foreach ($pro_brand as $key => $value) {
                 <div class="flex inline-flex items-center popup-select" onclick="close_pop_select(this)">
                 <label class="">`+txtt_loca[i]+`
                 </label>
-                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+                <img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
                 </div>
                 `
             }
@@ -1977,7 +1977,7 @@ foreach ($pro_brand as $key => $value) {
                 <div class="flex inline-flex items-center popup-select" onclick="close_pop_select(this)">
                 <label class="">`+txtt_brand[i]+`
                 </label>
-                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+                <img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
                 </div>
                 `
             }
@@ -1991,7 +1991,7 @@ foreach ($pro_brand as $key => $value) {
             <div class="flex inline-flex items-center popup-select"  onclick="remove_price()">
             <label class="">`+txt_price+`
             </label>
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+            <img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
             </div>
             `
 
@@ -2005,7 +2005,7 @@ foreach ($pro_brand as $key => $value) {
                 <div class="flex inline-flex items-center popup-select" onclick="close_pop_select(this)">
                 <label class="">`+txtt_type[i]+`
                 </label>
-                <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
+                <img src="/wp-content/uploads/2023/01/x-1.png" class="pointer" style="margin-bottom:0;margin-left:0.5rem;width:16px;height:16px;" >
                 </div>
                 `
             }
@@ -2332,7 +2332,7 @@ foreach ($pro_brand as $key => $value) {
 </script>
 
 <section id="condo-show" class="pt-8 pb-20 md:pb-16 relative" style="background: linear-gradient(180deg, #EDF2F7 -4.71%, #FFFFFF 164.99%); z-index: 10;">
-    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf14">
+    <img src="/wp-content/uploads/2022/11/shutterstock_1574382076-1-2.png" class="absolute pointer-events-none leaf14">
     <div class="cont-pd">
         <?php
 
@@ -2372,30 +2372,30 @@ foreach ($pro_brand as $key => $value) {
                         <?php pll_e('เรียงลำดับโครงการ')?>&nbsp;&nbsp;&nbsp;&nbsp;
                     </span>
                     <span class="sortby-box" data-sortby="1" data-sorttype="date">
-                        <?php pll_e('เรียงตามโครงการเก่า')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ใหม่')?>
+                        <?php pll_e('เรียงตามโครงการเก่า')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ใหม่')?>
                     </span>
                     <span class="sortby-box" data-sortby="1" data-sorttype="price">
-                        <?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
+                        <?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
                     </span>
                     <span class="sortby-box" data-sortby="-1" data-sorttype="price">
-                        <?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
+                        <?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
                     </span>
-                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" class="-arrow">
+                    <img src="/wp-content/uploads/2022/10/Vector.png" class="-arrow">
                     <div class="-choise">
                         <!-- <div class="-choise-1" onclick="sorting_project(-1)">
-                            เรียงตามโครงการใหม่ <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> เก่า
+                            เรียงตามโครงการใหม่ <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> เก่า
                         </div>
 
                         <div class="-choise-2" onclick="sorting_project(1)">
-                            เรียงตามโครงการเก่า <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> ใหม่
+                            เรียงตามโครงการเก่า <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> ใหม่
                         </div> -->
 
                         <div class="-choise-3" onclick="sorting_price(1)">
-                            <?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
+                            <?php pll_e('เรียงตามราคาเริ่มต้นสูง')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('ต่ำ')?>
                         </div>
 
                         <div class="-choise-4" onclick="sorting_price(-1)">
-                            <?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
+                            <?php pll_e('เรียงตามราคาเริ่มต้นต่ำ')?> <img src="/wp-content/uploads/2022/10/Vector.png" style="height: .3rem;transform:rotate(-90deg);display: inline-block;"> <?php pll_e('สูง')?>
                         </div>
                     </div>
                 </div>
@@ -2460,7 +2460,7 @@ foreach ($pro_brand as $key => $value) {
                                     <img src="<?=$cate_icon['url']?>" class="project-card-icon -condo"><?=$cate_parent->name?>
                                 </div>
                                 <div class="flex flex-row items-center" class="f22-20" style="margin-top: 6px;">
-                                    <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input-1.png" class="project-card-icon -loca"><?=$loca_child->name?>
+                                    <img src="/wp-content/uploads/2022/10/Icon-in-input-1.png" class="project-card-icon -loca"><?=$loca_child->name?>
                                 </div>
                             </div>
                             <div class="bottom-right project-card-info-2">
@@ -2502,7 +2502,7 @@ foreach ($pro_brand as $key => $value) {
         </div>
         <div id="notfound" class="flex flex-col justify-center items-center hidden">
             <sp class="rem-5"></sp>
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/12/Group-937.png" style="margin-bottom: 30px;">
+            <img src="/wp-content/uploads/2022/12/Group-937.png" style="margin-bottom: 30px;">
             <h5 class="f30-28" style="font-weight: 500;margin-bottom: 12px;text-align: center;"><?php pll_e('ไม่พบโครงการที่คุณต้องการ?')?></h5>
             <p style="margin-bottom: 26px;text-align: center;"><?php pll_e('ลองปรับรายละเอียดการค้นหา หรือลบตัวกรองและลองใหม่อีกครั้ง')?></p>
             <button style="border-radius: 8px;color: white;background-color: var(--ci-blue-300);padding:8px 24px;" onclick="remove_price();filter_pop(999, this);check_chk('clear', 999)">

@@ -1,4 +1,4 @@
-<?php
+<?php 
 $data = jpx_getPost();
 $msg = [];
 if ($data != false) {

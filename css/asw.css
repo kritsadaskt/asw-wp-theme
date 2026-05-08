@@ -1,3 +1,5 @@
+/*@import "modules/privacy-page.css";*/
+
 .compare-icon.nav-icon {
     display: none !important;
 }
@@ -861,6 +863,10 @@ body {
 	margin-bottom: 1rem;
 }
 
+.entry-content p img {
+	display: inline-block;
+}
+
 .ffont .elementor-widget-heading .elementor-heading-title {
 	font-family: var(--pmr-font);
 }
@@ -1040,6 +1046,75 @@ body {
 	font-weight: 400;
 	font-size: 26px;
 	line-height: 32px;
+}
+
+/* Shared: Privacy Notice / Privacy Policy / About tabbed layout */
+.about-menu {
+	transition: all 0.2s;
+}
+.side-nav-menu,
+.side-nav-menu-about {
+	border-left: 0;
+}
+.about_vbar {
+	width: 4px;
+	height: 28px;
+	position: absolute;
+	left: -1.5px;
+	top: 0;
+	background-color: #F1683B;
+	transition: all 0.2s;
+}
+.about_hbar {
+	width: 28px;
+	height: 4px;
+	position: absolute;
+	left: 0;
+	top: -0.7px;
+	background-color: #F1683B;
+	transition: all 0.2s;
+}
+#menu-about {
+	transition: all 0.15s;
+}
+#about-menu {
+	position: sticky;
+	top: calc(0.5em + 70px);
+}
+div#about-info-section {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: -70px;
+}
+@media (max-width: 1023px) {
+	.side-nav-menu-about {
+		overflow: auto;
+		white-space: nowrap;
+		scroll-behavior: smooth;
+		overflow-y: hidden;
+	}
+}
+@media (max-width: 767px) {
+	.side-nav-menu,
+	.side-nav-menu-about {
+		border-left: 0;
+		border-bottom: 0;
+	}
+}
+.privacy-policy-tab[data-active="0"] {
+	display: none;
+}
+.about-mini-section {
+	transition: all 2s cubic-bezier(0, 0, 0, 1.5);
+}
+.about-mini-section[data-show="0"] {
+	opacity: 0;
+	transform: translateY(100px);
+}
+.about-mini-section[data-show="1"] {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .active {
@@ -2521,7 +2596,7 @@ cont-pd {
 }
 
 :root {
-	--mc-lightbox-arrow: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/slide-arrow-l-e1680155229211.png');
+	--mc-lightbox-arrow: url('/wp-content/uploads/2023/03/slide-arrow-l-e1680155229211.png');
 }
 
 #contact-form {
@@ -2621,7 +2696,7 @@ cont-pd {
 #contact-form .wpcf7 .wpcf7-not-valid-tip::before,
 #contact-form #form_check_ok_alert::before {
 	content: " ";
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/invalid.png);
+	background-image: url(/wp-content/uploads/2023/03/invalid.png);
 	width: 16px;
 	height: 16px;
 	background-size: contain;
@@ -2657,7 +2732,7 @@ cont-pd {
 
 #contact-form .codedropz-upload-inner h3::before {
 	content: "";
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group.png);
+	background-image: url(/wp-content/uploads/2023/04/Group.png);
 	background-size: contain;
 	display: block;
 	width: 24px;
@@ -2672,7 +2747,7 @@ cont-pd {
 
 #contact-form a.cd-upload-btn::before {
 	content: "";
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/material-symbols_attach-file.png);
+	background-image: url(/wp-content/uploads/2023/04/material-symbols_attach-file.png);
 	background-size: contain;
 	display: block;
 	width: 32px;
@@ -2698,7 +2773,7 @@ cont-pd {
 }
 
 #contact-form .dnd-upload-status .dnd-upload-image span.file {
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Png.png);
+	background-image: url(/wp-content/uploads/2023/04/Png.png);
 	height: 40px;
 	width: 40px;
 }
@@ -2764,7 +2839,7 @@ cont-pd {
 	height: 24px;
 	width: 24px;
 	margin-right: 16px;
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Icon-Close-1.png);
+	background-image: url(/wp-content/uploads/2023/04/Icon-Close-1.png);
 }
 
 #contact-form .dnd-upload-status .dnd-upload-details .name>span {
@@ -2854,7 +2929,7 @@ cont-pd {
 	position: absolute;
 	top: 16px;
 	left: 16px;
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/invalid.png);
+	background-image: url(/wp-content/uploads/2023/03/invalid.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 32px;
@@ -2887,7 +2962,7 @@ cont-pd {
 	position: absolute;
 	top: 16px;
 	left: 16px;
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/04/Group-1147.png);
+	background-image: url(/wp-content/uploads/2023/04/Group-1147.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 32px;
@@ -3255,7 +3330,7 @@ div#header-nav-items {
 }
 
 .card-360 .-footer i.-line {
-	background-image: url(https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Line.png);
+	background-image: url(/wp-content/uploads/2023/05/Line.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 24px;
@@ -3440,11 +3515,11 @@ div#header-nav-items {
 }
 
 .card-360 .-cont-footer .-location:before {
-	background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Icon.png');
+	background-image: url('/wp-content/uploads/2023/05/Icon.png');
 }
 
 .card-360 .-cont-footer .-type:before {
-	background-image: url('https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/05/Icon-1.png');
+	background-image: url('/wp-content/uploads/2023/05/Icon-1.png');
 }
 
 .card-360.-card-360-max .-inner {
@@ -3578,3 +3653,8 @@ h5.-num-next {
 /* #concept .-d-images-item-pic img {
 	aspect-ratio: 758 / 543;
 } */
+
+/* reCAPTCHA v3 badge positioning tweaks for Grow Together form */
+.grecaptcha-badge {
+	z-index: 9999;
+}

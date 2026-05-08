@@ -62,12 +62,10 @@ act_template_project_css($opt,$template_name,$layout);
                                                     <?= $value['text'] ?>
                                                     <ul class="ml-6">
                                                         <?php
-                                                        if (is_array($value['bullet'])) {
-                                                            foreach ($value['bullet'] as $key => $v) {
-                                                                ?>
-                                                                <li class="list-disc"><?= $v['text'] ?></li>
-                                                                <?php
-                                                            }
+                                                        foreach ($value['bullet'] as $key => $v) {
+                                                            ?>
+                                                            <li class="list-disc"><?= $v['text'] ?></li>
+                                                            <?php
                                                         }
                                                         ?>
                                                     </ul>
@@ -83,7 +81,7 @@ act_template_project_css($opt,$template_name,$layout);
                                 <?php if ($content['more_information']['url'] != '') : ?>
                                     <a  target="_blank" href="<?= $content['more_information']['url'] ?>" class="info-btn" target="_blank">
                                         <div>
-                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Vector-3.png" alt="">
+                                            <img src="/wp-content/uploads/2023/03/Vector-3.png" alt="">
                                         </div>
                                         <div>
                                             <span><?php pll_e('ดาวน์โหลดโบรชัวร์')?></span>
@@ -93,7 +91,7 @@ act_template_project_css($opt,$template_name,$layout);
                                 <?php if ($content['more_condition'] != '') : ?>
                                     <a  target="_blank" href="<?= $content['more_condition'][0]->guid ?>" target="_blank" class="info-btn">
                                         <div>
-                                            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Information-1.png" alt="">
+                                            <img src="/wp-content/uploads/2023/03/Information-1.png" alt="">
                                         </div>
                                         <div>
                                             <span><?php pll_e('ข้อมูลเงื่อนไขเพิ่มเติม')?></span>
@@ -109,7 +107,7 @@ act_template_project_css($opt,$template_name,$layout);
                             <?php if ($content['more_information']['url'] != '') : ?>
                                 <a href="<?= $content['more_information']['url'] ?>" target="_blank" class="info-btn">
                                     <div>
-                                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Vector-3.png" alt="">
+                                        <img src="/wp-content/uploads/2023/03/Vector-3.png" alt="">
                                     </div>
                                     <div>
                                         <span><?php pll_e('ดาวน์โหลดโบรชัวร์')?></span>
@@ -119,7 +117,7 @@ act_template_project_css($opt,$template_name,$layout);
                             <?php if ($content['more_condition'] != '') : ?>
                                 <a href="<?= $content['more_condition'][0]->guid ?>" target="_blank" class="info-btn">
                                     <div>
-                                        <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2023/03/Information-1.png" alt="">
+                                        <img src="/wp-content/uploads/2023/03/Information-1.png" alt="">
                                     </div>
                                     <div>
                                         <span><?php pll_e('ข้อมูลเงื่อนไขเพิ่มเติม')?></span>

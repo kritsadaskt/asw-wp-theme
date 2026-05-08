@@ -143,7 +143,8 @@ function pad($num)
 		height: 30px;
 	}
 
-	#home-slider-count h3 {
+	#home-slider-count .-num-min, 
+	#home-slider-count .-num-next {
 		font-size: 40px;
 	}
 
@@ -274,6 +275,16 @@ function pad($num)
 			bottom: 40px;
 		}
 	}
+
+	body h2 {
+		font-size: 48px;
+	}
+
+	@media (max-width: 768px) {
+		body h2 {
+			font-size: 38px;
+		}
+	}
 </style>
 <script type="text/javascript">
 	let allSlideVideo = []
@@ -293,7 +304,8 @@ function pad($num)
 						}
 			?>
 						<div class="home-slider-slide bg-cover pointer" <?= $new_banner_onclick_condition ?>
-							style="background-image:url('<?= $v['image']['sizes']['1536x1536'] ?>')"></div>
+							style="background-image:url('<?= $v['image']['url'] ?>')"></div>
+						<pre class="hidden"><?php print_r($v); ?></pre>
 					<?php
 
 						break;
@@ -323,20 +335,20 @@ function pad($num)
 			?>
 		</div>
 		<div id="home-slider-arrow">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l"
+			<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l"
 				onclick="changeSlider(-1);stopAutoplay()">
-			<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r"
+			<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r"
 				onclick="changeSlider(1);stopAutoplay()">
 		</div>
 		<div id="home-slider-count">
 			<div>
-				<h3 class="-num-min">01</h3>
+				<span class="-num-min">01</span>
 			</div>
 			<div class="-num-bar">
 				<div class=""></div>
 			</div>
 			<div>
-				<h3 class="-num-next">02</h3>
+				<span class="-num-next">02</span>
 			</div>
 			<div>
 				<p style="margin-left: 3px;">/<span class="-num-max">06</span></p>
@@ -558,6 +570,12 @@ function pad($num)
 				align-items: center;
 			}
 
+			#home-slider-count-mob .-num-min,
+			#home-slider-count-mob .-num-next {
+				font-size: 26px;
+				font-weight: 500;
+			}
+
 
 			/*.mini-filter {
 				left: 0;
@@ -570,27 +588,27 @@ function pad($num)
 		}
 	</style>
 	<div class="hsm-arrow -l" onclick="mhbanner_slide_plus(1);clearInterval(mhbannerInterval)">
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
+		<img src="/wp-content/uploads/2022/09/slide-arrow-l.png" class="-l" onclick="">
 	</div>
 	<div id="home-slider-count-mob">
 		<div>
-			<h5 class="-num-min">01</h5>
+			<span class="-num-min">01</span>
 		</div>
 		<div class="-num-bar" data-play="0">
 			<div class=""></div>
 		</div>
 		<div>
-			<h5 class="-num-next">
-				<span class="-num-next-num">02</span><span
+			<span class="-num-next flex">
+				<span class="-num-next-num">02</span><span class="flex align-end leading-normal"
 					style="margin-left: 3px;color: var(--ci-grey-400);font-weight: 300;font-size: 20px;">/<span
-						class="-num-max">
+						class="-num-max leading-normal">
 						<?= pad($data_active + 1) ?>
 					</span></span>
-			</h5>
+			</span>
 		</div>
 	</div>
 	<div class="hsm-arrow -r" onclick="mhbanner_slide_plus(-1);clearInterval(mhbannerInterval)">
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
+		<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="-r" onclick="">
 	</div>
 	<script type="text/javascript">
 		let mhbannerAutoPlay = 1;
@@ -815,8 +833,8 @@ function pad($num)
 if ($f['is_open'] == 'open') {
 ?>
 	<div class="bg-yellow-200-" id="desktop_promotion">
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/เงากิ่งไม้-1.png" class="absolute pointer-events-none leaf01">
-		<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/leaves-shadow-1.png" class="absolute pointer-events-none leaf03">
+		<img src="/wp-content/uploads/2022/10/เงากิ่งไม้-1.png" class="absolute pointer-events-none leaf01">
+		<img src="/wp-content/uploads/2022/10/leaves-shadow-1.png" class="absolute pointer-events-none leaf03">
 		<div class="cont-pd">
 			<div id="home-slider-wrap-cont">
 				<div id="home-slider-wrap-cont_header" data-aos="fade-up">
@@ -851,18 +869,20 @@ if ($f['is_open'] == 'open') {
 						</inner>
 						<div>
 							<sp class="xl"></sp>
-							<h5 class="see-more cl-white"><a href="/<?= pll_current_language() ?>/promotion" class="">
+							<div class="see-more flex items-center gap-2 cl-white">
+								<a href="/<?= pll_current_language() ?>/promotion" class="">
 									<span class="cl-white f30-24"><?php pll_e('ดูทั้งหมด') ?></span> <img
-										src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png" class="inline-block"
+										src="/wp-content/uploads/2022/09/arrow-r.png" class="inline-block"
 										style="width:30px">
-								</a></h5>
+								</a>
+							</div>
 							<sp class="xl"></sp>
 						</div>
 					</box>
 
 					<box col="9" id="home_promotion_slides_wrap_box">
 						<inner class="" id="home_promotion_slides_wrap_inner" data-items="<?= $promo_chk ?>">
-							<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r --l"
+							<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r --l"
 								onclick="show_promo_arrow(-1)">
 							<div id="home_promotion_slides_wrap">
 								<div id="home_promotion_slides_num">
@@ -891,7 +911,7 @@ if ($f['is_open'] == 'open') {
 									?>
 
 								</div>
-								<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r"
+								<img src="/wp-content/uploads/2022/09/slide-arrow-r.png" class="promotion-slide--r"
 									onclick="show_promo_arrow(1)">
 							</div>
 						</inner>
@@ -977,18 +997,18 @@ if ($f['featured_1']['is_open'] == 'open') {
 					</div>
 					<div id="booking2" class="row-span-1 md:col-span-6 md:my-12 2xl:col-span-5">
 						<div class="booking-content cl-white">
-							<h1 class="uppercase online-booking"><?= $f['featured_1']['title'] ?></h1>
+							<h2 class="uppercase online-booking"><?= $f['featured_1']['title'] ?></h2>
 							<div class="md:ml-12">
 								<h6 class="f26-24">
 									<?= $f['featured_1']['text'] ?>
 								</h6>
 								<sp class="l"></sp>
 								<a href="<?= $f['featured_1']['url'] ?>" class="text-2xl" target="_blank">
-									<h5 class="see-more">
+									<div class="see-more flex items-center">
 										<span class="cl-white f30-28" style="font-weight: 500;"><?= $f['featured_1']['button_name'] ?></span>
-										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png" class="inline-block"
+										<img src="/wp-content/uploads/2022/09/arrow-r.png" class="inline-block"
 											style="width:30px">
-									</h5>
+									</div>
 								</a>
 							</div>
 						</div>
@@ -1224,10 +1244,10 @@ if ($f['featured_1']['is_open'] == 'open') {
 	}
 </style>
 <section id="feature" class="padding-l-vtc" style="background-color: #EDF2F6;z-index: 2;padding-bottom: 7rem;">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-1.png" class="absolute pointer-events-none leaf04">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-12.png" class="absolute pointer-events-none leaf04-1">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-5.png" class="absolute pointer-events-none leaf05">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Vector-11.png" class="absolute pointer-events-none leaf05-1">
+	<img src="/wp-content/uploads/2022/10/Vector-1.png" class="absolute pointer-events-none leaf04">
+	<img src="/wp-content/uploads/2022/11/Vector-12.png" class="absolute pointer-events-none leaf04-1">
+	<img src="/wp-content/uploads/2022/10/Vector-5.png" class="absolute pointer-events-none leaf05">
+	<img src="/wp-content/uploads/2022/11/Vector-11.png" class="absolute pointer-events-none leaf05-1">
 	<div class="-px-4 -md:px-20 cont-pd three-block">
 		<sp class="xl"></sp>
 		<?php
@@ -1243,20 +1263,18 @@ if ($f['featured_1']['is_open'] == 'open') {
 				</div>
 				<div class="row-span-1 xl:col-span-1 flex items-center">
 					<div class="bg-ci-orange-500 line01"></div>
-					<?php if(isset($f['featured_2']['small_image']['sizes']['large'])): ?>
-						<img src="<?= $f['featured_2']['small_image']['sizes']['large'] ?>" class="im_360">
-					<?php endif; ?>
+					<img src="<?= $f['featured_2']['small_image']['sizes']['large'] ?>" class="im_360">
 					<div class="p-4 pb-8 pl-8 md:pb-4 md:pl-0">
-						<h1 class="b4 cl-ci-blue-300 "><?= $f['featured_2']['title'] ?></h1>
+						<h2 class="b4 cl-ci-blue-300 "><?= $f['featured_2']['title'] ?></h2>
 						<div class="p-4 md:pl-8 md:pr-8 cl-ci-grey-300" style="font-size: 22px;line-height: 28px;">
 							<?= $f['featured_2']['text'] ?>
 							<sp class="" style="height: 2.5rem;"></sp>
 							<a href="<?= $f['featured_2']['url'] ?>" class="" target="_blank">
-								<h5 class="see-more cl-ci-blue-300">
+								<div class="see-more flex items-center cl-ci-blue-300">
 									<span class="f30-28" style="font-weight: 500;"><?= $f['featured_2']['button_name'] ?></span>
-									<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+									<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 										style="width:30px">
-								</h5>
+								</div>
 							</a>
 						</div>
 					</div>
@@ -1285,18 +1303,18 @@ if ($f['featured_1']['is_open'] == 'open') {
 								</div>
 								<div
 									class="row-span-1 md:row-start-1 md:col-span-10 md:col-span-7 cl-ci-grey-300 md:px-10 mt-5 md:mt-0 md:pb-10">
-									<h1 class="b4 cl-ci-blue-300" style=""><?= $f['featured_3']['title'] ?></h1>
+									<h2 class="b4 cl-ci-blue-300" style=""><?= $f['featured_3']['title'] ?></h2>
 									<sp class=""></sp>
 									<div class="ml-4 mr-4 md:mr-0 md:ml-8 text-xl text-break" style="font-size: 22px;line-height: 28px;">
 										<?= $f['featured_3']['text'] ?>
 									</div>
 									<sp class="" style="height: 2.5rem;"></sp>
 									<a href="<?= $f['featured_3']['url'] ?>" target="_blank">
-										<h5 class="see-more cl-ci-blue-300 ml-4 md:ml-8">
+										<div class="see-more flex items-center cl-ci-blue-300 ml-4 md:ml-8">
 											<span style="font-weight: 500;" class="f30-28"><?= $f['featured_3']['button_name'] ?></span>
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+											<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 												style="width:30px">
-										</h5>
+										</div>
 									</a>
 								</div>
 							</div>
@@ -1324,18 +1342,18 @@ if ($f['featured_1']['is_open'] == 'open') {
 								</div>
 								<div
 									class="row-span-1 md:row-start-1 md:col-span-10 md:col-span-7 cl-ci-grey-300 md:px-10 mt-5 md:mt-0 md:pb-10">
-									<h1 class="b4 cl-ci-blue-300" style=""><?= $f['featured_3']['title'] ?></h1>
+									<h2 class="b4 cl-ci-blue-300" style=""><?= $f['featured_3']['title'] ?></h2>
 									<sp class=""></sp>
 									<div class="ml-4 mr-4 md:mr-0 md:ml-8 text-xl text-break" style="font-size: 22px;line-height: 28px;">
 										<?= $f['featured_3']['text'] ?>
 									</div>
 									<sp class="" style="height: 2.5rem;"></sp>
 									<a href="<?= $f['featured_3']['url'] ?>" target="_blank">
-										<h5 class="see-more cl-ci-blue-300 ml-4 md:ml-8">
+										<div class="see-more flex items-center cl-ci-blue-300 ml-4 md:ml-8">
 											<span style="font-weight: 500;" class="f30-28"><?= $f['featured_3']['button_name'] ?></span>
-											<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+											<img src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 												style="width:30px">
-										</h5>
+										</div>
 									</a>
 								</div>
 							</div>
@@ -1360,7 +1378,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 							</div>
 							<div
 								class="row-span-1 relative bottom-16 md:static md:bottom-0 md:row-start-1 md:col-span-7 cl-ci-grey-300 px-10 aapp">
-								<h1 class="cl-ci-blue-300" style=""><?= $f['featured_4']['title'] ?></h1>
+								<h2 class="cl-ci-blue-300" style=""><?= $f['featured_4']['title'] ?></h2>
 								<sp class=""></sp>
 								<p class="ml-4 md:ml-8 pr-8 md:pr-0" style="font-size: 22px;line-height: 28px;">
 									<?= $f['featured_4']['text'] ?>
@@ -1368,10 +1386,10 @@ if ($f['featured_1']['is_open'] == 'open') {
 								<sp class="l hidden md:block"></sp>
 								<div class="app-btn-wrap">
 									<a href="<?= $f['featured_4']['app_store_url'] ?>" target="_blank" class="">
-										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play-1.png" class="app-btn">
+										<img src="/wp-content/uploads/2022/09/google-play-1.png" class="app-btn">
 									</a>
 									<a href="<?= $f['featured_4']['google_play_url'] ?>" target="_blank" class="">
-										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play.png" class="app-btn">
+										<img src="/wp-content/uploads/2022/09/google-play.png" class="app-btn">
 									</a>
 								</div>
 							</div>
@@ -1396,7 +1414,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 							</div>
 							<div
 								class="row-span-1 relative bottom-16 md:static md:bottom-0 md:row-start-1 md:col-span-7 cl-ci-grey-300 px-10 aapp">
-								<h1 class="cl-ci-blue-300" style=""><?= $f['featured_4']['title'] ?></h1>
+								<h2 class="cl-ci-blue-300" style=""><?= $f['featured_4']['title'] ?></h2>
 								<sp class=""></sp>
 								<p class="ml-4 md:ml-8 pr-8 md:pr-0" style="font-size: 22px;line-height: 28px;">
 									<?= $f['featured_4']['text'] ?>
@@ -1404,10 +1422,10 @@ if ($f['featured_1']['is_open'] == 'open') {
 								<sp class="l hidden md:block"></sp>
 								<div class="app-btn-wrap">
 									<a href="<?= $f['featured_4']['apple_store_url'] ?>" class="" target="_blank">
-										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play-1.png" class="app-btn" style="width: 170px">
+										<img src="/wp-content/uploads/2022/09/google-play-1.png" class="app-btn" style="width: 170px">
 									</a>
 									<a href="<?= $f['featured_4']['google_play_url'] ?>" class="" target="_blank">
-										<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/google-play.png" class="app-btn" style="width: 170px">
+										<img src="/wp-content/uploads/2022/09/google-play.png" class="app-btn" style="width: 170px">
 									</a>
 								</div>
 							</div>
@@ -1439,20 +1457,20 @@ if ($f['featured_1']['is_open'] == 'open') {
 <!--=== The Section Boxes : news ===-->
 <section id="news" class=""
 	style="z-index: 3;background-color: white;padding-top: 4rem;padding-bottom: 3rem;overflow:hidden;">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/shutterstock_1574382076-1.png" class="absolute pointer-events-none leaf06">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/Group-793-1.png" class="absolute pointer-events-none leaf07">
+	<img src="/wp-content/uploads/2022/10/shutterstock_1574382076-1.png" class="absolute pointer-events-none leaf06">
+	<img src="/wp-content/uploads/2022/11/Group-793-1.png" class="absolute pointer-events-none leaf07">
 
 	<div class="cont-pd" style="z-index: 3;"> <!-- px-4 md:px-20 -->
 		<div class="grid grid-cols-2">
 			<div class="col-span-1 flex items-center">
 				<div class="bg-ci-blue-300 padding-l news-head">
 				</div>
-				<h1 class="cl-white" style="z-index: 3;"><?php pll_e('ข่าวสาร') ?></h1>
+				<h2 class="cl-white" style="z-index: 3;"><?php pll_e('ข่าวสาร') ?></h2>
 			</div>
 			<div class="col-span-1 text-right pr-0 p-6">
-				<a href="/<?= pll_current_language() ?>/news" class="see-more flex justify-end pointer cl-ci-blue-300">
-					<h5 class="cl-ci-blue-300 f30-28"><?php pll_e('ดูทั้งหมด') ?></h5> <img
-						src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r-main.png" class="inline-block"
+				<a href="/<?= pll_current_language() ?>/news" class="see-more flex items-center justify-end pointer cl-ci-blue-300">
+					<span class="cl-ci-blue-300 flex items-center gap-2 f30-28"><?php pll_e('ดูทั้งหมด') ?></span> <img
+						src="/wp-content/uploads/2022/09/arrow-r-main.png" class="inline-block"
 						style="width:30px;margin:0;margin-left: 10px;">
 				</a>
 			</div>
@@ -1626,12 +1644,13 @@ if ($f['featured_1']['is_open'] == 'open') {
 					'order' => 'DESC',
 				);
 
+
 				$loop = new WP_Query($args);
 				$chk = 0;
 				while ($loop->have_posts()):
 					$loop->the_post();
 					$featured_img = wp_get_attachment_image_src($post->ID, 'medium-large-thumb');
-					$value = get_post($post->ID);
+					$v = get_postdata($post->ID);
 					if ($chk == 1) {
 				?>
 						<div class="col-span-1 news-item-<?= $chk ?> relative" data-aos="fade-up" data-aos-duration="500"
@@ -1673,7 +1692,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 								} ?>
 								<div class="home-news-date-sp"></div>
 								<div class="row-span-1 cl-ci-grey-300 home-news-date">
-									<?= asw_date_format($value->post_date) ?>
+									<?= asw_date_format($v['Date']) ?>
 								</div>
 							</div>
 						</div>
@@ -1710,7 +1729,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 								</div>
 								<div class="home-news-date-sp"></div>
 								<div class="row-span-1 cl-ci-grey-300 home-news-date">
-									<?= asw_date_format($value->post_date) ?>
+									<?= asw_date_format($v['Date']) ?>
 								</div>
 							</div>
 						</div>
@@ -1795,22 +1814,22 @@ if ($f['featured_1']['is_open'] == 'open') {
 </style>
 <!--=== The Section Boxes : blog ===-->
 <section id="blog" class="sec-blog">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-2.png" class="absolute pointer-events-none"
+	<img src="/wp-content/uploads/2022/10/Vector-2.png" class="absolute pointer-events-none"
 		style="top: 0; left: 0;opacity: 0.1;">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Vector-3.png" class="absolute pointer-events-none"
+	<img src="/wp-content/uploads/2022/10/Vector-3.png" class="absolute pointer-events-none"
 		style="top: 0; left: 0;opacity: 0.1;">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/เงากิ่งไม้-2.png" class="absolute pointer-events-none leaf08">
+	<img src="/wp-content/uploads/2022/10/เงากิ่งไม้-2.png" class="absolute pointer-events-none leaf08">
 	<div class="cont-pd">
 		<div class="grid grid-cols-2">
 			<div class="col-span-1">
 				<a href="/<?= pll_current_language() ?>/blog" class="">
-					<h1 class="cl-white " style=""><?php pll_e('บล็อก') ?></h1>
+					<h2 class="cl-white " style=""><?php pll_e('บล็อก') ?></h2>
 				</a>
 			</div>
 			<div class="col-span-1 cl-white flex items-center justify-end" style="z-index: 2;">
 				<a href="/<?= pll_current_language() ?>/blog" class="see-more flex justify-end pointer cl-white">
-					<h5 class="f30-28"><?php pll_e('ดูทั้งหมด') ?></h5> <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/arrow-r.png"
-						class="inline-block" style="width:30px;margin:0;margin-left: 10px;">
+					<span class="flex items-center gap-2 f30-28"><?php pll_e('ดูทั้งหมด') ?></span>
+					<img src="/wp-content/uploads/2022/09/arrow-r.png" class="inline-block" style="width:30px;margin:0;margin-left: 10px;">
 				</a>
 			</div>
 		</div>
@@ -1929,7 +1948,27 @@ if ($f['featured_1']['is_open'] == 'open') {
 	</div>
 </section>
 
-<?php //get_template_part('template-parts/careers-home-section'); ?>
+<!-- WRS Home Banner
+<section id="wrs_banner" class="py-12" style="background-image: url('/wp-content/uploads/2022/12/circle.png'); background-size: cover; background-position: left;">
+	<div class="container mx-auto flex flex-col md:flex-row px-16 md:px-0 gap-7 md:gap-0">
+		<div class="w-full flex md:w-1/2 md:pr-20 md:justify-end">
+			<div class="inner inline-block w-auto">
+				<p class="text-4xl text-neutral-900 font-medium">WE ARE</p>
+				<h3 class="cl-ci-orange-500 text-[5rem] font-bold leading-[0.7] mb-2">HIRING</h3>
+				<p><?php //pll_e('โอกาสในการร่วมงานกับองค์กรชั้นนำ') ?></p>
+			</div>
+		</div>
+		<div class="w-full md:w-1/2 flex justify-center md:justify-start pl-6 md:pl-24 border-l-[6px] border-l-[var(--ci-veri-500)]">
+			<div class="inner w-full md:w-1/2 flex flex-col">
+				<ul id="wrs_jobs_list" class="mb-5 flex flex-col gap-1">
+					<li class="text-neutral-700">Loading...</li>
+				</ul>
+				<a href="https://careers.assetwise.co.th/jobs/" class="bg-[var(--ci-veri-500)] hover:bg-[var(--ci-veri-300)] w-fit px-5 py-1 rounded text-white font-medium align-self-end"><?php pll_e('ดูตำแหน่งทั้งหมด') ?></a>
+			</div>
+		</div>
+	</div>
+</section>
+		-->
 
 <style type="text/css">
 	.sec-home-filter {
@@ -1969,7 +2008,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 		<div class="lg:flex justify-center grid grid-cols-1 lg:grid-cols-4 lg:gap-2">
 			<div class="px-8 col-span-1 home-bottom-filter pointer" data-clickblank onclick="window.location.href='https://aswland.assetwise.co.th';">
 				<div class="home-bottom-filter-img">
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-1.png">
+					<img src="/wp-content/uploads/2022/10/icon-menu-1.png">
 				</div>
 				<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('เสนอขายที่ดิน') ?></h6>
 			</div>
@@ -1977,7 +2016,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 			<div class="px-8 col-span-1 home-bottom-filter pointer">
 				<a href="https://aswinno.assetwise.co.th/vendorportal/Vendor/Verify" title="" target="_blank" class="flex flex-col md:flex-row items-center">	
 					<div class="home-bottom-filter-img">
-						<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-2.png">
+						<img src="/wp-content/uploads/2022/10/icon-menu-2.png">
 					</div>
 					<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('เสนอขายสินค้าและบริการ') ?></h6>
 				</a>
@@ -1986,15 +2025,14 @@ if ($f['featured_1']['is_open'] == 'open') {
 			<div class="px-8 col-span-1 home-bottom-filter pointer">
         <a href="https://careers.assetwise.co.th" title="ร่วมงานกับ AssetWise" target="_blank" class="flex flex-col md:flex-row items-center">
           <div class="home-bottom-filter-img">
-            <img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-3.png">
+            <img src="/wp-content/uploads/2022/10/icon-menu-3.png">
           </div>
-          <h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('ร่วมงานกับเรา'); ?></h6>
+          <h6 class="text-center cl-ci-grey-200 f26-22"><? pll_e('ร่วมงานกับเรา'); ?></h6>
         </a>
       </div>
-
 			<div class="px-8 col-span-1 home-bottom-filter pointer">
 				<div class="home-bottom-filter-img">
-					<a href="tel:021680000" class=""><img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/icon-menu-4.png"></a>
+					<a href="tel:021680000" class=""><img src="/wp-content/uploads/2022/10/icon-menu-4.png"></a>
 				</div>
 				<a href="tel:021680000" class="">
 					<h6 class="text-center cl-ci-grey-200 f26-22"><?php pll_e('ติดต่อเรา') ?></h6>
@@ -2072,8 +2110,8 @@ if ($f['featured_1']['is_open'] == 'open') {
 	}
 </style>
 <section id="all_project" class="sec-all-pro padding-l-vtc-">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow-4.png" class="absolute pointer-events-none leaf09">
-	<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/11/leaves-shadow2-1.png" class="absolute pointer-events-none leaf10">
+	<img src="/wp-content/uploads/2022/11/leaves-shadow-4.png" class="absolute pointer-events-none leaf09">
+	<img src="/wp-content/uploads/2022/11/leaves-shadow2-1.png" class="absolute pointer-events-none leaf10">
 	<div class="cont-pd text-center">
 		<div class="">
 			<div id="show_pro_foot" class="flex flex-row justify-center">
@@ -2094,7 +2132,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 			<sp class="hidden vl md:block"></sp>
 			<div id="show-condo">
 				<span class="flex flex-row items-center justify-center" style="padding-top: 1rem;padding-bottom: 1rem;">
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/09/Vector.png" style="height:24px;margin:0;margin-right: 12px;">
+					<img src="/wp-content/uploads/2022/09/Vector.png" style="height:24px;margin:0;margin-right: 12px;">
 					<h6 class=""><?php pll_e('คอนโดมิเนียม') ?></h6>
 				</span>
 				<sp class="l hidden md:block"></sp>
@@ -2128,7 +2166,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 			<sp class="s"></sp>
 			<div id="show-townhome">
 				<span class="flex flex-row items-center justify-center txt-townhome">
-					<img src="https://asw-mainweb-medias.s3.ap-southeast-1.amazonaws.com/uploads/2022/10/Icon-in-input.png"
+					<img src="/wp-content/uploads/2022/10/Icon-in-input.png"
 						style="filter: grayscale(100%);height:24px;margin:0;margin-right: 12px;">
 					<h6 class=""><?php pll_e('บ้านและทาวน์โฮม') ?></h6>
 				</span>
@@ -2194,7 +2232,7 @@ if ($f['featured_1']['is_open'] == 'open') {
 	}
 
 	if (document.querySelector('#home_promotion_slides_wrap') != null) {
-		document.querySelector('#home_promotion_slides_wrap').style.setProperty('--max', <?= isset($promo_chk) ? $promo_chk * 3 : 0 ?>)
+		document.querySelector('#home_promotion_slides_wrap').style.setProperty('--max', <?= $promo_chk * 3 ?>)
 	}
 	let waitingPromotionLoop = null
 
