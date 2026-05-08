@@ -2584,8 +2584,8 @@ function asw_project_render_theme($template_name,$common_layout){
     ?>
     <!-- ~~~~~~~~~~ Start Template V2 ~~~~~~~~~~ -->
     <!-- =====👇👇👇👇👇 Start Template V2 Header 👇👇👇👇👇===== -->
-    <script src="/wp-content/themes/seed-spring/js/circle-progress.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/all.css?t=<?=time()?>">
+    <script src="/wp-content/themes/assetwise/js/circle-progress.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/assetwise/template-css/all.css?t=<?=time()?>">
     
     <?php
     
@@ -2620,7 +2620,7 @@ function asw_project_render_theme($template_name,$common_layout){
     echo "--all--color_gradient: linear-gradient(calc(1deg*var(--all--color_gradient--degree)), var(--all--color_gradient--color_start), var(--all--color_gradient--color_end));";
     echo "}</style>";
     ?>
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/default-<?=$template_name?>-style.css?t=<?=time()?>">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/assetwise/template-css/default-<?=$template_name?>-style.css?t=<?=time()?>">
     <!-- =====🔺🔺🔺🔺🔺 End Template V2 Header 🔺🔺🔺🔺🔺===== -->
     <!-- =====👇👇👇👇👇 Start Template V2 Nav 👇👇👇👇👇===== -->
     <?php
@@ -2681,9 +2681,9 @@ function asw_project_render_theme($template_name,$common_layout){
 
 function act_template_project_css($opt,$template_name,$layout){
     if ($opt == 'all') {
-        ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/all-<?=$layout?>.css?t=<?=time()?>"><?php
+        ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/assetwise/template-css/all-<?=$layout?>.css?t=<?=time()?>"><?php
     }
-    ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/seed-spring/template-css/<?=$template_name?>-<?=$layout?>.css?t=<?=time()?>"><?php
+    ?><link rel="stylesheet" type="text/css" href="/wp-content/themes/assetwise/template-css/<?=$template_name?>-<?=$layout?>.css?t=<?=time()?>"><?php
 }
 
 function v2_asw_tpj_scroll_js()
