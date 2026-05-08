@@ -280,7 +280,7 @@ function clean_string($string) {
   <div class="container mx-auto px-4 md:px-0">
     <div class="w-full lg:w-4/5 mx-auto">
       <h2 class="text-5xl text-center font-medium mb-2 text-white">ลงทะเบียน <span id="project_name"></span></h2>
-      <form id="register_form" class="max-w-2xl mx-auto mt-8 space-y-6">
+      <form name="campaign_register_form" id="register_form" class="max-w-2xl mx-auto mt-8 space-y-6">
         <input type="hidden" id="project_id" name="project_id" value="">
         <input type="hidden" id="utm_source" name="utm_source" value="<?= isset($_GET['utm_source']) ? $_GET['utm_source'] : ''; ?>">
         <input type="hidden" id="utm_medium" name="utm_medium" value="<?= isset($_GET['utm_medium']) ? $_GET['utm_medium'] : ''; ?>">
