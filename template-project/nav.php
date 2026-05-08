@@ -28,7 +28,7 @@ $v2_content = $args[1];
 					foreach ($v2_content as $key => $content) {
 						switch ($content['acf_fc_layout']) {
 							case 'project_idea':
-							if ($content['is_show'] == 'show') {
+							if (isset($content['is_show']) && $content['is_show'] == 'show') {
 								?>
 								<div class="theme-menu-item" onclick="navItemsClick(<?= $it ?>)">
 									<h6><?php pll_e('แนวคิด')?></h6>
@@ -39,7 +39,7 @@ $v2_content = $args[1];
 							break;
 
 							case 'project_information':
-							if ($content['is_show'] == 'show') {
+							if (isset($content['is_show']) && $content['is_show'] == 'show') {
 								?>
 								<div class="theme-menu-item" onclick="navItemsClick(<?= $it ?>)">
 									<h6><?php pll_e('ข้อมูลโครงการ')?></h6>
@@ -49,7 +49,7 @@ $v2_content = $args[1];
 							}
 							break;
 							case 'facility':
-							if ($content['is_show'] == 'show') {
+							if (isset($content['is_show']) && $content['is_show'] == 'show') {
 								?>
 								<div class="theme-menu-item" onclick="navItemsClick(<?= $it ?>)">
 									<h6><?php pll_e('สิ่งอำนวยความสะดวก')?></h6>
@@ -60,7 +60,7 @@ $v2_content = $args[1];
 							break;
 
 							case 'gallery':
-							if ($content['is_show'] == 'show') {
+							if (isset($content['is_show']) && $content['is_show'] == 'show') {
 								?>
 								<div class="theme-menu-item" onclick="navItemsClick(<?= $it ?>)">
 									<h6><?php pll_e('แกลเลอรี')?></h6>
@@ -71,7 +71,7 @@ $v2_content = $args[1];
 							break;
 
 							case 'video':
-							if ($content['is_show'] == 'show') {
+							if (isset($content['is_show']) && $content['is_show'] == 'show') {
 								?>
 								<div class="theme-menu-item" onclick="navItemsClick(<?= $it ?>)">
 									<h6><?php pll_e('วิดีโอ')?></h6>
@@ -82,7 +82,7 @@ $v2_content = $args[1];
 							break;
 
 							case 'plan':
-							if ($content['is_show'] == 'show') {
+							if (isset($content['is_show']) && $content['is_show'] == 'show') {
 								?>
 								<div class="theme-menu-item" onclick="navItemsClick(<?= $it ?>)">
 									<h6><?=$plan_text?></h6>
@@ -93,7 +93,7 @@ $v2_content = $args[1];
 							break;
 
 							case 'location':
-							if ($content['is_show'] == 'show') {
+							if (isset($content['is_show']) && $content['is_show'] == 'show') {
 								?>
 								<div class="theme-menu-item" onclick="navItemsClick(<?= $it ?>)">
 									<h6><?php pll_e('ทำเลที่ตั้ง')?></h6>
@@ -128,7 +128,7 @@ $v2_content = $args[1];
 	foreach ($v2_content as $key => $content) {
 		switch ($content['acf_fc_layout']) {
 			case 'project_idea':
-			if ($content['is_show'] == 'show') {
+			if (isset($content['is_show']) && $content['is_show'] == 'show') {
 				?>
 				<div class="theme-menu-item-mob" onclick="toggleNavMob(<?= $it ?>)">
 					<?php pll_e('แนวคิด')?>
@@ -139,7 +139,7 @@ $v2_content = $args[1];
 			break;
 
 			case 'project_information':
-			if ($content['is_show'] == 'show') {
+			if (isset($content['is_show']) && $content['is_show'] == 'show') {
 				?>
 				<div class="theme-menu-item-mob" onclick="toggleNavMob(<?= $it ?>)">
 					<?php pll_e('ข้อมูลโครงการ')?>
@@ -149,7 +149,7 @@ $v2_content = $args[1];
 			}
 			break;
 			case 'facility':
-			if ($content['is_show'] == 'show') {
+			if (isset($content['is_show']) && $content['is_show'] == 'show') {
 				?>
 				<div class="theme-menu-item-mob" onclick="toggleNavMob(<?= $it ?>)">
 					<?php pll_e('สิ่งอำนวยความสะดวก')?>
@@ -160,7 +160,7 @@ $v2_content = $args[1];
 			break;
 
 			case 'gallery':
-			if ($content['is_show'] == 'show') {
+			if (isset($content['is_show']) && $content['is_show'] == 'show') {
 				?>
 				<div class="theme-menu-item-mob" onclick="toggleNavMob(<?= $it ?>)">
 					<?php pll_e('แกลเลอรี')?>
@@ -171,7 +171,7 @@ $v2_content = $args[1];
 			break;
 
 			case 'video':
-			if ($content['is_show'] == 'show') {
+			if (isset($content['is_show']) && $content['is_show'] == 'show') {
 				?>
 				<div class="theme-menu-item-mob" onclick="toggleNavMob(<?= $it ?>)">
 					<?php pll_e('วิดีโอ')?>
@@ -182,7 +182,7 @@ $v2_content = $args[1];
 			break;
 
 			case 'plan':
-			if ($content['is_show'] == 'show') {
+			if (isset($content['is_show']) && $content['is_show'] == 'show') {
 				?>
 				<div class="theme-menu-item-mob" onclick="toggleNavMob(<?= $it ?>)">
 					<?php pll_e('แบบแปลน')?>
@@ -193,7 +193,7 @@ $v2_content = $args[1];
 			break;
 
 			case 'location':
-			if ($content['is_show'] == 'show') {
+			if (isset($content['is_show']) && $content['is_show'] == 'show') {
 				?>
 				<div class="theme-menu-item-mob" onclick="toggleNavMob(<?= $it ?>)">
 					<?php pll_e('ทำเลที่ตั้ง')?>
